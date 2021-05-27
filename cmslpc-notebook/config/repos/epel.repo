@@ -1,0 +1,7 @@
+[epel]
+name=EPEL - Extra Packages for Enterprise Linux Local Mirror
+baseurl=http://ssirepo04.fnal.gov/repos/epel-main-el7-x86_64
+enabled=1
+gpgcheck=0
+priority=90
+

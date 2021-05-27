@@ -1,0 +1,8 @@
+[osg]
+name=Open Science Grid Local Mirror
+baseurl=http://ssirepo04.fnal.gov/repos/osg-3.5-el7-x86_64
+enabled=True
+gpgcheck=0
+priority=80
+exclude=*condor*
+
