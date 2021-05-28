@@ -9,7 +9,7 @@ JupyterHub @ the Fermilab Elastic Analysis Facility
 
 EAF Docker Stacks are a set of ready-to-run [Docker images](https://hub.docker.com/u/jupyter) containing Jupyter applications and interactive computing tools for Fermilab experiments through the Elastic Analysis Facility.
 
-This is a fork of the original docker stacks from Jupyter, adapted to innovative century HEP computing needs without compromising major traditional Grid computing features.
+This is a fork of the original docker stacks from Jupyter, adapted to innovative modern HEP computing needs without compromising major traditional Grid computing features.
 
 ## Quick Start
 
