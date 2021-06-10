@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #source /usr/local/bin/setups.sh
-su products -c ". /fnal/ups/etc/setups.sh; setup ups; setup upd; upd install jobsub_client v1_0 -f NULL; ups declare -c jobsub_client v1_0" 
+sh -c ". /fnal/ups/etc/setups.sh; setup ups; setup upd; upd install jobsub_client v1_0 -f NULL; ups declare -c jobsub_client v1_0" 
 
 #. /fnal/ups/etc/setups.sh
 #setup jobsub_client
