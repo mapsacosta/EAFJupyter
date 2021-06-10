@@ -24,10 +24,12 @@ RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/8.8/el7/release/ht
 COPY config/config.d/* /etc/condor/config.d/
 COPY config/motd /etc/motd
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
+COPY config/bootstrap.sh /tmp/bootstrap.sh
 COPY config/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py 
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 
-RUN chmod a+x /usr/local/bin/cmslpc-local-conf.py && chmod +x /etc/profile.d/lpc_aliases.sh
+RUN cat /tmp/bootstrap.sh >> /usr/local/bin/bootstrap.sh && \
+    chmod +x /etc/profile.d/lpc_aliases.sh && cat /usr/local/bin/bootstrap.sh
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID
