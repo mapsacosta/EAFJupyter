@@ -1,6 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-FROM ssiregistry.fnal.gov/eaf/jupyter:cmslpc-notebook
+FROM mapsacosta/eafjupyter:cmslpc-notebook 
 
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
