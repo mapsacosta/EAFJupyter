@@ -5,6 +5,7 @@ FROM ssiregistry.fnal.gov/eaf/jupyter:cmslpc-notebook
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
 ENV PYTHONPATH /usr/local/lib:$PYTHONPATH
+ENV CONDOR_CONFIG /etc/condor/condor_config
 #RUN conda create --name MLtutorial2 python=3.7.0 && \
 #    conda activate MLtutorial2 && \
  #   fix-permissions $CONDA_DIR && \

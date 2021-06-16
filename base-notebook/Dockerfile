@@ -150,7 +150,7 @@ CMD ["start-notebook.sh"]
 # Copy local files as late as possible to avoid cache busting
 COPY start.sh start-notebook.sh start-singleuser.sh bootstrap.sh /usr/local/bin/
 # Currently need to have both jupyter_notebook_config and jupyter_server_config to support classic and lab
-COPY jupyter_notebook_config.py /etc/jupyter/
+COPY jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
 
 # Fix permissions on /etc/jupyter as root
