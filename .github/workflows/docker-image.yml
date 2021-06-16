@@ -19,7 +19,6 @@ jobs:
         name: Cache Docker layers
         uses: actions/cache@v2
         with:
-          context: base-notebook/
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
@@ -36,7 +35,7 @@ jobs:
         with:
           context: base-notebook/
           push: true
-          tags: ssiregistry.fnal.gov:443/eaf/jupyter:base-notebook
+          tags: mapsacosta/eafjupyter:base-notebook
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       -
