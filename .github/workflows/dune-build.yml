@@ -6,7 +6,6 @@ on:
     branches:
       - 'master'
     paths:
-      - base-notebook/**
       - dunegpvm-notebook/**
 
 jobs:

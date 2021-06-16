@@ -53,6 +53,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
   
   build-and-push-cmslpc-dask:
+    needs: build-and-push-cmslpc
     runs-on: ubuntu-latest
     steps:
       -

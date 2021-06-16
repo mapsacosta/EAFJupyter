@@ -49,6 +49,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
           
   build-and-push-cmslpc:
+    needs: build-and-push-base
     runs-on: ubuntu-latest
     steps:
       -
@@ -91,6 +92,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
   
   build-and-push-cmslpc-dask:
+    needs: [build-and-push-base, build-and-push-cmslpc]
     runs-on: ubuntu-latest
     steps:
       -
@@ -133,6 +135,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
           
   build-and-push-dune:
+    needs: build-and-push-base
     runs-on: ubuntu-latest
     steps:
       -
