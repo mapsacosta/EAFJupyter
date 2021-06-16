@@ -1,4 +1,4 @@
-cp -r /home/jupyter/.jupyter /home/$NB_UID/.jupyter
+cp -r /home/jupyter/.jupyter /home/$NB_USER/.jupyter
 
 cat <<EOF > .bashrc
 install_env() {
@@ -18,4 +18,5 @@ source .env/bin/activate
 alias pip="python -m pip"
 EOF
 
+mkdir -p /etc/dask
 wget -O /etc/dask/lpcjobqueue.yaml https://raw.githubusercontent.com/CoffeaTeam/lpcjobqueue/main/src/lpcjobqueue/config.yaml

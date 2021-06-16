@@ -48,9 +48,11 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
     jupyter labextension install dask-labextension && \
     jupyter serverextension enable dask_labextension 
 
+
 COPY config/bootstrap.sh /tmp/bootstrap.sh
 
 RUN cat /tmp/bootstrap.sh >> /usr/local/bin/bootstrap.sh && \
     cat /usr/local/bin/bootstrap.sh
 
 USER $NB_USER
+RUN python -m pip install -q git+https://github.com/CoffeaTeam/lpcjobqueue.git@v0.2.3 
