@@ -1,4 +1,4 @@
-FROM ssiregistry.fnal.gov:443/eaf/jupyter:base-notebook
+FROM mapsacosta/eafjupyter:base-notebook
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
 USER root
