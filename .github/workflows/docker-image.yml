@@ -23,7 +23,6 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v2
         with:
-          context: path
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-single-buildx-${{ github.sha }}
           restore-keys: |
@@ -34,7 +33,7 @@ jobs:
         with:
           context: .
           builder: ${{ steps.buildx.outputs.name }}
-          file: base-notebook/Dockerfile
+          file: .base-notebook/Dockerfile
           push: false # This would be set to true in a real world deployment scenario.
           tags: ${{ steps.prep.outputs.tagged_image }}
           cache-from: type=local,src=/tmp/.buildx-cache
