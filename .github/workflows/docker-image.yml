@@ -27,7 +27,7 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          registry: ssiregistry.fnal.gov
+          registry: ssiregistry.fnal.gov/eaf
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_TOKEN }}
       -
