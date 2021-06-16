@@ -1,10 +1,13 @@
-name: ci
+name: cmslpc-dask-notebook-ci
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'master'
     paths:
+      - base-notebook/**
+      - cmslpc-notebook/**
       - dask-notebook/**
 
 jobs:

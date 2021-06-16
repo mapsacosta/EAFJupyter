@@ -1,4 +1,4 @@
-name: ci
+name: base-notebook-ci
 
 on:
   workflow_dispatch:
