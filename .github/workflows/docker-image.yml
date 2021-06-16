@@ -3,11 +3,10 @@ on: [push]
 
 jobs:
   # This job uses Buildx layer caching
-  fake_deploy_cache_single:
+  deploy_base_cache_single:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Prepare
         id: prep
         run: |
