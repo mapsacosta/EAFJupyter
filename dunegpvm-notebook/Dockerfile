@@ -23,8 +23,6 @@ COPY config/config.d/* /etc/condor/config.d/
 COPY config/motd /etc/motd
 COPY config/dune_aliases.sh /etc/profile.d/dune_aliases.sh
 
-RUN mkdir -p /opt/jobsub_repo/ && cd /opt/jobsub_repo/ && git clone http://cdcvs.fnal.gov/projects/jobsub
-
 RUN chmod +x /etc/profile.d/dune_aliases.sh
 
 VOLUME ["/fnal/ups/etc/"]
