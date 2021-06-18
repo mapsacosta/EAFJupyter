@@ -1,7 +1,10 @@
 #!/bin/sh
 
-#source /usr/local/bin/setups.sh
-sh -c ". /fnal/ups/etc/setups.sh; setup ups; setup upd; upd install jobsub_client v1_0 -f NULL; ups declare -c jobsub_client v1_0" 
+export GROUP=dune
+source /cvmfs/fermilab.opensciencegrid.org/products/common/etc/setups
+setup jobsub_client
+
+source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
 
 #. /fnal/ups/etc/setups.sh
 #setup jobsub_client
