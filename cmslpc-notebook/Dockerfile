@@ -7,7 +7,12 @@ COPY config/repos/* /etc/yum.repos.d/
 
 # Install all OS dependencies for fully functional notebook server
 RUN yum -y update && \
-    yum -y install epel-release yum-plugin-priorities redhat-lsb-core && yum clean all
+    yum -y install epel-release \
+           yum-plugin-priorities \
+           redhat-lsb-core \
+           make cmake3 gcc-c++ gcc binutils \
+           libX11-devel libXpm-devel libXft-devel libXext-devel openssl-devel && \
+           yum clean all
 
 RUN yum -y install osg-wn-client  \
                    xrootd-client \
@@ -23,12 +28,12 @@ RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/8.8/el7/release/ht
 
 COPY config/config.d/* /etc/condor/config.d/
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
-COPY config/bootstrap.sh /tmp/bootstrap.sh
+COPY config/init.sh /tmp/init.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 COPY config/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py 
 
-RUN cat /tmp/bootstrap.sh >> /usr/local/bin/bootstrap.sh && \
-    chmod +x /etc/profile.d/lpc_aliases.sh && cat /usr/local/bin/bootstrap.sh
+RUN cat /tmp/bootstrap.sh >> /usr/local/bin/init.sh && \
+    chmod +x /etc/profile.d/lpc_aliases.sh && cat /usr/local/bin/init.sh
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID
