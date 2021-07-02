@@ -84,7 +84,6 @@ jobs:
           context: .
           push: true
           file: dask-notebook/Dockerfile
-          push: true
           tags: mapsacosta/eafjupyter:cmslpc-dask-notebook
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
