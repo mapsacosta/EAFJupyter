@@ -37,7 +37,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: cmslpc-notebook/
           push: true
           file: cmslpc-notebook/Dockerfile
           tags: mapsacosta/eafjupyter:cmslpc-notebook
@@ -81,7 +81,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: dask-notebook/
           push: true
           file: dask-notebook/Dockerfile
           tags: mapsacosta/eafjupyter:cmslpc-dask-notebook
