@@ -30,9 +30,8 @@ COPY config/config.d/* /etc/condor/config.d/
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
 COPY config/init.sh /tmp/init.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
-COPY config/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py 
 
-RUN cat /tmp/bootstrap.sh >> /usr/local/bin/init.sh && \
+RUN cat /tmp/init.sh >> /usr/local/bin/init.sh && \
     chmod +x /etc/profile.d/lpc_aliases.sh && cat /usr/local/bin/init.sh
 
 # Switch back to jupyter to avoid accidental container runs as root
