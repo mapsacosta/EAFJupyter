@@ -159,7 +159,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: dunegpvm-notebook/
+          context: dune-notebook/
           push: true
           tags: mapsacosta/eafjupyter:dune-notebook
           cache-from: type=local,src=/tmp/.buildx-cache
