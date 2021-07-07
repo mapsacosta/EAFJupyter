@@ -1,8 +1,0 @@
-[osg]
-name=Open Science Grid Local Mirror
-baseurl=https://repo.opensciencegrid.org/osg/3.5/el7/release/x86_64
-enabled=True
-gpgcheck=0
-priority=80
-exclude=*condor*
-

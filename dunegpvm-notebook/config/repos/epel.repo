@@ -1,7 +1,0 @@
-[epel]
-name=EPEL - Extra Packages for Enterprise Linux
-mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=epel-7&arch=x86_64
-enabled=1
-gpgcheck=0
-priority=90
-
