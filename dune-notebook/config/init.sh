@@ -57,8 +57,8 @@ $(condor_config_val MASTER)
 
 echo ===== Initializing jobsub client
 export GROUP=dune
-source /cvmfs/fermilab.opensciencegrid.org/products/common/etc/setups
-setup jobsub_client
+#source /cvmfs/fermilab.opensciencegrid.org/products/common/etc/setups
+#setup jobsub_client
 
 echo ===== Setting up DUNE development environent
 source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
