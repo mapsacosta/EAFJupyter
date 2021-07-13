@@ -30,6 +30,7 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
+          registry: ${{ secrets.REGISTRY_URL }}
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_TOKEN }}
       -
@@ -38,7 +39,7 @@ jobs:
         with:
           context: base-notebook/
           push: true
-          tags: mapsacosta/eafjupyter:base-notebook
+          tags: ${{ secrets.REGISTRY_URL }}/jupyter/base-notebook:prod
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       -
