@@ -29,6 +29,7 @@ RUN conda install --yes \
       dask==2021.4.1 \
       distributed==2021.4.1 \
       dask-jobqueue \
+      dask-gateway==0.9.0 \
       nomkl \
       scipy==1.5.3 \
       tini==0.18.0 \
