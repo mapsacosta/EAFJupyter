@@ -39,7 +39,8 @@ jobs:
         with:
           context: accel-ai-notebook/
           push: true
-          file: Dockerfile.gpu
+          no-cache: true
+          file: accel-ai-notebook/Dockerfile.gpu
           tags: mapsacosta/eafjupyter:accel-ai-notebook-gpu
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
@@ -82,8 +83,9 @@ jobs:
         with:
           context: accel-ai-notebook/
           push: true
+          no-cache: true
           tags: mapsacosta/eafjupyter:accel-ai-notebook-cpu
-          file: Dockerfile.cpu
+          file: accel-ai-notebook/Dockerfile.cpu
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       -
