@@ -38,7 +38,7 @@ jobs:
         with:
           context: base-notebook/
           push: true
-          tags: ${{ secrets.REGISTRY_URL }}/jupyter/base-notebook:prod
+          tags: mapsacosta/eafjupyter:base-notebook
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       -
