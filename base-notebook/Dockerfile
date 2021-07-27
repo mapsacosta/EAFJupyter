@@ -33,6 +33,7 @@ ARG miniforge_checksum="c56cc2da96043688c6bdb521d825de27754de0a342d5228ba3155cd9
 # Install all OS dependencies for notebook server that starts but lacks all
 # features (e.g., download as all possible file formats)
 RUN yum -y update \
+ && yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.9-1.x86_64.rpm \
  && yum -y install \
     wget \
     epel-release \
@@ -49,6 +50,8 @@ RUN yum -y update \
     emacs \
     git \
     unzip \
+    krb5-workstation \
+    krb5-libs \
     nano \
     vim  \
  && yum clean all && rm -rf /var/cache/yum
