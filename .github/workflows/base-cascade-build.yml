@@ -175,6 +175,7 @@ jobs:
 
 ##### GPU build breaks caching, this one has to be built from scratch every single time #####
   build-and-push-accel-ai-gpu:
+    needs: build-and-push-base
     runs-on: ubuntu-latest
     steps:
       -
@@ -200,6 +201,7 @@ jobs:
           tags: mapsacosta/eafjupyter:accel-ai-notebook-gpu
 
   build-and-push-accel-ai-cpu:
+    needs: build-and-push-base
     runs-on: ubuntu-latest
     steps:
       -
