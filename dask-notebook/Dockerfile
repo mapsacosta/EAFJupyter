@@ -15,7 +15,7 @@ ENV CONDOR_CONFIG /etc/condor/condor_config
 RUN conda install --yes \
       -c conda-forge \
       conda-build \
-      python==3.8.6 \
+      python==3.8.3 \
       dask_labextension \
       ca-policy-lcg \
       xrootd==5.1.1 \
@@ -26,8 +26,8 @@ RUN conda install --yes \
       python-blosc \
       cytoolz \
       bokeh==2.2.3 \
-      dask==2021.4.1 \
-      distributed==2021.4.1 \
+      dask==2.30.0 \
+      distributed==2.30.1 \
       dask-jobqueue \
       dask-gateway==0.9.0 \
       nomkl \
