@@ -68,7 +68,6 @@ ENV CONDA_DIR=/opt/conda \
 ENV PATH="${CONDA_DIR}/bin:${PATH}" \
     HOME="/home/${NB_USER}" \
     CONDA_VERSION="${conda_version}" \
-    PYTHON_VERSON="3.8.6"
     MINIFORGE_VERSION="${miniforge_version}"
 
 # Copy a script that we will use to correct permissions after running certain commands

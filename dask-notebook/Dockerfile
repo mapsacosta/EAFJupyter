@@ -15,7 +15,7 @@ ENV CONDOR_CONFIG /etc/condor/condor_config
 RUN conda install --yes \
       -c conda-forge \
       conda-build \
-      python==3.8.* \
+      python==3.8.6 \
       dask_labextension \
       ca-policy-lcg \
       xrootd==5.1.1 \
