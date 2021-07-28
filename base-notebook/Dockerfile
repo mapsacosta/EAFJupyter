@@ -68,6 +68,7 @@ ENV CONDA_DIR=/opt/conda \
 ENV PATH="${CONDA_DIR}/bin:${PATH}" \
     HOME="/home/${NB_USER}" \
     CONDA_VERSION="${conda_version}" \
+    PYTHON_VERSON="3.8.6"
     MINIFORGE_VERSION="${miniforge_version}"
 
 # Copy a script that we will use to correct permissions after running certain commands
@@ -95,7 +96,7 @@ RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
     fix-permissions $CONDA_DIR
 
 USER $NB_UID
-ARG PYTHON_VERSION=default
+ARG PYTHON_VERSION="3.8.6"
 
 # Setup work directory for backward-compatibility
 RUN mkdir "/home/$NB_USER/work" && \
