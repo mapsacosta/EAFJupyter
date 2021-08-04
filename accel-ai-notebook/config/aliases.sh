@@ -1,5 +1,7 @@
 #!/bin/sh
 
+REL=$(cat /etc/*-release | grep "PRETTY_NAME" | sed 's/PRETTY_NAME=//g' | sed 's/"//g')
+
 export PS1="[\u@\h \W]\\$ "
 
 echo "
@@ -33,7 +35,7 @@ echo "
             ..:: Powered by the ElasticAF Openshift Kubernetes ::..
 
        JHub URL: https:///analytics-hub.okddev.fnal.gov/user/${NB_USER}/lab
-    Notebook OS: `lsb_release -ds`
+    Notebook OS: ${REL}
     Notebook IP: `hostname -I`
 
 ------------------------------------------------------------------------------
