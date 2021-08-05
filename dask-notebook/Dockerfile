@@ -12,17 +12,17 @@ ENV CONDOR_CONFIG /etc/condor/condor_config
   #  fix-permissions /home/$NB_USER
 
 # XRootD + CA + VOMS + Coffea
-RUN conda install --yes \
+RUN conda install --yes --freeze-installed \
       -c conda-forge \
       conda-build \
-      python==3.8.3 \
       dask_labextension \
+      python==3.8.3 \
       ca-policy-lcg \
-      xrootd==5.1.1 \
-      coffea==0.7.2 \
-      lz4 \
-      python-xxhash \
-      zstandard \
+      xrootd==5.2.0 \
+      "uproot>=4.0.8" \
+      coffea==0.7.5 \
+      vector \
+      lz4 python-xxhash zstandard \
       python-blosc \
       cytoolz \
       bokeh==2.2.3 \
