@@ -62,5 +62,3 @@ cp /tmp/htcondor-config-files/service_configs/*cmslpc_interactive* /etc/condor/c
 cp /tmp/htcondor-config-files/mapfiles/cmslpc.condor_mapfile /etc/condor/certs/condor_mapfile
 
 rm -rf /tmp/htcondor-config-files
-
-$(condor_config_val MASTER)
