@@ -14,17 +14,17 @@ RUN yum -y update && \
            libX11-devel libXpm-devel libXft-devel libXext-devel openssl-devel && \
            yum clean all
 
+#Install HTCondor 9 (stable)
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-2.el7.noarch.rpm && \
+    yum install --disablerepo=osg -y condor && \
+    yum clean all && rm -rf /var/cache/yum/*
+
 RUN yum -y install osg-wn-client  \
                    xrootd-client \
                    xrootd-client-libs && \
     yum clean all && rm -rf /var/cache/yum/*
 
 RUN yum --enablerepo=eos,xrootd -y install eos-client eos-xrootd
-
-#Install HTCondor 9 (stable)
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-2.el7.noarch.rpm && \
-    yum install -y condor && \
-    yum clean all && rm -rf /var/cache/yum/*
 
 COPY config/config.d/* /etc/condor/config.d/
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
