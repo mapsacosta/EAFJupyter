@@ -22,7 +22,7 @@ RUN yum -y install osg-wn-client  \
 RUN yum --enablerepo=eos,xrootd -y install eos-client eos-xrootd
 
 #Install HTCondor 9 (stable)
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/8.8/el7/release/htcondor-release-8.8-1.el7.noarch.rpm && \
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-2.el7.noarch.rpm && \
     yum install -y condor && \
     yum clean all && rm -rf /var/cache/yum/*
 
@@ -32,7 +32,7 @@ COPY config/init.sh /tmp/init.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 
 RUN cat /tmp/init.sh >> /usr/local/bin/init.sh && \
-    chmod +x /etc/profile.d/lpc_aliases.sh && cat /usr/local/bin/init.sh
+    chmod +x /etc/profile.d/lpc_aliases.sh
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID
