@@ -76,8 +76,8 @@ rm -rf /tmp/htcondor-config-files
 
 echo Setitng X509 environment
 # Need to set the X509 environment for users
-USCMS_HOME=/uscms/home/$NB_USER
-export X509_USER_PROXY=\$USCMS_HOME/x509up_u\$(/usr/bin/id -u)\n
+USCMS_HOME=/uscms/home/${NB_USER}
+echo $USCMS_HOME
+#export X509_USER_PROXY=\$USCMS_HOME/x509up_u\$(/usr/bin/id -u)\n
+export X509_USER_PROXY="${USCMS_HOME}/x509up_u$(/usr/bin/id -u)"
 echo Done
-
-
