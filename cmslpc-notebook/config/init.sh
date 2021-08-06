@@ -16,7 +16,10 @@ git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/gco_scripts.git /tmp/gco_
 
 cp /tmp/gco_scripts/htcondor/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py
 
-# Replacing various HTCondor commands with CSI/GCO wrappers
+echo Cleaning up /etc/condor/config.d
+rm -rf /etc/condor/config.d/*
+
+echo Replacing various HTCondor commands with CSI/GCO wrappers
 for i in "${REPLACE_CONDOR_CMD[@]}"
 do
   if [ -e /usr/bin/${i} ]; then 
@@ -56,9 +59,25 @@ cp /tmp/gco_scripts/htcondor/cmslpc-condor-submit.py /usr/local/bin/condor_submi
 
 rm -rf /tmp/gco_scripts
 
+echo Creating scratch directory for condor wrappers
+mkdir -p /storage/local/data1/condor/config.d
+echo Done
+
+echo ===== Putting configuration files in place
+echo Cleaning up /etc/condor/config.d
+rm -rf /etc/condor/config.d/*
+
 mkdir -p /etc/condor/certs
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
 cp /tmp/htcondor-config-files/service_configs/*cmslpc_interactive* /etc/condor/config.d/
 cp /tmp/htcondor-config-files/mapfiles/cmslpc.condor_mapfile /etc/condor/certs/condor_mapfile
 
 rm -rf /tmp/htcondor-config-files
+
+echo Setitng X509 environment
+# Need to set the X509 environment for users
+USCMS_HOME=/uscms/home/$NB_USER
+export X509_USER_PROXY=\$USCMS_HOME/x509up_u\$(/usr/bin/id -u)\n
+echo Done
+
+
