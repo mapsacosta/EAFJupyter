@@ -71,6 +71,7 @@ mkdir -p /etc/condor/certs
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
 cp /tmp/htcondor-config-files/service_configs/*cmslpc_interactive* /etc/condor/config.d/
 cp /tmp/htcondor-config-files/mapfiles/cmslpc.condor_mapfile /etc/condor/certs/condor_mapfile
+echo "UID_DOMAIN=jupyter.okddev.fnal.gov" > /etc/condor/config.d/02_jupyter_interactive
 
 rm -rf /tmp/htcondor-config-files
 
