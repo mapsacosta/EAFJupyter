@@ -79,5 +79,6 @@ echo Setitng X509 environment
 USCMS_HOME=/uscms/home/${NB_USER}
 echo $USCMS_HOME
 #export X509_USER_PROXY=\$USCMS_HOME/x509up_u\$(/usr/bin/id -u)\n
-export X509_USER_PROXY="${USCMS_HOME}/x509up_u$(/usr/bin/id -u)"
+#export X509_USER_PROXY="${USCMS_HOME}/x509up_u$(/usr/bin/id -u)"
+export X509_USER_PROXY="${USCMS_HOME}/x509up_u${NB_UID}"
 echo Done
