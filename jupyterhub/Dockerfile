@@ -4,7 +4,7 @@ USER root
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
 
-RUN apt-get update && apt install -y krb5-multidev wget net-tools gnupg2 build-essential nodejs npm
+RUN apt-get update && apt install -y krb5-multidev wget nodejs net-tools gnupg2 build-essential
 
 RUN npm install -g configurable-http-proxy
 
