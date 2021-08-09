@@ -9,7 +9,7 @@ on:
       - jupyterhub/**
 
 jobs:
-  build-and-push-base:
+  build-and-push-jupyterhub:
     runs-on: ubuntu-latest
     steps:
       -
