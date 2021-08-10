@@ -1,12 +1,8 @@
-FROM jupyterhub/k8s-hub:1.0.0
+FROM jupyterhub/k8s-hub:1.1.1
 
 USER root
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
-
-RUN apt-get update && apt install -y krb5-multidev wget nodejs net-tools gnupg2 build-essential
-
-RUN npm install -g configurable-http-proxy
+RUN apt-get update && apt install -y krb5-multidev wget net-tools gnupg2 build-essential
 
 RUN wget -q -O - \
      https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-3 \
