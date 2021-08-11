@@ -45,6 +45,9 @@ RUN yum -y update \
     fonts-liberation \
     run-one \
     wget \
+    net-tools \
+    traceroute  \
+    tcpdump \
     nss_wrapper \
     openssl \
     emacs \
