@@ -65,7 +65,7 @@ echo Done
 
 echo ===== Putting configuration files in place
 echo Cleaning up /etc/condor/config.d
-rm -rf /etc/condor/config.d/*
+rm -rf /etc/condor/config.d/00*
 
 mkdir -p /etc/condor/certs
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
