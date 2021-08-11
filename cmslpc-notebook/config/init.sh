@@ -71,15 +71,18 @@ mkdir -p /etc/condor/certs
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
 cp /tmp/htcondor-config-files/service_configs/*cmslpc_interactive* /etc/condor/config.d/
 cp /tmp/htcondor-config-files/mapfiles/cmslpc.condor_mapfile /etc/condor/certs/condor_mapfile
-echo "UID_DOMAIN=jupyter.okddev.fnal.gov" > /etc/condor/config.d/02_jupyter_interactive
 
 rm -rf /tmp/htcondor-config-files
 
-echo Setitng X509 environment
+echo ===== Setitng X509 environment
 # Need to set the X509 environment for users
 USCMS_HOME=/uscms/home/${NB_USER}
 echo $USCMS_HOME
 #export X509_USER_PROXY=\$USCMS_HOME/x509up_u\$(/usr/bin/id -u)\n
 #export X509_USER_PROXY="${USCMS_HOME}/x509up_u$(/usr/bin/id -u)"
 export X509_USER_PROXY="${USCMS_HOME}/x509up_u${NB_UID}"
+echo $X509_USER_PROXY
+
+echo ===== Starting a simple condor_master
+$(condor_config_val MASTER)
 echo Done

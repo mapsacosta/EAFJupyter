@@ -1,1 +1,99 @@
-CCB_ADDRESS=cmsccb01.fnal.gov
+# Remote submit node configuration for an OKD jupyter  notebook
+
+CENTRAL_MANAGER1 = htccolldev01.fnal.gov 
+CENTRAL_MANAGER2 = htccolldev02.fnal.gov
+
+# What should be the remote pool to query for schedds?
+FERMIHTC_REMOTE_POOL = $(CENTRAL_MANAGER1), $(CENTRAL_MANAGER2)
+
+# Collector host set to remote pool
+COLLECTOR_HOST = $(FERMIHTC_REMOTE_POOL)
+
+# Setting condor host as well, so we always have a default
+CONDOR_HOST = $(FERMIHTC_REMOTE_POOL)
+
+CCB_ADDRESS = htccolldev01.fnal.gov
+
+UID_DOMAIN = jupyter.okddev.fnal.gov
+FILESYSTEM_DOMAIN = fnal.gov
+DEFAULT_DOMAIN_NAME = jupyter.okddev.fnal.gov
+
+SENDMAIL=/usr/sbin/sendmail
+
+MAX_FILE_DESCRIPTORS = 131072
+
+# Only start a very basic condor_master
+DAEMON_LIST = MASTER
+
+# Not using UDP until inbound UDP issues are solved at the OKD level
+UPDATE_COLLECTOR_WITH_TCP = True
+
+# Using shared port to avoid poking holes in the Firewall
+USE_SHARED_PORT = True
+SHARED_PORT_ARGS = -p 9620
+
+### Security configuration starts here ###
+
+#-- Authentication settings
+SEC_DEFAULT_AUTHENTICATION = REQUIRED
+SEC_DEFAULT_AUTHENTICATION_METHODS = FS, IDTOKEN, GSI
+SEC_READ_AUTHENTICATION    = OPTIONAL
+SEC_CLIENT_AUTHENTICATION  = OPTIONAL
+
+DENY_CLIENT        = anonymous@*
+
+#--  Privacy settings
+SEC_DEFAULT_ENCRYPTION = OPTIONAL
+SEC_DEFAULT_INTEGRITY = REQUIRED
+SEC_READ_INTEGRITY = OPTIONAL
+SEC_CLIENT_INTEGRITY = OPTIONAL
+SEC_READ_ENCRYPTION = OPTIONAL
+SEC_CLIENT_ENCRYPTION = OPTIONAL
+
+#-- Grid Certificate directory
+GSI_DAEMON_TRUSTED_CA_DIR= /etc/grid-security/certificates
+
+#-- Condor mapfile
+CERTIFICATE_MAPFILE= /etc/condor/certs/condor_mapfile
+
+# Setting DENY policies
+# By default unauthenticate and anonymous users are DENIED
+# The default READ policy is sufficient, so no need to define
+# a corresponding DENY entry
+DENY_WRITE         = anonymous@* unauthenticated@unmapped
+DENY_ADMINISTRATOR = anonymous@* unauthenticated@unmapped
+DENY_DAEMON        = anonymous@* unauthenticated@unmapped
+DENY_NEGOTIATOR    = anonymous@* unauthenticated@unmapped
+
+# Setting ALLOW policies
+# By default, off site READ access is blocked
+# DENY entries take precendence over ALLOW entries
+# Format for ALLOW entries: <mapfile_mapping>@<uid_domain>/<fqdn_of_requestor>
+#
+# ALLOW/DENY entries below are set based on first round of testing
+# they can refined later if needed
+#
+ALLOW_READ= */*.fnal.gov
+# Commenting this one out and using a wild card for now
+# ALLOW_WRITE = *@fnal.gov/*.fnal.gov
+ALLOW_WRITE= */*
+
+# For daemon authentication
+ALLOW_DAEMON = $(ALLOW_WRITE)
+DENY_DAEMON  = $(DENY_WRITE)
+
+# For negotiator
+# This is only valid for central manager but has to be defined here
+# since security configs are all in one file
+# We need to allow both collectors access to the negotiator (and vice versa)
+# because our monitoring queries the back ups. There is no good way to do this
+# with a single knob (FULL_HOSTNAME does not work) -- Farrukh 2021-07-02
+ALLOW_NEGOTIATOR = */$(CENTRAL_MANAGER1) */$(CENTRAL_MANAGER2)
+
+# For admin access
+ALLOW_ADMINISTRATOR = */$(CENTRAL_MANAGER1) */$(CENTRAL_MANAGER2)
+
+# Disable hostname check during GSI authentication
+# This is requried for workers since they use service
+# certificates, not host certs
+GSI_SKIP_HOST_CHECK = true
