@@ -26,7 +26,6 @@ RUN yum -y install osg-wn-client  \
 
 RUN yum --enablerepo=eos,xrootd -y install eos-client eos-xrootd
 
-COPY config/config.d/* /etc/condor/config.d/
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
 COPY config/init.sh /tmp/init.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
