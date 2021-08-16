@@ -86,5 +86,5 @@ echo ===== Making sure permissions are set correctly
 #$(condor_config_val MASTER)
 echo "My token:"
 cat /home/$NB_USER/.condor/tokens.d/JUPYTER_idtoken 
-chown -R $NB_USER /home/$NB_USER/.condor
+#chown -R $NB_USER /home/$NB_USER/.condor
 echo Done
