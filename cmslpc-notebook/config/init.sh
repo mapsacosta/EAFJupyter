@@ -82,6 +82,7 @@ USCMS_HOME=/uscms/home/${NB_USER}
 export X509_USER_PROXY="${USCMS_HOME}/x509up_u${NB_UID}"
 echo $X509_USER_PROXY
 
-echo ===== Starting a simple condor_master
+echo ===== Making sure permissions are set correctly
 #$(condor_config_val MASTER)
+chown -R ${NB_USER}:${NB_GROUP} /home/${NB_USER}/.condor/tokens.d
 echo Done
