@@ -84,5 +84,5 @@ echo $X509_USER_PROXY
 
 echo ===== Making sure permissions are set correctly
 #$(condor_config_val MASTER)
-chown -R ${NB_USER}:${NB_GROUP} /home/${NB_USER}/.condor/tokens.d
+chown ${NB_USER} -R /home/${NB_USER}/.condor/tokens.d
 echo Done
