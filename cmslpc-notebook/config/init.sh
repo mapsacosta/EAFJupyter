@@ -84,5 +84,7 @@ echo $X509_USER_PROXY
 
 echo ===== Making sure permissions are set correctly
 #$(condor_config_val MASTER)
-fix-permissions /home/${NB_USER}/.condor/tokens.d
+echo "My token:"
+cat ${HOME}/.condor/tokens.d/JUPYTER_idtoken 
+chown -R ${NB_USER}: ${HOME}/.condor
 echo Done
