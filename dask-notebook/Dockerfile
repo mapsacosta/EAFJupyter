@@ -6,15 +6,15 @@ LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
 ENV PYTHONPATH /usr/local/lib:$PYTHONPATH
 ENV CONDOR_CONFIG /etc/condor/condor_config
-#RUN conda create --name MLtutorial2 python=3.7.0 && \
-#    conda activate MLtutorial2 && \
- #   fix-permissions $CONDA_DIR && \
+#RUN mamba create --name MLtutorial2 python=3.7.0 && \
+#    mamba activate MLtutorial2 && \
+ #   fix-permissions $mamba_DIR && \
   #  fix-permissions /home/$NB_USER
 
 # XRootD + CA + VOMS + Coffea
-RUN conda install --yes --freeze-installed \
-      -c conda-forge \
-      conda-build \
+RUN mamba install --yes --freeze-installed \
+      -c mamba-forge \
+      mamba-build \
       dask_labextension \
       python==3.8.3 \
       ca-policy-lcg \
@@ -37,8 +37,8 @@ RUN conda install --yes --freeze-installed \
       jupyter_nbextensions_configurator \
       jupyterlab-git \
       dask-labextension \
-      && conda clean --all -f -y \
-      && conda build purge-all
+      && mamba clean --all -f -y \
+      && mamba build purge-all
 
 USER root
 RUN fix-permissions $CONDA_DIR  && \
