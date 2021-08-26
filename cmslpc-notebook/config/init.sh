@@ -12,7 +12,7 @@ declare -a REPLACE_CONDOR_RM_LINKS=('condor_vacate_job' 'condor_suspend' 'condor
 declare -a DELETE_CONDOR_RM_LINKS=('condor_hold' 'condor_release')
 declare -a NAME_FLAG_CHK_CMD=('condor_rm' 'condor_tail' 'condor_qedit' 'condor_hold' 'condor_release''condor_history')
 
-git clone -q -b fkhan_notebook_interactives --single-branch https://hepcloud-git.fnal.gov/ECF-GCO-public/gco_scripts.git /tmp/gco_scripts
+git clone -b fkhan_notebook_interactives --single-branch https://hepcloud-git.fnal.gov/ECF-GCO-public/gco_scripts.git /tmp/gco_scripts
 
 cp /tmp/gco_scripts/htcondor/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py
 
@@ -68,7 +68,7 @@ echo Cleaning up /etc/condor/config.d
 rm -rf /etc/condor/config.d/00*
 
 mkdir -p /etc/condor/certs
-git clone -q -b eaf_jupyter --single-branch https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
+git clone -b eaf_jupyter --single-branch https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
 cp /tmp/htcondor-config-files/service_configs/01_${NB_HTCPOOL}_jupyter_interactive /etc/condor/config.d/
 #cp /tmp/htcondor-config-files/mapfiles/cmslpc.condor_mapfile /etc/condor/certs/condor_mapfile
 cp /tmp/htcondor-config-files/mapfiles/${NB_HTCPOOL}.condor_mapfile /etc/condor/certs/condor_mapfile
