@@ -15,7 +15,7 @@ RUN yum -y install osg-wn-client  \
     yum clean all && rm -rf /var/cache/yum/*
 
 #Install HTCondor (stable)
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-2.el7.noarch.rpm && \
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-4.el7.noarch.rpm && \
     yum install -y --disablerepo=osg condor && \
     yum clean all && rm -rf /var/cache/yum/*
 
