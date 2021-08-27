@@ -6,14 +6,9 @@ LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
 ENV PYTHONPATH /usr/local/lib:$PYTHONPATH
 ENV CONDOR_CONFIG /etc/condor/condor_config
-#RUN mamba create --name MLtutorial2 python=3.7.0 && \
-#    mamba activate MLtutorial2 && \
- #   fix-permissions $mamba_DIR && \
-  #  fix-permissions /home/$NB_USER
 
 # XRootD + CA + VOMS + Coffea
 RUN mamba install --yes --freeze-installed \
-      -c mamba-forge \
       mamba-build \
       dask_labextension \
       python==3.8.3 \
