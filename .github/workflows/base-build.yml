@@ -50,8 +50,7 @@ jobs:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
       - 
-        name: Test container images
-        uses: actions/checkout@v1
+        name: Test container image for vulnerabilities
         run: |
           docker pull mapsacosta/eafjupyter:base-notebook
           docker save -o base-notebook.tar mapsacosta/eafjupyter:base-notebook
@@ -59,7 +58,7 @@ jobs:
         env:
           NB_UID: "1000"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - 
+      - name: Upload report 
         uses: actions/upload-artifact@v1
         with:
           name: reports
