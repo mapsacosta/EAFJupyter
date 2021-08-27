@@ -49,3 +49,18 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+      - 
+        name: Test container images
+        uses: actions/checkout@v1
+        run: |
+          docker pull mapsacosta/eafjupyter:base-notebook
+          docker save -o base-notebook.tar mapsacosta/eafjupyter:base-notebook
+          docker run --rm -e "WORKSPACE=${PWD}" -e "FETCH_LICENSE=true" -e "ENABLE_OSS_RISK=true" -v $PWD:/app shiftleft/scan:docker scan --src /app/base-notebook.tar -o /app/reports --type docker
+        env:
+          NB_UID: "1000"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - 
+        uses: actions/upload-artifact@v1
+        with:
+          name: reports
+          path: reports
