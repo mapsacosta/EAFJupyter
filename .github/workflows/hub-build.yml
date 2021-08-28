@@ -38,7 +38,7 @@ jobs:
         with:
           context: jupyterhub/
           push: true
-          tags: mapsacosta/eafjupyter:k8s-hub
+          tags: mapsacosta/eafjupyter:k8s-hub-1.1.2
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       -
