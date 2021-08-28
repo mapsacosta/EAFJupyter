@@ -15,6 +15,5 @@ RUN apt-get update && apt install -y ca-policy-egi-core
 
 RUN pip install jupyterhub-kerberosauthenticator && pip install jupyterhub-samlauthenticator
 
-# The following makes my eyes bleed but it has to be done like this
-# Not configurable
-RUN find /usr/local/share/jupyterhub/ -type f -exec sed -i -e 's/f37524/204f92/g' {} \;
+VOLUME ['/srv/jupyterhub/custom/templates']
+RUN ln -s /srv/jupyterhub/custom/templates /usr/local/share/jupyter/hub/custom_templates && ln -s /srv/jupyterhub/custom/extra-assets /usr/local/share/jupyter/hub/static/custom
