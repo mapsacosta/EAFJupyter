@@ -14,3 +14,7 @@ RUN echo "#### EGI Trust Anchor Distribution ####" >> /etc/apt/sources.list && \
 RUN apt-get update && apt install -y ca-policy-egi-core 
 
 RUN pip install jupyterhub-kerberosauthenticator && pip install jupyterhub-samlauthenticator
+
+# The following makes my eyes bleed but it has to be done like this
+# Not configurable
+RUN grep -rl 'f37524' /usr/local/share/jupyterhub/ | xargs sed -i 's/f37524/204f92/g'
