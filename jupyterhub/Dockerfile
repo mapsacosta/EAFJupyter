@@ -17,4 +17,4 @@ RUN pip install jupyterhub-kerberosauthenticator && pip install jupyterhub-samla
 
 # The following makes my eyes bleed but it has to be done like this
 # Not configurable
-RUN grep -rl 'f37524' /usr/local/share/jupyterhub/ | xargs sed -i 's/f37524/204f92/g'
+RUN find /usr/local/share/jupyterhub/ -type f -exec sed -i -e 's/f37524/204f92/g' {} \;
