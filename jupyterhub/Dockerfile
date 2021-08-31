@@ -16,6 +16,9 @@ RUN apt-get update && apt install -y ca-policy-egi-core
 RUN pip install jupyterhub-kerberosauthenticator && pip install jupyterhub-samlauthenticator
 
 # The following makes my eyes bleed but it has to be done like this
+# These are static values in general
 # Not configurable
-RUN find /usr/local/share/jupyterhub/* -type f -exec sed -i -e 's/f37524/204f92/g' {} \;
-RUN mkdir /usr/local/share/jupyterhub/custom
+RUN cd /tmp && git clone --single-branch https://hepcloud-git.fnal.gov/csi-kubernetes/jupyter-web.git && \
+    cp -r /tmp/jupyter-web/static/css/* /usr/local/share/jupyterhub/static/css/ && \
+    cp -r /tmp/jupyter-web/static/less/* /usr/local/share/jupyterhub/static/less/ && \
+    rm -rf /tmp/jupyter-web

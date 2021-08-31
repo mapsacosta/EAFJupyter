@@ -10,6 +10,8 @@ ENV CONDOR_CONFIG /etc/condor/condor_config
 #    conda activate MLtutorial2 && \
  #   fix-permissions $CONDA_DIR && \
   #  fix-permissions /home/$NB_USER
+  #
+  #'python': '3.8.3.final.0', 'dask': '2.30.0', 'distributed': '2.30.1', 'msgpack': '1.0.0', 'cloudpickle': '1.6.0', 'tornado': '6.1', 'toolz': '0.11.1', 'numpy': '1.19.2', 'lz4': None, 'blosc': None
 
 # XRootD + CA + VOMS + Coffea
 RUN conda install --yes --freeze-installed \
@@ -26,17 +28,21 @@ RUN conda install --yes --freeze-installed \
       python-blosc \
       cytoolz \
       bokeh==2.2.3 \
+      # Relevant for dask-gateway compatibility
       dask==2.30.0 \
       distributed==2.30.1 \
-      dask-jobqueue \
       dask-gateway==0.9.0 \
+      msgpack==1.0.0 \
+      cloudpickle==1.6.0 \
+      tornado==6.1 \
+      toolz==0.11.1 \
+      numpy==1.19.2 \
+      dask-jobqueue \
       nomkl \
       scipy==1.5.3 \
-      tini==0.18.0 \
       jupyter-server-proxy \
       jupyter_nbextensions_configurator \
       jupyterlab-git \
-      dask-labextension \
       && conda clean --all -f -y \
       && conda build purge-all
 
