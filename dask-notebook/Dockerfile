@@ -32,7 +32,6 @@ RUN conda install --yes --freeze-installed \
       dask==2.30.0 \
       distributed==2.30.1 \
       dask-gateway==0.9.0 \
-      msgpack==1.0.0 \
       cloudpickle==1.6.0 \
       tornado==6.1 \
       toolz==0.11.1 \
