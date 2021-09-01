@@ -15,7 +15,7 @@ RUN yum -y update && \
            yum clean all
 
 #Install HTCondor 9 (stable)
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-4.el7.noarch.rpm && \
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/el7/release/htcondor-release-9.0-2.el7.noarch.rpm && \
     yum install --disablerepo=osg -y condor && \
     yum clean all && rm -rf /var/cache/yum/*
 
