@@ -12,11 +12,16 @@ declare -a REPLACE_CONDOR_RM_LINKS=('condor_vacate_job' 'condor_suspend' 'condor
 declare -a DELETE_CONDOR_RM_LINKS=('condor_hold' 'condor_release')
 declare -a NAME_FLAG_CHK_CMD=('condor_rm' 'condor_tail' 'condor_qedit' 'condor_hold' 'condor_release''condor_history')
 
-rm -rf /tmp/gco_scripts
+# Some git configs before starting
 git config --global user.email "gco_admin@fnal.gov"
 git config --global user.name GCO_admin
+git config --global pull.rebase false
+
+# Better to start clean
+rm -rf /tmp/gco_scripts
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/gco_scripts.git /tmp/gco_scripts 
-### I'm aware that this can be done with a one liner but there's some weirdness about it
+
+### I'm aware that this can be done with a one liner but there's some weirdness about it and this seems to be the only thing that worked
 (cd /tmp/gco_scripts
 git fetch origin
 git checkout -b fkhan_notebook_interactives
@@ -75,12 +80,10 @@ echo Done
 echo ===== Putting configuration files in place
 echo Cleaning up /etc/condor/config.d
 rm -rf /etc/condor/config.d/00*
-
 mkdir -p /etc/condor/certs
 
 rm -rf /tmp/htcondor-config-files
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
-### I'm aware that this can be done with a one liner but there's some weirdness about it
 (cd /tmp/htcondor-config-files
 git fetch origin
 git checkout -b eaf_jupyter
