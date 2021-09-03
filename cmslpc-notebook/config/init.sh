@@ -12,9 +12,16 @@ declare -a REPLACE_CONDOR_RM_LINKS=('condor_vacate_job' 'condor_suspend' 'condor
 declare -a DELETE_CONDOR_RM_LINKS=('condor_hold' 'condor_release')
 declare -a NAME_FLAG_CHK_CMD=('condor_rm' 'condor_tail' 'condor_qedit' 'condor_hold' 'condor_release''condor_history')
 
+rm -rf /tmp/gco_scripts
+git config --global user.email "gco_admin@fnal.gov"
+git config --global user.name GCO_admin
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/gco_scripts.git /tmp/gco_scripts 
 ### I'm aware that this can be done with a one liner but there's some weirdness about it
-(cd /tmp/gco_scripts && git checkout fkhan_notebook_interactives && git pull)
+(cd /tmp/gco_scripts
+git fetch origin
+git checkout -b fkhan_notebook_interactives
+git branch --set-upstream-to=origin/fkhan_notebook_interactives fkhan_notebook_interactives
+git pull --no-edit)
 
 cp /tmp/gco_scripts/htcondor/cmslpc-local-conf.py /usr/local/bin/cmslpc-local-conf.py
 
@@ -70,8 +77,16 @@ echo Cleaning up /etc/condor/config.d
 rm -rf /etc/condor/config.d/00*
 
 mkdir -p /etc/condor/certs
+
+rm -rf /tmp/htcondor-config-files
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
-(cd /tmp/htcondor-config-files && git checkout eaf_jupyter && git pull)
+### I'm aware that this can be done with a one liner but there's some weirdness about it
+(cd /tmp/htcondor-config-files
+git fetch origin
+git checkout -b eaf_jupyter
+git branch --set-upstream-to=origin/eaf_jupyter eaf_jupyter
+git pull --no-edit)
+
 cp /tmp/htcondor-config-files/service_configs/01_${NB_HTCPOOL}_jupyter_interactive /etc/condor/config.d/
 cp /tmp/htcondor-config-files/mapfiles/${NB_HTCPOOL}.condor_mapfile /etc/condor/certs/condor_mapfile
 
