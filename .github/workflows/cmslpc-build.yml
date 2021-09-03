@@ -97,7 +97,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   post-build-security-scan:
-    needs: build-and-push-cmslpc, build-and-push-cmslpc-dask
+    needs: [build-and-push-cmslpc, build-and-push-cmslpc-dask]
     runs-on: ubuntu-latest
     steps:
       -
