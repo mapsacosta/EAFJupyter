@@ -22,7 +22,7 @@ jobs:
 
       - name: Prepares PR text
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
-        run: export ENV_FILE_CONTENT=`cat .github/ISSUE_TEMPLATE/version-check.md` ; envsubst "$ENV_FILE_CONTENT" < .github/ISSUE_TEMPLATE/version-check.md > /tmp/version-check-${SHORT_SHA}.md ; echo "ISSUE_FILE_TEMPLATE=/tmp/version-check-${SHORT_SHA}.md" >> $GITHUB_ENV
+        run: export ENV_FILE_CONTENT=`cat /eaf-coffea-sync-versions` ; envsubst "$ENV_FILE_CONTENT" < .github/ISSUE_TEMPLATE/version-check.md > /tmp/version-check-${SHORT_SHA}.md ; echo "ISSUE_FILE_TEMPLATE=/tmp/version-check-${SHORT_SHA}.md" >> $GITHUB_ENV ; cat ${ISSUE_FILE_TEMPLATE}
 
       - name: Opens a templated PR for review
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
