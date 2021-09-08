@@ -5,22 +5,8 @@ title: "Version check for coffea-dask-gateway-eaf build - {{ date | date('MMMM D
 labels:
   - "admin-approve"
 ---
-### Please revisit the following package versions changed recently at ${{GITHUB_REPOSITORY}}
+### Please revisit the following package versions changed recently at ${GITHUB_REPOSITORY}
 This will trigger builds in a lot of places, so make sure the following makes sense to you:
-Environment variables file reads:
+New pinned version file available:
 
-<-- ENV_FILE -->
-
-```
-RUN conda install --yes \
-      -c conda-forge \
-      conda-build \
-      dask==${DASK_VERSION} \
-      distributed==${DISTRIBUTED_VERSION} \
-      dask-gateway==${DASK_GATEWAY_VERSION} \
-      cloudpickle==${CLOUDPICKLE_VERSION} \
-      tornado==${TORNADO_VERSION} \
-      toolz==${TOOLZ_VERSION} \
-      && conda clean --all -f -y \
-      && conda build purge-all
-```
+${ENV_FILE_CONTENT}
