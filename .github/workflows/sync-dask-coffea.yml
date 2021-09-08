@@ -4,7 +4,7 @@ on:
     branches:
       - 'master'
 jobs:
-  detect-changes:
+  open-issue-on-change:
     runs-on: ubuntu-latest
     steps:
       -
@@ -13,24 +13,30 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Get changed files using defaults
-        id: changed-files
-        uses: tj-actions/changed-files@v1.1.2
-
       - name: Add SHORT_SHA env property with commit short sha
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
-      - name: Prepares PR text
-        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
-        run: export ENV_FILE_CONTENT=`cat /eaf-coffea-sync-versions` ; envsubst "$ENV_FILE_CONTENT" < .github/ISSUE_TEMPLATE/version-check.md > /tmp/version-check-${SHORT_SHA}.md ; echo "ISSUE_FILE_TEMPLATE=/tmp/version-check-${SHORT_SHA}.md" >> $GITHUB_ENV ; cat ${ISSUE_FILE_TEMPLATE}
+      - name: Export PR template
+        shell: bash
+        run: |
+          export ENV_FILE_CONTENT=`cat /eaf-coffea-sync-versions` ; envsubst "$EN    V_FILE_CONTENT" < .github/ISSUE_TEMPLATE/version-check.md > /tmp/version-check-${SHORT_SHA}.md
 
-      - name: Opens a templated PR for review
+      - name: Upload PR template
+        uses: actions/upload-artifact@v2
+        with:
+          name: version-check-${SHORT_SHA}.md
+          path: version-check-${SHORT_SHA}.md
+
+      - name: Opens issue for admins review if sync versions file changes
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: /tmp/version-check-${SHORT_SHA}.md
+          filename: version-check-${SHORT_SHA}.md
+     
+      - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
+      - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
 
       - name: List modified file
         run: |
