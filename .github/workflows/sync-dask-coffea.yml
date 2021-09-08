@@ -1,4 +1,4 @@
-name: scan-for-env-changes
+name: scan-for-changes-in-shared-env
 on:
   workflow_dispatch:
     push:
@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Get changed files using defaults
         id: changed-files
         uses: tj-actions/changed-files@v1.1.2
