@@ -1,16 +1,18 @@
 name: scan-for-changes-in-shared-env
 on:
   workflow_dispatch:
-    push:
-      branches:
-        - 'master'
-      paths:
-        - /**
+  push:
+    branches:
+      - 'master'
+    paths:
+      - /**
 jobs:
   detect-changes:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      -
+        name: Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 2
           path: /
