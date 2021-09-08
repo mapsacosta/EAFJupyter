@@ -1,0 +1,42 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+
+build:
+  local:
+    push: false
+    useBuildkit: true
+  artifacts:
+  - image: daskgateway/dask-gateway-server
+    context: ./dask-gateway-server
+    docker:
+      dockerfile: Dockerfile
+  - image: daskgateway/dask-gateway
+    context: ./dask-gateway
+    docker:
+      dockerfile: Dockerfile
+
+deploy:
+  helm:
+    releases:
+    - name: dask-gateway
+      chartPath: resources/helm/dask-gateway/
+      namespace: default
+      imageStrategy:
+        helm: {}
+      values:
+        gateway.image: daskgateway/dask-gateway-server
+        gateway.backend.image: daskgateway/dask-gateway
+        controller.image: daskgateway/dask-gateway-server
+      valuesFiles:
+        - resources/helm/testing/skaffold.yaml
+    flags:
+      upgrade:
+      - --install
+
+profiles:
+  - name: local-controller
+    patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValues
+        value:
+          controller.enabled: false
