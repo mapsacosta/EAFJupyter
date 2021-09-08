@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: ${ISSUE_FILE_TEMPLATE}
+          filename: /tmp/version-check-${SHORT_SHA}.md
 
       - name: List modified file
         run: |
