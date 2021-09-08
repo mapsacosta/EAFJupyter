@@ -22,7 +22,7 @@ jobs:
 
       - name: Prepares PR text
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
-        run: "content=`cat .github/ISSUE_TEMPLATE/version-check.md` ; sed 's,<-- ENV_FILE -->,${content},g' > ${RUNNER_TEMP}/version-check-${SHORT_SHA}.md ; cat ${RUNNER_TEMP}/version-check-${SHORT_SHA}.md"
+        run: "content=`cat .github/ISSUE_TEMPLATE/version-check.md` ; sed 's,<-- ENV_FILE -->,${content},g' > /tmp/version-check-${SHORT_SHA}.md ; cat /tmp/version-check-${SHORT_SHA}.md"
 
       - name: Opens a templated PR for review
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: "${RUNNER_TEMP}/version-check-${SHORT_SHA}.md"
+          filename: "/tmp/version-check-${SHORT_SHA}.md"
 
       - name: List modified file
         run: |
