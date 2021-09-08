@@ -17,10 +17,20 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v1.1.2
 
-      - name: Run step when a file changes, in the future will open a PR.
+      - name: Add SHORT_SHA env property with commit short sha
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+
+      - name: Prepares PR text
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
-        run: |
-          echo "EAF-COFFEA sync file has changed."
+        run: "content=`cat .github/ISSUE_TEMPLATE/version-check.md` ; sed 's,<-- ENV_FILE -->,${content},g' > ${RUNNER_TEMP}/version-check-${SHORT_SHA}.md ; cat ${RUNNER_TEMP}/version-check-${SHORT_SHA}.md"
+
+      - name: Opens a templated PR for review
+        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: "${RUNNER_TEMP}/version-check-${SHORT_SHA}.md"
 
       - name: List modified file
         run: |
