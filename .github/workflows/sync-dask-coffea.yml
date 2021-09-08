@@ -14,21 +14,14 @@ jobs:
       - id: file_changes
         uses: trilom/file-changes-action@v1.2.3
         with:
+          context: .github/eaf-coffea-sync-versions
           # optional target repo
           githubRepo: mapsacosta/EAFJupyter
           # optional token
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          # optional output format
-          output: 'json'
-          # optional fileoutput format
-          fileOutput: 'csv'
       - name: test
         run: |
-          cat $HOME/files.json
           cat $HOME/files_modified.json
-          cat $HOME/files_added.json
-          cat $HOME/files_removed.json
-          echo '${{ steps.file_changes.outputs.files}}'
           echo '${{ steps.file_changes.outputs.files_modified}}'
-          echo '${{ steps.file_changes.outputs.files_added}}'
-          echo '${{ steps.file_changes.outputs.files_removed}}'
+          cat $HOME/files.json
+          echo '${{ steps.file_changes.outputs.files}}'
