@@ -5,8 +5,8 @@ title: "Version check for coffea-dask-gateway-eaf build - {{ date | date('MMMM D
 labels:
   - "admin-approve"
 ---
-### Please revisit the following package versions changed recently at ${GITHUB_REPOSITORY}
+### Please revisit the following package versions changed recently at this repo
 This will trigger builds in a lot of places, so make sure the following makes sense to you:
 New pinned version file available:
 
-${ENV_FILE_CONTENT}
+$ENV_FILE_CONTENT
