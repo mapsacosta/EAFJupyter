@@ -1,11 +1,8 @@
 name: scan-for-changes-in-shared-env
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'master'
-    paths:
-      - /**
 jobs:
   detect-changes:
     runs-on: ubuntu-latest
