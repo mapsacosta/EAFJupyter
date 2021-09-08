@@ -31,7 +31,7 @@ jobs:
             cat $file
           done
 
-  prepare-issue-on-change:
+  prepare-issue:
     runs-on: ubuntu-latest
     steps:
       -
