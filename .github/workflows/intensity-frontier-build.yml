@@ -6,7 +6,7 @@ on:
     branches:
       - 'master'
     paths:
-      - intensity-frontier-*-notebook/**
+      - intensity-frontier-notebook/**
 
 jobs:
   build-and-push-if:
