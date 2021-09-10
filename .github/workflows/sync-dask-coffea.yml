@@ -41,9 +41,7 @@ jobs:
       - name: Export template
         id: export_first
         run: |
-          echo 'ISSUE_TEMPLATE<<EOF' >> $GITHUB_ENV
-          cat .github/ISSUE_TEMPLATE/version-check.md eaf-coffea-sync-versions > /tmp/$SHORT_SHA-version-check.md ; cat /tmp/$SHORT_SHA-version-check.md >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+          cat .github/ISSUE_TEMPLATE/version-check.md eaf-coffea-sync-versions > .github/ISSUE_TEMPLATE.md ; cat .github/ISSUE_TEMPLATE.md
 
       - name: Opens issue for admins review if sync versions file changes
         id: open_issue_and_done
@@ -52,9 +50,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          assignees: mapsacosta
-          title: "Facilitiy admins: for your approval - shared locked version file has changed"
-          body: echo ${{ env.ISSUE_TEMPLATE }}
-     
+          filename: .github/ISSUE_TEMPLATE.md
+
       - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
       - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
