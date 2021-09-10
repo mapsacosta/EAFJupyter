@@ -43,24 +43,10 @@ jobs:
         run: |
           cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md ; ls -ltrha ; pwd ; cat eaf-coffea-sync-versions >> /tmp/version-check.md
 
-      - name: Upload template
-        uses: actions/upload-artifact@v2
-        with:
-          name: version-check.md
-          path: /tmp/version-check.md
-
       - name: Verify template
         shell: bash
         run: |
           cat /tmp/version-check.md
-
-      - name: Download version check template
-        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
-        uses: actions/download-artifact@v2
-        with:
-          name: version-check.md
-          path: /tmp/version-check.md
- 
 
       - name: Opens issue for admins review if sync versions file changes
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
