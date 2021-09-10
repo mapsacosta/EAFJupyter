@@ -41,9 +41,9 @@ jobs:
       - name: Export template
         id: export_first
         run: |
-          echo ‘ISSUE_TEMPLATE<<EOF’ >> $GITHUB_ENV
+          echo 'ISSUE_TEMPLATE<<EOF' >> $GITHUB_ENV
           cat .github/ISSUE_TEMPLATE/version-check.md eaf-coffea-sync-versions > /tmp/$SHORT_SHA-version-check.md ; cat /tmp/$SHORT_SHA-version-check.md >> $GITHUB_ENV
-          echo ‘EOF’ >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
 
       - name: Opens issue for admins review if sync versions file changes
         id: open_issue_and_done
