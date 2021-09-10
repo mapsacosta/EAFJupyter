@@ -5,10 +5,11 @@ on:
       - 'master'
 jobs:
   check-for-modified-files:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
-
       - name: Get changed files using defaults
         id: changed-files
         uses: tj-actions/changed-files@v1.1.2
@@ -25,7 +26,6 @@ jobs:
 
   open-issue-on-change:
     runs-on: ubuntu-latest
-    needs: prepare-issue
     steps:
       - uses: actions/checkout@v2
         with:
