@@ -5,8 +5,17 @@ title: "Version check for coffea-dask-gateway-eaf build - {{ date | date('MMMM D
 labels:
   - "admin-approve"
 ---
-### Please revisit the following package versions changed recently at this repo
-This will trigger builds in a lot of places, so make sure the following makes sense to you:
-New pinned version file available:
+### Facility ADMINS read carefully:
+Please revisit the following package versions changed recently at repository 'mapsacosta/eafjupyter' by 'macosta' registered as 'Fermilab-EAF'
+This means that the synchronized file for version locks was modified by a push or pull request:
 
-$ENV_FILE_CONTENT
+Commit information:
+```
+commit 6b40b192f27beeb142418b53a9e31ef290fe1b97
+Author: macosta <macosta@fnal.gov>
+Date:   Thu Sep 9 20:54:17 2021 -0500
+
+    Removing redundant pre-issue step
+```
+
+This will trigger builds in a lot of places, so make sure the new pinned version locks are accurate:
