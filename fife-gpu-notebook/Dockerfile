@@ -45,7 +45,4 @@ ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
-COPY config/init.sh /tmp/init.sh
-RUN cat /tmp/init.sh >> /usr/local/bin/init.sh
-
 USER ${NB_UID}
