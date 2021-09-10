@@ -1,0 +1,51 @@
+FROM mapsacosta/eafjupyter:fife-notebook 
+
+LABEL maintainer="Maria A. <macosta@fnal.gov>"
+
+ENV PYTHONPATH /usr/local/lib:$PYTHONPATH
+
+USER root
+RUN yum -y update \
+ && yum -y install \
+    ffmpeg \
+    dvipng \
+    cm-super
+
+# Install Python 3 packages
+RUN conda install --quiet --yes \
+    'pytorch'\
+    'torchvision' \
+    'cudatoolkit=11.1' -c pytorch -c nvidia
+
+RUN conda install --quiet --yes \
+    'bokeh' \
+    'tqdm' \
+    'cython' \
+    'h5py' \
+    'ipympl'\
+    'ipywidgets' \
+    'matplotlib-base' \
+    'numba' \
+    'numexpr' \
+    'numpy' \
+    'pandas' \
+    'pytz' \
+    'scikit-image' \
+    'scikit-learn' \
+    'scipy' \
+    'sympy' && \
+    conda clean --all -f -y
+
+RUN fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"
+
+# Import matplotlib the first time to build the font cache.
+ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
+
+RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
+    fix-permissions "/home/${NB_USER}"
+
+COPY config/init.sh /tmp/init.sh
+RUN cat /tmp/init.sh >> /usr/local/bin/init.sh
+
+USER ${NB_UID}
