@@ -96,38 +96,3 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-
-  post-build-security-scan:
-    needs: [build-and-push-if, build-and-push-if-dask]
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v2
-
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-
-      -
-        name: Test intensity-frontier-notebook image for vulnerabilities
-        run: |
-          docker pull mapsacosta/eafjupyter:intensity-frontier-notebook
-          docker pull mapsacosta/eafjupyter:intensity-frontier-dask-notebook
-          docker save -o intensity-frontier-notebook.tar mapsacosta/eafjupyter:intensity-frontier-notebook
-          docker save -o intensity-frontier-dask-notebook.tar mapsacosta/eafjupyter:intensity-frontier-dask-notebook
-          echo "Scanning intensity-frontier-notebook image"
-          docker run --rm -e "WORKSPACE=${PWD}" -e "FETCH_LICENSE=true" -e "ENABLE_OSS_RISK=true" -v $PWD:/app shiftleft/scan:docker scan --src /app/intensity-frontier-notebook.tar -o /app/reports --type docker
-          echo "Scanning intensity-frontier-dask-notebook image"
-          docker run --rm -e "WORKSPACE=${PWD}" -e "FETCH_LICENSE=true" -e "ENABLE_OSS_RISK=true" -v $PWD:/app shiftleft/scan:docker scan --src /app/intensity-frontier-dask-notebook.tar -o /app/reports --type docker
-        env:
-          NB_UID: "1000"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload report
-        uses: actions/upload-artifact@v1
-        with:
-          name: reports
-          path: reports
