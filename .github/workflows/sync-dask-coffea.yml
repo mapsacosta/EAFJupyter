@@ -36,17 +36,16 @@ jobs:
         uses: tj-actions/changed-files@v1.1.2
 
       - name: Add SHORT_SHA env property with commit short sha
-        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`<<EOF" >> $GITHUB_ENV
 
       - name: Export template
         shell: bash
-        run: |
-          cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md && cat eaf-coffea-sync-versions >> /tmp/version-check.md && echo "ISSUE_TEMPLATE=`cat /tmp/version-check.md`" >> $GITHUB_ENV
+        run: cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md && cat eaf-coffea-sync-versions >> /tmp/version-check.md && echo "ISSUE_TEMPLATE=`cat /tmp/version-check.md<<EOF`" >> $GITHUB_ENV
 
       - name: Verify template
         shell: bash
         run: |
-          ls -ltrha $ISSUE_TEMPLATE && cat /tmp/version-check.md
+          ls -ltrha ${ISSUE_TEMPLATE} && echo ${ISSUE_TEMPLATE} && cat /tmp/version-check.md
 
       - name: Opens issue for admins review if sync versions file changes
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
