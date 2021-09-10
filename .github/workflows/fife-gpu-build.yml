@@ -11,7 +11,7 @@ on:
 jobs:
 
 ##### GPU build breaks caching, this one has to be built from scratch every single time #####
-  build-and-push-accel-ai-gpu:
+  build-and-push-fife-gpu:
     runs-on: ubuntu-latest
     steps:
       -
