@@ -39,21 +39,18 @@ jobs:
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`<<EOF" >> $GITHUB_ENV
 
       - name: Export template
-        shell: bash
-        run: cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md && cat eaf-coffea-sync-versions >> /tmp/version-check.md && echo "ISSUE_TEMPLATE=`cat /tmp/version-check.md<<EOF`" >> $GITHUB_ENV
-
-      - name: Verify template
-        shell: bash
+        id: export_first
         run: |
-          ls -ltrha ${ISSUE_TEMPLATE} && echo ${ISSUE_TEMPLATE} && cat /tmp/version-check.md
+          echo "ISSUE_TEMPLATE=`cat .github/ISSUE_TEMPLATE/version-check.md eaf-coffea-sync-versions > /tmp/$SHORT_SHA-version-check.md ; cat /tmp/$SHORT_SHA-version-check.md`" >> $GITHUB_ENV
 
       - name: Opens issue for admins review if sync versions file changes
+        id: open_issue_and_done
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: /tmp/version-check.md
+          filename: {{ env.ISSUE_TEMPLATE }}
      
       - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
       - run: 'echo Created ${{ steps.create-issue.outputs.url }}'

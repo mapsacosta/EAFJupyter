@@ -4,10 +4,11 @@ about: A CoffeaTeam and or EAF developer needs to approve the versions before tr
 title: "Version check for coffea-dask-gateway-eaf build - {{ date | date('MMMM Do') }}"
 labels:
   - "admin-approve"
+  - "high-prio"
 ---
 ### Facility ADMINS read carefully:
-Please revisit the following package versions changed recently at repository 'mapsacosta/eafjupyter' by 'macosta' registered as 'Fermilab-EAF'
-This means that the synchronized file for version locks was modified by a push or pull request:
+Please revisit the following package versions changed recently at repository "$GITHUB_REPOSITORY" by "$GITHUB_ACTOR" registered as 'Fermilab-EAF'
+This means that the synchronized file for version locks was modified by a :
 
 Commit information:
 ```
