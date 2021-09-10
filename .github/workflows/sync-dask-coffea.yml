@@ -41,20 +41,21 @@ jobs:
       - name: Export template
         shell: bash
         run: |
-          cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md ; ls -ltrha ; pwd ; cat eaf-coffea-sync-versions >> /tmp/version-check.md
+          cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md && echo "ISSUE_TEMPLATE=`cat eaf-coffea-sync-versions >> /tmp/version-check.md" >> $GITHUB_ENV
 
       - name: Verify template
         shell: bash
         run: |
-          cat /tmp/version-check.md
+          env | grep -i ISSUE_TEMPLATE
 
       - name: Opens issue for admins review if sync versions file changes
         if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TEMPLATE: $ISSUE_TEMPLATE
         with:
-          filename: /tmp/version-check.md
+          filename: $ISSUE_TEMPLATE
      
       - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
       - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
