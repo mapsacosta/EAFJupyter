@@ -1,4 +1,4 @@
-FROM mapsacosta/eafjupyter:intensity-frontier-notebook
+FROM mapsacosta/eafjupyter:fife-notebook
 
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 

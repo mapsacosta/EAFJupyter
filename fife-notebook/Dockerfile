@@ -24,11 +24,11 @@ RUN yum -y install osg-wn-client  \
                    xrootd-client-libs && \
     yum clean all && rm -rf /var/cache/yum/*
 
-COPY config/if_aliases.sh /etc/profile.d/if_aliases.sh
+COPY config/fife_aliases.sh /etc/profile.d/fife_aliases.sh
 COPY config/init.sh /tmp/init.sh
 
 RUN cat /tmp/init.sh >> /usr/local/bin/init.sh && \
-    chmod +x /etc/profile.d/if_aliases.sh
+    chmod +x /etc/profile.d/fife_aliases.sh
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID
