@@ -19,7 +19,7 @@ jobs:
         uses: tj-actions/changed-files@v1.1.2
 
       - name: Download version check template
-        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-ve    rsions')
+        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
         uses: actions/download-artifact@v2
         with:
           name: version-check.md
@@ -59,7 +59,7 @@ jobs:
       - name: Export template
         shell: bash
         run: |
-          cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md ; cat /eaf-coffea-sync-versions >> /tmp/version-check.md
+          cp .github/ISSUE_TEMPLATE/version-check.md /tmp/version-check.md ; ls -ltrha ; pwd ; cat eaf-coffea-sync-versions >> /tmp/version-check.md
 
       - name: Upload template
         uses: actions/upload-artifact@v2
