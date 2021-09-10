@@ -52,7 +52,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          filename: ${{ env.ISSUE_TEMPLATE }}
+          assignees: mapsacosta
+          title: "Facilitiy admins: for your approval - shared locked version file has changed"
+          body: echo ${ISSUE_TEMPLATE}
      
       - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
       - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
