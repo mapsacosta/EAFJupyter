@@ -73,7 +73,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: accel-ai-notebook/
+          context: astro-notebook/
           push: true
           file: astro-notebook/Dockerfile.gpu
           tags: mapsacosta/eafjupyter:astro-notebook-gpu
