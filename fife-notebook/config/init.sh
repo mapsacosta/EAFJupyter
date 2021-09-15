@@ -1,10 +1,5 @@
 echo ===== Creating base directories for NFS mounts
-mkdir -p /uscmst1b_scratch/lpc1
-mkdir -p /uscms_data/d1
-mkdir -p /uscms_data/d2
-mkdir -p /uscms_data/d3
-mkdir -p /uscms
-
+mkdir -p /nashome
 
 echo ===== Putting HTCondor wrappers in place
 declare -a REPLACE_CONDOR_CMD=('condor_q' 'condor_rm' 'condor_qedit' 'condor_tail' 'condor_submit' 'condor_history')
@@ -94,10 +89,3 @@ cp /tmp/htcondor-config-files/service_configs/01_${NB_HTCPOOL}_jupyter_interacti
 cp /tmp/htcondor-config-files/mapfiles/${NB_HTCPOOL}.condor_mapfile /etc/condor/certs/condor_mapfile
 
 rm -rf /tmp/htcondor-config-files
-
-echo ===== Setitng X509 environment
-# Need to set the X509 environment for users
-USCMS_HOME=/uscms/home/${NB_USER}
-export X509_USER_PROXY="${USCMS_HOME}/x509up_u${NB_UID}"
-echo $X509_USER_PROXY
-echo Done
