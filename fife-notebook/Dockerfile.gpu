@@ -16,9 +16,8 @@ RUN conda install --yes \
     'torchvision' \
     'cudatoolkit=11.2' \
     'cudnn=8.2' \
-    'cupti' \
-    'mpi4py=3.0' \
-    'nccl=2.4' \
+    'mpi4py' \
+    'nccl' \
     'tensorflow-gpu' -c conda-forge -c defaults -c pytorch
 
 # Other relevant packages for GPU environments
