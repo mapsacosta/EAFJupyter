@@ -53,6 +53,4 @@ COPY config/init.sh /tmp/init.sh
 
 RUN cat /tmp/init.sh >> /usr/local/bin/init.sh
 
-VOLUME ["/store/DESDM/"]
-
 USER ${NB_UID}

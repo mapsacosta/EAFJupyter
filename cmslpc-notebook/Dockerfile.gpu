@@ -3,19 +3,24 @@ FROM mapsacosta/eafjupyter:cmslpc-notebook
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 ENV PYTHONPATH /usr/local/lib:$PYTHONPATH
 
-USER root
-RUN yum -y update \
- && yum -y install \
-    ffmpeg \
-    dvipng \
-    cm-super
+ENV OS=rhel7
+ENV cuda_version=11.2
+ENV cudnn_version=8.2
 
-# Install Python 3 packages
-RUN conda install --quiet --yes \
+USER root
+
+
+# Install Python 3 packages and CUDA toolkit
+RUN conda install --yes \
     'pytorch'\
     'torchvision' \
-    'cudatoolkit=11.1' -c pytorch -c nvidia
+    'cudatoolkit=11.2' \
+    'cudnn=8.2' \
+    'mpi4py' \
+    'nccl' \
+    'tensorflow-gpu' -c conda-forge -c defaults -c pytorch
 
+# Other relevant packages for GPU environments
 RUN conda install --quiet --yes \
     'bokeh' \
     'tqdm' \
