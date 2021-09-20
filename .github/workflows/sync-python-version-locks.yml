@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - 'master'
+    paths:
+      - dask-notebook/**
+
 jobs:
   check-for-modified-files:
     runs-on: ubuntu-latest
@@ -41,11 +44,11 @@ jobs:
       - name: Export template
         id: export_first
         run: |
-          cat .github/ISSUE_TEMPLATE/version-check.md eaf-coffea-sync-versions > .github/ISSUE_TEMPLATE.md ; cat .github/ISSUE_TEMPLATE.md
+          cat .github/ISSUE_TEMPLATE/version-check.md dask-notebook/requirements.txt > .github/ISSUE_TEMPLATE.md ; cat .github/ISSUE_TEMPLATE.md
 
       - name: Opens issue for admins review if sync versions file changes
         id: open_issue_and_done
-        if: contains(steps.changed-files.outputs.modified_files, 'eaf-coffea-sync-versions')
+        if: contains(steps.changed-files.outputs.modified_files, 'requirements.txt')
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
