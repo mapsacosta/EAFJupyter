@@ -29,13 +29,15 @@ RUN conda install --yes --freeze-installed \
       cytoolz \
       bokeh==2.2.3 \
       # Relevant for dask-gateway compatibility
-      dask==2.30.0 \
-      distributed==2.30.1 \
+      dask==2021.7.1 \
+      distributed==2021.7.1 \
+      aiohttp=3.6.2 \
       dask-gateway==0.9.0 \
       cloudpickle==1.6.0 \
       tornado==6.1 \
       toolz==0.11.1 \
       numpy==1.19.2 \
+      pandas==1.1.4 \
       dask-jobqueue \
       nomkl \
       scipy==1.5.3 \
