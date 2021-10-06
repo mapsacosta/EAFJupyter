@@ -17,6 +17,15 @@ ENV CONDOR_CONFIG /etc/condor/condor_config
 RUN conda install --yes --freeze-installed \
       -c conda-forge \
       conda-build \
+      # Relevant for dask-gateway compatibility
+      dask==2.30.0 \
+      distributed==2.30.1 \
+      dask-gateway==0.9.0 \
+      cloudpickle==1.6.0 \
+      tornado==6.1 \
+      toolz==0.11.1 \
+      numpy==1.19.2 \
+      aiohttp=3.6.2 \
       dask_labextension \
       python==3.8.3 \
       ca-policy-lcg \
@@ -28,15 +37,6 @@ RUN conda install --yes --freeze-installed \
       python-blosc \
       cytoolz \
       bokeh==2.2.3 \
-      # Relevant for dask-gateway compatibility
-      dask==2021.7.1 \
-      distributed==2021.7.1 \
-      aiohttp=3.6.2 \
-      dask-gateway==0.9.0 \
-      cloudpickle==1.6.0 \
-      tornado==6.1 \
-      toolz==0.11.1 \
-      numpy==1.19.2 \
       pandas==1.1.4 \
       dask-jobqueue \
       nomkl \
