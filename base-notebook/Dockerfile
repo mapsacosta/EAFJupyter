@@ -29,6 +29,7 @@ RUN yum -y update \
     net-tools \
     tcpdump \
     nss_wrapper \
+    sssd-client \
     openssl \
     emacs \
     git \
