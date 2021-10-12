@@ -39,9 +39,7 @@ RUN sh -c "/usr/local/bin/install_htcondor_wrappers.sh"
 VOLUME /uscmst1b_scratch/lpc1 /uscms_data/d1 /uscms_data/d2 /uscms_data/d3 /uscms /opt/condor /var/lib/sss
 
 RUN git clone https://github.com/tskirvin/json-passwd.git /srv/json-passwd && \
-    chmod -R +x /srv/json-passwd/usr/ && \
-    chmod +r /etc/sssd/groups && \
-    chmod +r /etc/sssd/passwd
+    chmod -R +x /srv/json-passwd/usr/
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID
