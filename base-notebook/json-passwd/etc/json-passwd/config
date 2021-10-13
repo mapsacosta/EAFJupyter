@@ -1,0 +1,15 @@
+{
+    "groupFile": "/var/db/group.db",
+    "groupFileRaw": "/etc/sssd/group",
+    "groupIgnore": [ ],
+    "groupUrl": "",
+    "logFile": "/var/log/json-passwd.log",
+    "makeFile": "/etc/json-passwd/Makefile",
+    "passwdFile": "/var/db/passwd.db",
+    "passwdFileRaw": "/etc/sssd/passwd",
+    "passwdIgnore": [ ],
+    "passwdUrl": "",
+    "passwdUidMinimum": 500,
+    "proxies": {},
+    "workDir": "/var/lib/json-passwd"
+}

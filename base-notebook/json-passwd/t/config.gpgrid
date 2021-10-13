@@ -1,0 +1,23 @@
+{
+    "groupFile": "/var/db/group.db",
+    "groupFileRaw": "/etc/sssd/group",
+    "groupIgnore": [
+        "condor",
+        "cvmfs"
+    ],
+    "groupUrl": "http://ssi-users.fnal.gov/gco/group.json.all",
+    "logFile": "/tmp/json-passwd.log",
+    "makeFile": "/etc/json-passwd/Makefile",
+    "passwdFile": "/var/db/passwd.db",
+    "passwdFileRaw": "/etc/sssd/passwd",
+    "passwdIgnore": [
+        "condor",
+        "cvmfs",
+        "gcounpriv",
+        "puppet",
+        "temproot"
+    ],
+    "passwdUrl": "http://ssi-users.fnal.gov/gco/passwd.json.gpgrid",
+    "passwdUidMinimum": 500,
+    "workDir": "/var/lib/json-passwd"
+}
