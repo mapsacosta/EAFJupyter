@@ -149,5 +149,7 @@ RUN sed -re "s/c.NotebookApp/c.ServerApp/g" \
     fix-permissions /etc/jupyter/
 
 ADD json-passwd/usr/sbin/* /usr/sbin/
+RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-document=/etc/krb5.conf && \
+    echo "$(awk '{print} /libdefaults/ && !n {print "udp_preference_limit = 1"; n++}' /etc/krb5.conf)" > /etc/krb5.conf
 
 USER $NB_UID
