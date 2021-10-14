@@ -27,14 +27,17 @@ RUN yum -y install osg-wn-client  \
 RUN yum --enablerepo=eos,xrootd -y install eos-client eos-xrootd
 
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
-COPY config/install_htcondor_wrappers.sh /usr/local/bin/install_htcondor_wrappers.sh
+COPY config/install_htcondor_wrappers.sh /tmp/install_htcondor_wrappers.sh
 COPY config/init.sh /tmp/init.sh
+COPY config/init-container-notebook.sh /usr/local/bin/init-container-notebook.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 
 RUN cat /tmp/init.sh >> /usr/local/bin/init.sh && \
-    chmod +x /etc/profile.d/lpc_aliases.sh
+    chmod +x /etc/profile.d/lpc_aliases.sh && \
+    chmod +x /usr/local/bin/init-container-notebook.sh
 
-RUN sh -c "/usr/local/bin/install_htcondor_wrappers.sh"
+RUN sh -c "/tmp/install_htcondor_wrappers.sh" && \
+    rm -rf /tmp/*
 
 VOLUME /uscmst1b_scratch/lpc1 /uscms_data/d1 /uscms_data/d2 /uscms_data/d3 /uscms /opt/condor /var/db
 
