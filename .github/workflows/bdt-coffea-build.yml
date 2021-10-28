@@ -1,0 +1,37 @@
+name: bdt-coffea-gpu-notebook-ci
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - bdt-coffea-notebook/**
+
+jobs:
+
+##### GPU build breaks caching, this one has to be built from scratch every single time #####
+  build-and-push-bdt-coffea-gpu:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: bdt-coffea-notebook/
+          push: true
+          file: bdt-coffea-notebook/Dockerfile.gpu
+          tags: mapsacosta/eafjupyter:bdt-coffea-notebook
