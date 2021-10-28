@@ -1,4 +1,4 @@
-FROM mapsacosta/eafjupyter:base-notebook
+FROM mapsacosta/eafjupyter:base-itb-notebook
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
 
 USER root
@@ -11,7 +11,7 @@ RUN yum -y update && \
            yum-plugin-priorities \
            redhat-lsb-core \
            make cmake3 gcc-c++ gcc binutils \
-           libX11-devel libXpm-devel libXft-devel libXext-devel openssl-devel && \
+           libX11-devel libXpm-devel libXft-devel libXext-devel openssl-devel nss_wrapper gettext && \
            yum clean all
 
 #Install HTCondor 9 (stable)
@@ -28,12 +28,10 @@ RUN yum --enablerepo=eos,xrootd -y install eos-client eos-xrootd
 
 COPY config/lpc_aliases.sh /etc/profile.d/lpc_aliases.sh
 COPY config/install_htcondor_wrappers.sh /tmp/install_htcondor_wrappers.sh
-COPY config/init.sh /tmp/init.sh
 COPY config/init-container-notebook.sh /usr/local/bin/init-container-notebook.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 
-RUN cat /tmp/init.sh >> /usr/local/bin/init.sh && \
-    chmod +x /etc/profile.d/lpc_aliases.sh && \
+RUN chmod +x /etc/profile.d/lpc_aliases.sh && \
     chmod +x /usr/local/bin/init-container-notebook.sh
 
 RUN sh -c "/tmp/install_htcondor_wrappers.sh" && \

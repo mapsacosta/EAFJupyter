@@ -20,6 +20,8 @@ echo "+++++++++++=========="
 chmod a+r /opt/condor
 rm -rf /tmp/htcondor-config-files
 
+NB_HTCPOOL="${NB_HTCPOOL:-dfc}"
+
 git clone https://hepcloud-git.fnal.gov/ECF-GCO-public/htcondor-config-files.git /tmp/htcondor-config-files
 (cd /tmp/htcondor-config-files
 git fetch origin
@@ -32,7 +34,13 @@ cp /tmp/htcondor-config-files/mapfiles/${NB_HTCPOOL}.condor_mapfile ${CONDOR_DES
 
 rm -rf /tmp/htcondor-config-files
 
-echo ===== Generating an HTCondor IDTOKEN for remote user submit to CMSLPC
+echo ===== Copying jupyter and conda directories into user home
+cp -R /home/jupyter/.conda /home/${JPY_USER}/
+cp -R /home/jupyter/.npm /home/${JPY_USER}/
+cp -R /home/jupyter/.jupyter /home/${JPY_USER}/
+fix-permissions /home/${JPY_USER}
+
+echo ===== Generating an HTCondor IDTOKEN for remote user submit to ${NB_HTCPOOL}
 
 cat >${CONDOR_ORIG}/config.d/97-token-issuer.conf <<EOF
 COLLECTOR_HOST = htccolldev01.fnal.gov:9618, htccolldev02.fnal.gov:9618

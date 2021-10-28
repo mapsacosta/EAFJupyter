@@ -154,4 +154,6 @@ RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-documen
 
 RUN mkdir /etc/json-passwd/ && touch /etc/json-passwd/config
 
+RUN cd /opt && wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/n/nss_wrapper-1.1.7-3.el7.x86_64.rpm && rpm -i /opt/nss_wrapper-1.1.7-3.el7.x86_64.rpm
+
 USER $NB_UID
