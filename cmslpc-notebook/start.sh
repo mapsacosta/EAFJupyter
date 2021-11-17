@@ -37,6 +37,30 @@ run-hooks () {
 }
 
 run-hooks /usr/local/bin/start-notebook.d
+#exec /usr/local/bin/init-container-notebook.sh
+echo "Fetching json passwd"
+/usr/sbin/json-fetchgroupfile --debug
+/usr/sbin/json-fetchpasswdfile --debug
+ls -ltrha /etc/sssd/
+
+cat >>/etc/sssd/passwd <<EOF
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+sssd:x:101:101:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+EOF
+
+#source /usr/local/bin/init-container-notebook.sh
 
 # Handle special flags if we're root
 if [ $(id -u) == 0 ] ; then
@@ -46,9 +70,10 @@ if [ $(id -u) == 0 ] ; then
     export NSS_WRAPPER_GROUP=/etc/sssd/group    # the environment preserved
     run-hooks /usr/local/bin/before-notebook.d
     echo "Starting SSSD daemon"
-    getent $NB_USER
-    /usr/sbin/sssd -i -d 4    
+#    getent $NB_USER
+    /usr/sbin/sssd -d 4 
     echo "Executing the command: ${cmd[@]}"
+    sleep 5
     exec sudo -E -H -u $NB_USER PATH=$PATH XDG_CACHE_HOME=/home/$NB_USER/.cache PYTHONPATH=${PYTHONPATH:-} "${cmd[@]}"
 else
     if [[ "$NB_UID" == "$(id -u jupyter 2>/dev/null)" && "$NB_GID" == "$(id -g jupyter 2>/dev/null)" ]]; then
