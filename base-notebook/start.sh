@@ -38,16 +38,80 @@ run-hooks () {
 
 run-hooks /usr/local/bin/start-notebook.d
 
-# Handle special flags if we're root
-if [ $(id -u) == 0 ] ; then
-    # Exec the command as NB_USER with the PATH and the rest of
+# Is this a non-root notebook?
+if [ ${NB_NONROOT} ] ; then
+
+    # Preload libnss_wrapper and define location for group and passwd files
     export LD_PRELOAD=libnss_wrapper.so
     export NSS_WRAPPER_PASSWD=/etc/sssd/passwd
-    export NSS_WRAPPER_GROUP=/etc/sssd/group    # the environment preserved
+    export NSS_WRAPPER_GROUP=/etc/sssd/group   
+
+    # Run hooks before starting the notebook process
     run-hooks /usr/local/bin/before-notebook.d
-    echo "Starting SSSD daemon"
-    getent $NB_USER
-    /usr/sbin/sssd -i -d 4    
+
+    # Start the notebook command 
+    echo "Executing the command: ${cmd[@]}"
+    exec sudo -E -H -u $NB_USER PATH=$PATH XDG_CACHE_HOME=/home/$NB_USER/.cache PYTHONPATH=${PYTHONPATH:-} "${cmd[@]}"
+else
+    # Do nothing
+fi
+
+# If it's not, handle system user and special flags as root
+if [ $(id -u) == 0 ] ; then
+
+    # Only attempt to change the jupyter username if it exists
+    if id jupyter &> /dev/null ; then
+        echo "Set username to: $NB_USER"
+        usermod -d /home/$NB_USER -l $NB_USER jupyter
+    fi
+
+    # handle home and working directory if the username changed
+    if [[ "$NB_USER" != "jupyter" ]]; then
+        # changing username, make sure homedir exists
+        # (it could be mounted, and we shouldn't create it if it already exists)
+        if [[ ! -e "/home/$NB_USER" ]]; then
+            echo "Relocating home dir to /home/$NB_USER"
+            mv /home/jupyter "/home/$NB_USER" || ln -s /home/jupyter "/home/$NB_USER"
+        fi
+        # if workdir is in /home/jupyter, cd to /home/$NB_USER
+        if [[ "$PWD/" == "/home/jupyter/"* ]]; then
+            newcwd="/home/$NB_USER/${PWD:13}"
+            echo "Setting CWD to $newcwd"
+            cd "$newcwd"
+        fi
+    fi
+
+    # Handle case where provisioned storage does not have the correct permissions by default
+    # Ex: default NFS/EFS (no auto-uid/gid)
+    if [[ "$CHOWN_HOME" == "1" || "$CHOWN_HOME" == 'yes' ]]; then
+        echo "Changing ownership of /home/$NB_USER to $NB_UID:$NB_GID with options '${CHOWN_HOME_OPTS}'"
+        chown $CHOWN_HOME_OPTS $NB_UID:$NB_GID /home/$NB_USER
+    fi
+    if [ ! -z "$CHOWN_EXTRA" ]; then
+        for extra_dir in $(echo $CHOWN_EXTRA | tr ',' ' '); do
+            echo "Changing ownership of ${extra_dir} to $NB_UID:$NB_GID with options '${CHOWN_EXTRA_OPTS}'"
+            chown $CHOWN_EXTRA_OPTS $NB_UID:$NB_GID $extra_dir
+        done
+    fi
+
+    # Change UID:GID of NB_USER to NB_UID:NB_GID if it does not match
+    groupadd -f -g $NB_GID -o ${NB_GROUP:-${NB_USER}}
+    userdel $NB_USER
+    useradd --home /home/$NB_USER -u $NB_UID -g $NB_GID -G 100 -l $NB_USER
+    fix-permissions /home/$NB_USER
+
+    # Enable sudo if requested
+    if [[ "$GRANT_SUDO" == "1" || "$GRANT_SUDO" == 'yes' ]]; then
+        echo "Granting $NB_USER sudo access and appending $CONDA_DIR/bin to sudo PATH"
+        echo "$NB_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/notebook
+    fi
+
+    # Add $CONDA_DIR/bin to sudo secure_path
+    sed -r "s#Defaults\s+secure_path\s*=\s*\"?([^\"]+)\"?#Defaults secure_path=\"\1:$CONDA_DIR/bin\"#" /etc/sudoers | grep secure_path > /etc/sudoers.d/path
+
+    # Exec the command as NB_USER with the PATH and the rest of
+    # the environment preserved
+    run-hooks /usr/local/bin/before-notebook.d
     echo "Executing the command: ${cmd[@]}"
     exec sudo -E -H -u $NB_USER PATH=$PATH XDG_CACHE_HOME=/home/$NB_USER/.cache PYTHONPATH=${PYTHONPATH:-} "${cmd[@]}"
 else

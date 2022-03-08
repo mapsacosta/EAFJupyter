@@ -1,14 +1,26 @@
-FROM centos:7
-ENV container docker
+# Copyright 2021 Maria Acosta Flechas
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#         http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
+FROM centos:7
 LABEL maintainer="Maria A. <macosta@fnal.gov>"
+
 ARG NB_USER="jupyter"
 ARG NB_UID="56344"
 ARG NB_GID="8609"
 
 # Fix DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
 USER root
 
 # Install all OS dependencies for notebook server that starts but lacks all
@@ -31,6 +43,7 @@ RUN yum -y update \
     nss_wrapper \
     sssd-client \
     openssl \
+    python-requests \
     emacs \
     git \
     unzip \
@@ -48,8 +61,8 @@ ENV CONDA_DIR=/opt/conda \
     NB_GID=${NB_GID} \
     LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
-    LANGUAGE=en_US.UTF-8
-ENV PATH="${CONDA_DIR}/bin:${PATH}" \
+    LANGUAGE=en_US.UTF-8 \
+    PATH="${CONDA_DIR}/bin:${PATH}" \
     HOME="/home/${NB_USER}"
 
 # Copy a script that we will use to correct permissions after running certain commands
@@ -93,7 +106,7 @@ WORKDIR /tmp
 # - conda only: either Miniforge3 to use Python or Miniforge-pypy3 to use PyPy
 # - conda + mamba: either Mambaforge to use Python or Mambaforge-pypy3 to use PyPy
 # Installation: conda, mamba, pip
-RUN set -x && \
+RUN  -x && \
     # Miniforge installer
     miniforge_arch=$(uname -m) && \
     miniforge_installer="Mambaforge-Linux-${miniforge_arch}.sh" && \
@@ -133,27 +146,30 @@ RUN mamba install --quiet --yes \
 
 EXPOSE 8888
 
-ENTRYPOINT ["tini", "-g", "--"]
-CMD ["start-notebook.sh"]
+# Fix permissions on /etc/jupyter as root
+USER root
+
+# Install json-passwd rpm
+RUN cd /opt && wget http://ssi-rpm.fnal.gov/ssi/yum-managed/RPMS/noarch/7/json-passwd-1.4.0-0.el7.noarch.rpm && yum -y localinstall --skip-broken /opt/json-passwd-1.4.0-0.el7.noarch.rpm && touch /etc/json-passwd/config
+
+RUN cd /opt && wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/n/nss_wrapper-1.1.7-3.el7.x86_64.rpm && yum -y localinstall /opt/nss_wrapper-1.1.7-3.el7.x86_64.rpm
+
+RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-document=/etc/krb5.conf && \
+    echo "$(awk '{print} /libdefaults/ && !n {print "udp_preference_limit = 1"; n++}' /etc/krb5.conf)" > /etc/krb5.conf
 
 # Copy local files as late as possible to avoid cache busting
-COPY start.sh start-notebook.sh start-singleuser.sh init.sh /usr/local/bin/
+COPY start.sh start-notebook.sh start-singleuser.sh init-container-notebook.sh fetch-passwd-ferry.sh /usr/local/bin/
+# Copy nss config file
+COPY config/nsswitch.conf /etc/nsswitch.conf
 # Currently need to have both jupyter_notebook_config and jupyter_server_config to support classic and lab
 COPY jupyter_notebook_config.py /etc/jupyter/
 
-# Fix permissions on /etc/jupyter as root
-USER root
 # Prepare upgrade to JupyterLab V3.0 #1205
 RUN sed -re "s/c.NotebookApp/c.ServerApp/g" \
     /etc/jupyter/jupyter_notebook_config.py > /etc/jupyter/jupyter_server_config.py && \
     fix-permissions /etc/jupyter/
 
-ADD json-passwd/usr/sbin/* /usr/sbin/
-RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-document=/etc/krb5.conf && \
-    echo "$(awk '{print} /libdefaults/ && !n {print "udp_preference_limit = 1"; n++}' /etc/krb5.conf)" > /etc/krb5.conf
-
-RUN mkdir /etc/json-passwd/ && touch /etc/json-passwd/config
-
-RUN cd /opt && wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/n/nss_wrapper-1.1.7-3.el7.x86_64.rpm && rpm -i /opt/nss_wrapper-1.1.7-3.el7.x86_64.rpm
+ENTRYPOINT ["tini", "-g", "--"]
+CMD ["start-notebook.sh"]
 
 USER $NB_UID

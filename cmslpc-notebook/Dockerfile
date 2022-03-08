@@ -40,19 +40,21 @@ COPY config/init-container-notebook.sh /usr/local/bin/init-container-notebook.sh
 COPY config/hooks/eosquota /usr/local/bin/eosquota
 COPY config/FNAL.conf /etc/sssd/conf.d/FNAL.conf
 COPY config/sssd.conf /etc/sssd/sssd.conf
+COPY config/nsswitch.conf /etc/nsswitch.conf
 
 RUN chmod +x /etc/profile.d/lpc_aliases.sh && \
     chmod +x /usr/local/bin/init-container-notebook.sh  && \
-    chmod 600 /etc/sssd/sssd.conf && \
-    chmod 600 /etc/sssd/conf.d/FNAL.conf && \
+#    chmod 600 /etc/sssd/sssd.conf && \
+#    chmod 600 /etc/sssd/conf.d/FNAL.conf && \
     chown -R root:root /etc/sssd
 #    echo "/usr/sbin/sssd -d 4" >> /usr/local/bin/init.sh
 
 RUN sh -c "/tmp/install_htcondor_wrappers.sh" && \
     rm -rf /tmp/*
 
-VOLUME /uscmst1b_scratch/lpc1 /uscms_data/d1 /uscms_data/d2 /uscms_data/d3 /uscms /opt/condor /var/db
+VOLUME /uscmst1b_scratch/lpc1 /uscms_data/d1 /uscms_data/d2 /uscms_data/d3 /uscms /opt/condor /etc/sssd
 COPY start.sh /usr/local/bin/start.sh
+COPY json-passwd/usr/sbin/json-fetchgroupfile /usr/sbin/json-fetchgroupfile
 
 # Switch back to jupyter to avoid accidental container runs as root
 USER $NB_UID

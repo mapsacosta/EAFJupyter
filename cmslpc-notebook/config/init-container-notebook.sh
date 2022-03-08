@@ -36,7 +36,6 @@ rm -rf /tmp/htcondor-config-files
 
 echo ===== Copying jupyter and conda directories into user home
 cp -R /home/jupyter/.conda /home/${JPY_USER}/
-cp -R /home/jupyter/.npm /home/${JPY_USER}/
 cp -R /home/jupyter/.jupyter /home/${JPY_USER}/
 fix-permissions /home/${JPY_USER}
 

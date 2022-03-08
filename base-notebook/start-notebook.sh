@@ -6,8 +6,6 @@ set -e
 
 wrapper=""
 
-source /usr/local/bin/init.sh
-
 if [[ "${RESTARTABLE}" == "yes" ]]; then
     wrapper="run-one-constantly"
 fi
