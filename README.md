@@ -20,7 +20,7 @@ you [have Docker installed](https://docs.docker.com/install/) know
 [which Docker image](http://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html) you
 want to use, and want to launch a single Jupyter Notebook server in a container.
 
-The [User Guide on ReadTheDocs](http://jupyter-docker-stacks.readthedocs.io/) describes additional
+The [User Guide on ReadTheDocs](https://eafjupyter.readthedocs.io/en/latest) describes additional
 uses and features in detail.
 
 **Example 1:** This command pulls the `jupyter/scipy-notebook` image tagged `17aba6048f44` from
@@ -35,9 +35,7 @@ server exits.
 
 ## Resources
 
-- [Documentation on ReadTheDocs](http://jupyter-docker-stacks.readthedocs.io/)
-- [Issue Tracker on GitHub](https://github.com/jupyter/docker-stacks)
-- [Jupyter Discourse Q&A](https://discourse.jupyter.org/c/questions)
+- [Documentation on ReadTheDocs](https://eafjupyter.readthedocs.io/en/latest/#)
+- [Issue Tracker on GitHub](https://github.com/mapsacosta/EAFJupyter)
 - [Jupyter Website](https://jupyter.org)
-- [Images on DockerHub](https://hub.docker.com/u/jupyter)
-
+- [Images on DockerHub](https://hub.docker.com/u/mapsacosta)
