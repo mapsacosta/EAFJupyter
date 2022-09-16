@@ -1,30 +1,59 @@
-*********
-Customizing user environments via init script
-*********
+**************************************************
+Customizing user environments via preamble scripts
+**************************************************
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
-finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+You can customize your EAF Jupyter installation with your own custom preamble scripts.
+These scripts are executed when you launch a notebook with the standard python (`ipykernel`) kernel.
+We provide a duplicate of the standard python kernel, labelled `safemode`, that ignores the
+preamble scripts on launch.
 
-Document Section
-================
+Why would I need this?
+======================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
-nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
+It may be useful to set up your environment via setup scripts from CVMFS. For example, you 
+may want to execute a script like this::
 
-Document Subsection
--------------------
+  source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh
+  setup dunesw v09_52_00d00 -q e20:prof
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
-nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
+Usage
+=====
 
-Document Subsubsection
-^^^^^^^^^^^^^^^^^^^^^^
+The ipykernel launcher will execute two different preamble scripts in order:
 
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
+   * ``~/.preamble/global.sh``, which is executed on every notebook flavor.  
+   * ``~/.preamble/${NB_PROFILE.sh}``
 
-Document Paragraph
-""""""""""""""""""
+The second script allows you to customize notebook flavor-dependent scripts, based on the value of
+the ``NB_PROFILE`` environment variable.
 
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.
+
+Example
+^^^^^^^
+
+``~/.preamble/global.sh``:
+
+.. code-block:: bash
+
+  export FOO=globally-set
+  export BAR=globally-set
+
+``~/.preamble/astro-sl7-unpriv-interactive.sh``:
+
+.. code-block:: bash
+
+  export BAR=locally-set
+
+The second preamble will only run for an astro notebook; ``BAR`` is overwritten:
+
+.. image:: img/astro-preamble.png
+  :width: 400
+  :alt: Screencap from Astro notebook
+
+If you execute from an LPC notebook, the second script does not execute and ``BAR``
+remains unchanged:
+
+.. image:: img/lpc-preamble.png
+  :width: 400
+  :alt: Screencap from LPC notebook
+
