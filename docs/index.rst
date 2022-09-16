@@ -73,7 +73,7 @@ Exploring
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: EAF data analysis ecosystem
+   :caption: EAF DAE (Data Analysis Ecosystem)
 
    00_eaf_dae.rst
    01_jupyterhub_extensions.rst

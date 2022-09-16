@@ -1,5 +1,5 @@
 *********
-Jupyter notebooks and beyond - Advanced usage
+JupyterHub facts and features
 *********
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,

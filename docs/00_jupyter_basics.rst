@@ -1,5 +1,5 @@
 *********
-Jupyter notebooks - the basics
+Intro to Jupyterhub
 *********
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,

@@ -1,5 +1,5 @@
 *********
-Are you a user, visitor, or student? (mostly links to already existing stuff)
+Are you a user, visitor, or student?
 *********
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
