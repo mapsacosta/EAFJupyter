@@ -26,9 +26,9 @@ Exploring
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Welcome to EAF
+   :caption: 
 
-   00_introduction.rst
+   index.rst
    00_comp_capabilities.rst
    00_getting_started.rst
 
