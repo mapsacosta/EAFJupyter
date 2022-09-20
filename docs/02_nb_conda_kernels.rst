@@ -74,15 +74,3 @@ And the Bio module from biopython is available:
 .. image:: img/nb_conda_post_2.png
   :width: 600
   :alt: 
-
-Removing
-^^^^^^^^^^^^^^^^^^^^^^
-
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
-
-Document Paragraph
-""""""""""""""""""
-
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.
