@@ -75,15 +75,15 @@ Exploring
    :caption: EAF DAE (Data Analysis Ecosystem)
 
    00_eaf_dae.rst
-   01_jupyterhub_extensions.rst
-   02_preinstalled_libs.rst
-   02_fileops_jupyter.rst
-   02_fileops_xrootd.rst
    02_network_volumes.rst
    02_persistent_volumes.rst
    02_nb_conda_kernels.rst
    02_user_script_customiztion.rst
-.. 02_github_extension.rst
+.. 01_jupyterhub_extensions.rst
+   02_preinstalled_libs.rst
+   02_fileops_jupyter.rst
+   02_fileops_xrootd.rst
+   02_github_extension.rst
    02_dask_extension.rst
    01_tutorials.rst
    02_dask_usage_jupyter.rst
