@@ -29,8 +29,8 @@ Exploring
    :caption: 
 
    index.rst
-.. 00_comp_capabilities.rst
    00_getting_started.rst
+.. 00_comp_capabilities.rst
 
 .. toctree::
    :maxdepth: 1
@@ -38,10 +38,9 @@ Exploring
    :caption: Accounts and authentication
 
    00_user_accounts.rst
-..   01_user_visitor_student.rst
-..   01_getting_fnal_accounts.rst
-..   01_experiment_specific_accounts.rst
    02_cms_accounts.rst
+.. 01_user_visitor_student.rst
+   01_getting_fnal_accounts.rst
 
 .. toctree::
    :maxdepth: 1
@@ -49,16 +48,16 @@ Exploring
    :caption: Jupyter - the basics
 
    00_jupyter_basics.rst
-   01_managing_notebooks.rst
-   Notebook environments <https://pypi.org>
    01_named_sessions.rst
+.. 01_managing_notebooks.rst
+   Notebook environments <https://pypi.org>
 
 .. toctree::
    :maxdepth: 1
    :hidden:
    :caption: Jupyter - advanced usage
 
-   00_jupyter_advanced.rst
+.. 00_jupyter_advanced.rst
    01_new_users_python.rst
    01_jupyterhub_terminal.rst
    01_jupyterhub_terminal_howto.rst
@@ -78,7 +77,13 @@ Exploring
    00_eaf_dae.rst
    01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
-   02_github_extension.rst
+   02_fileops_jupyter.rst
+   02_fileops_xrootd.rst
+   02_network_volumes.rst
+   02_persistent_volumes.rst
+   02_nb_conda_kernels.rst
+   02_user_script_customiztion.rst
+.. 02_github_extension.rst
    02_dask_extension.rst
    01_tutorials.rst
    02_dask_usage_jupyter.rst
