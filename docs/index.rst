@@ -52,22 +52,23 @@ Exploring
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
-# .. toctree::
-#   :maxdepth: 1
-#   :hidden:
-#   :caption: Jupyter - advanced usage
-#
-#.. 00_jupyter_advanced.rst
-#   01_new_users_python.rst
-#   01_jupyterhub_terminal.rst
-#   01_jupyterhub_terminal_howto.rst
-#   01_tips_tricks.rst
-#   02_important_links.rst
-#   02_jupyter_console_ui.rst
-#   JupyterHub Extensions <https://pypi.org>
-#   01_troubleshooting.rst
-#   02_common_issues.rst
-#   02_contact.rst
+.. toctree::
+  :maxdepth: 1
+  :hidden:
+  :caption: Jupyter - advanced usage
+
+  01_jupyterhub_terminal.rst
+.. 00_jupyter_advanced.rst
+  01_new_users_python.rst
+  01_jupyterhub_terminal.rst
+  01_jupyterhub_terminal_howto.rst
+  01_tips_tricks.rst
+  02_important_links.rst
+  02_jupyter_console_ui.rst
+  JupyterHub Extensions <https://pypi.org>
+  01_troubleshooting.rst
+  02_common_issues.rst
+  02_contact.rst
 
 .. toctree::
    :maxdepth: 1
