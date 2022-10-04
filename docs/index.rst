@@ -29,7 +29,7 @@ Exploring
    :caption: 
 
    index.rst
-   00_comp_capabilities.rst
+.. 00_comp_capabilities.rst
    00_getting_started.rst
 
 .. toctree::
@@ -38,9 +38,9 @@ Exploring
    :caption: Accounts and authentication
 
    00_user_accounts.rst
-   01_user_visitor_student.rst
-   01_getting_fnal_accounts.rst
-   01_experiment_specific_accounts.rst
+..   01_user_visitor_student.rst
+..   01_getting_fnal_accounts.rst
+..   01_experiment_specific_accounts.rst
    02_cms_accounts.rst
 
 .. toctree::
