@@ -1,30 +1,25 @@
 *********
-User accounts
+EAF Access and Accounts
 *********
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
-finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+General Usage
+==============
+CMS USERS/VISITORS PLEASE GO TO CMS ACCOUNTS
 
-Document Section
+The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general Fermilab account. If you are offsite, you will also need to use the Fermilab VPN to connect to the EAF, follow `these instructions <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_ if you have not used the VPN before or are having trouble with it.
+
+If you already have a Fermilab account and are still having trouble please contact <email> or take a look at the Common Issues section of this documentation. 
+
+Links to Instructions
+----------------------
+
+`Request Forms and Instructions <https://get-connected.fnal.gov/accessandbadging/access/>`_
+
+`PDF Obtaining Accounts Guide <https://get-connected.fnal.gov/wp-content/uploads/2022/08/Instructions-for-Access-Request-Forms.pdf>`_
+
+`Access Request Form Instructions <https://get-connected.fnal.gov/accessandbadging/instructions/>`_
+
+
+CMS Accounts
 ================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
-nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
-
-Document Subsection
--------------------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
-nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
-
-Document Subsubsection
-^^^^^^^^^^^^^^^^^^^^^^
-
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
-
-Document Paragraph
-""""""""""""""""""
-
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.
