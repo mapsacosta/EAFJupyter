@@ -38,7 +38,6 @@ Exploring
    :caption: Accounts and authentication
 
    00_user_accounts.rst
-   02_cms_accounts.rst
 .. 01_user_visitor_student.rst
    01_getting_fnal_accounts.rst
 
@@ -47,7 +46,7 @@ Exploring
    :hidden:
    :caption: Jupyter - the basics
 
-   00_jupyter_basics.rst
+   About JupyterHub <https://jupyterhub.readthedocs.io/en/stable/>
    01_named_sessions.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
