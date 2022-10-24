@@ -27,7 +27,7 @@ Links to Instructions
 `Access Request Form Instructions <https://get-connected.fnal.gov/accessandbadging/instructions/>`_
 
 
-_my-reference-label:
+.. _my-reference-label:
 
 CMS Accounts
 ================
