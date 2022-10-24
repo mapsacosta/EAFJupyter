@@ -4,7 +4,7 @@ EAF Access and Accounts
 
 General Usage
 ==============
-CMS USERS/VISITORS PLEASE GO TO CMS ACCOUNTS
+CMS USERS/VISITORS PLEASE GO TO :ref:`my-reference-label` IF YOU HAVE ALREADY OBTAINED A GENERAL ACCOUNT
 
 The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your
 affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general
@@ -27,6 +27,7 @@ Links to Instructions
 `Access Request Form Instructions <https://get-connected.fnal.gov/accessandbadging/instructions/>`_
 
 
+_my-reference-label:
 CMS Accounts
 ================
 
