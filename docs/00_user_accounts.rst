@@ -8,6 +8,8 @@ CMS USERS/VISITORS PLEASE GO TO `CMS ACCOUNTS <https://eafjupyter.readthedocs.io
 
 The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general Fermilab account. If you are offsite, you will also need to use the Fermilab VPN to connect to the EAF, follow `these instructions <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_ if you have not used the VPN before or are having trouble with it.
 
+If you already have a Fermilab account and are still having trouble:
+(1) Your services account works for other Fermilab sites fo
 If you already have a Fermilab account and are still having trouble please contact <email> or take a look at the Common Issues section of this documentation. 
 
 Links to Instructions
@@ -23,12 +25,11 @@ Links to Instructions
 CMS Accounts
 ================
 
+Obtaining accounts as a CMS affiliate is slightly different than obtaining a general Fermilab account since there are also CERN accounts to obtain. The link for the instructions is provided and guides through all the steps needed to have full access as a CMS memeber. The link provided has instructions for obtaining Fermilab and CMS LPC computing accounts, getting a badge for onsite access, getting CERN accounts, getting a personal grid certificate, and how to connect to the LPC. 
+
 IMPORTANT: It can take 4-6 weeks for accounts to be approved. 
 
-Link to CMS Instruction
-------------------------
+Link to CMS Instructions
+-------------------------
 
-CMS has a few resources on how to get a Fermilab account as a CMS affiliate:
-
-`Full Instructions For New CMS Users <https://uscms.org/uscms_at_work/computing/getstarted/index.shtml>`_ - this link explains the steps for getting Fermilab accounts, Badges, CERN accounts, Grid certificates and how to use the LPC
-
+`Full Instructions For New CMS Users <https://uscms.org/uscms_at_work/computing/getstarted/index.shtml>`_ 
