@@ -4,7 +4,7 @@ EAF Access and Accounts
 
 General Usage
 ==============
-CMS USERS/VISITORS PLEASE GO TO `CMS ACCOUNTS <https://eafjupyter.readthedocs.io/en/latest/00_user_accounts.html#cms-accounts>`_ IF YOU HAVE ALREADY OBTAINED A GENERAL ACCOUNT
+CMS USERS/VISITORS PLEASE GO TO `CMS ACCOUNTS <https://eafjupyter.readthedocs.io/en/latest/00_user_accounts.html#cms-accounts>`_
 
 The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general Fermilab account. If you are offsite, you will also need to use the Fermilab VPN to connect to the EAF, follow `these instructions <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_ if you have not used the VPN before or are having trouble with it.
 
@@ -22,4 +22,13 @@ Links to Instructions
 
 CMS Accounts
 ================
+
+IMPORTANT: It can take 4-6 weeks for accounts to be approved. 
+
+Link to CMS Instruction
+------------------------
+
+CMS has a few resources on how to get a Fermilab account as a CMS affiliate:
+
+`Full Instructions For New CMS Users <https://uscms.org/uscms_at_work/computing/getstarted/index.shtml>`_ - this link explains the steps for getting Fermilab accounts, Badges, CERN accounts, Grid certificates and how to use the LPC
 
