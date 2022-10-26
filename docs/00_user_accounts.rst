@@ -8,9 +8,18 @@ CMS USERS/VISITORS PLEASE GO TO `CMS ACCOUNTS <https://eafjupyter.readthedocs.io
 
 The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general Fermilab account. If you are offsite, you will also need to use the Fermilab VPN to connect to the EAF, follow `these instructions <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_ if you have not used the VPN before or are having trouble with it.
 
-If you already have a Fermilab account and are still having trouble:
-(1) Your services account works for other Fermilab sites fo
-If you already have a Fermilab account and are still having trouble please contact <email> or take a look at the Common Issues section of this documentation. 
+Still Can't Log-In
+-------------------
+If you are still having trouble accessing the EAF, please use the following to find out who to contact.
+
+(1) Your services account just doesn't seem to work anywhere 
+    Example 1: You can't us the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
+    Example 2: You can't use the `Fermilab Password Reset Tool <https://passwordreset.fnal.gov>`_
+    Please contact servicedesk@fnal.gov (response may be as long as 8 hours, during business hours only).
+(2) Your services account works for other Fermilab sites but you can't log in or get an error
+    Example 1: You can us the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
+    Example 2: You can use the `Fermilab Password Reset Tool <https://passwordreset.fnal.gov>`_
+    Please contact eaf-users@fnal.gov.
 
 Links to Instructions
 ----------------------
