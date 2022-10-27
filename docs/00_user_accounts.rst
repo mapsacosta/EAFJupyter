@@ -14,14 +14,14 @@ If you are still having trouble accessing the EAF, please use the following to f
 
 (1) Your services account just doesn't seem to work anywhere 
 
-    Example 1: You can't us the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
+    Example 1: You can't use the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
     
     Example 2: You can't use the `Fermilab Password Reset Tool <https://passwordreset.fnal.gov>`_
     
     Please contact servicedesk@fnal.gov (response may be as long as 8 hours, during business hours only).
 (2) Your services account works for other Fermilab sites but you can't log in or get an error
 
-    Example 1: You can us the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
+    Example 1: You can use the `Fermilab Services Site <https://fermi.servicenowservices.com/wp>`_
     
     Example 2: You can use the `Fermilab Password Reset Tool <https://passwordreset.fnal.gov>`_
     
