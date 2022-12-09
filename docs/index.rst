@@ -75,8 +75,7 @@ Exploring
    :caption: EAF DAE (Data Analysis Ecosystem)
 
    00_eaf_dae.rst
-   02_network_volumes.rst
-   02_persistent_volumes.rst
+   01_storage.rst
    02_nb_conda_kernels.rst
    02_user_script_customiztion.rst
 .. 01_jupyterhub_extensions.rst
