@@ -54,10 +54,10 @@ Exploring
 .. toctree::
   :maxdepth: 1
   :hidden:
-  :caption: Jupyter - advanced usage
+  :caption: Jupyter - advanced usage [WIP]
 
-  01_jupyterhub_terminal.rst
-.. 00_jupyter_advanced.rst
+.. 01_jupyterhub_terminal.rst
+   00_jupyter_advanced.rst
   01_new_users_python.rst
   01_jupyterhub_terminal.rst
   01_jupyterhub_terminal_howto.rst
