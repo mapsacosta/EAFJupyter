@@ -23,4 +23,4 @@ Instructions
    :maxdepth: 2
    :caption: Contents:
 
-   notebooks/Example 1
+   notebooks/EAF-htcdaskgateway.ipynb
