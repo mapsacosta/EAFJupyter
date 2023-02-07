@@ -9,7 +9,7 @@ In alignment with IRIS-HEP and the USCMS LHC project COFFEA, EAF has deployed a 
 
 We have developed a client around Dask Gateway to facilitate user interaction with the Batch cluster. The COFFEA-Dask notebook has the latest version installed.
 
-[![PyPI latest version](https://badge.fury.io/py/htcdaskgateway.svg)](https://badge.fury.io/py/htcdaskgateway)
+[PyPI latest version](https://badge.fury.io/py/htcdaskgateway.svg)](https://badge.fury.io/py/htcdaskgateway)
 
 Instructions
 ================
@@ -19,15 +19,8 @@ Instructions
 * Our [example notebook](https://github.com/mapsacosta/eaf-jupyter-tutorials/blob/main/examples/EAF-htcdaskgateway.ipynb) is a good place to start gettng familiar with Dask and Dask Gateway.
 * If you have used COFFEA-Casa or other Dask facilities, you will find that EAF is no different and obtaining a `client` is the main difference. To add a new server/notebook, enter a DNS-safe name into the textbox 'Name your server'
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-
-
-```{toctree}
----
-maxdepth: 2
-caption: Contents:
----
-notebooks/EAF-htcdaskgateway.ipynb
-```
-
-
+   notebooks/Example 1
