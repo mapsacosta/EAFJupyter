@@ -78,6 +78,7 @@ Exploring
    01_storage.rst
    02_nb_conda_kernels.rst
    02_user_script_customiztion.rst
+   02_batch_dask_cms.rst
 .. 01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
    02_fileops_jupyter.rst
