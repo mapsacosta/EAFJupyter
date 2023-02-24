@@ -29,6 +29,16 @@ You must install the `ipykernel` package in order to make your custom environmen
 After a minute or so, a new launcher should appear corresponding to your environment; it may be necessary
 to reload the web page.
 
+.. _conda user scripts:
+
+Customizing conda with user scripts
+-----------------------------------
+
+For conda environments, you can add preamble scripts to ``${CONDA_PREFIX}/etc/conda/activate.d``; these will run before
+your notebook starts. For example, in the `snowflakes` conda environment example below,
+additional preamble scripts could be added to ``~/.conda/env/snowflakes/etc/conda/activate.d``.
+
+
 Example: installing biopython in the `snowflakes` conda environment
 =======================================================================
 
