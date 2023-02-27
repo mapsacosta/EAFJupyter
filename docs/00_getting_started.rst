@@ -21,6 +21,12 @@ Each experiment has different notebook options when starting a server and are gr
 Fermi Generic SL7/CC8
 =====================
 
+.. image:: img/Generic_hub.png
+   :height: 200
+   :width: 350
+   :align: center
+   :alt: The Fermi Generic SL7/CC8 server options as displayed on the JupyterHub. The first option is the Basic SL7 Interactive, the second option is the Basic CC8 Interactive and the third is the Rescue Image.
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
 nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
 
