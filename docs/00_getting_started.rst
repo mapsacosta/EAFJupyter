@@ -64,15 +64,8 @@ Image:
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 ----------------------------------------------------
 Image: 
----------------------
 
 
-
-
-
-For more detailed information, check out the following diagram. It has all the packages installed in the server you are interested in and, when it is specfied, the verisons. 
-
-.. image:: img/diagram.png
 
 
 
