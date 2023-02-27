@@ -14,11 +14,10 @@ FIFE/Neutrinos - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND
 
 LBNF/DUNE/ProtoDUNE - DUNE, LBNF
 
-:ref:`Fermi<Fermi Generic SL7/CC8>` Fermi Generic SL7/CC8 - Muon g-2
+`Fermi Generic SL7/CC8`_ - Muon g-2
 
 If you have access to an experiment you are not apart of, please contact <eaf email>.
 
-.. _Fermi:
 Fermi Generic SL7/CC8
 =====================
 
