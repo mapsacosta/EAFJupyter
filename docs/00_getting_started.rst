@@ -4,15 +4,15 @@ Getting started - Choosing a Notebook
 
 Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7/CC8. In general, only the servers where the user has an associated experiment should be options when selecting which notebook to open. 
 
-CMSLPC - CMS, LHC
+`CMSLPC`_ - CMS, LHC
 
-Cosmic Frontier - LSST, MAGIS-100, Mu2e, DES, DarkSide, Holometer
+`Cosmic Frontier`_ - LSST, MAGIS-100, Mu2e, DES, DarkSide, Holometer
 
-ACORN/ACCEL-AI - 
+`ACORN/ACCEL-AI`_ - 
 
-FIFE/Neutrinos - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND
+`FIFE/Neutrinos`_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND
 
-LBNF/DUNE/ProtoDUNE - DUNE, LBNF
+`LBNF/DUNE/ProtoDUNE`_ - DUNE, LBNF
 
 `Fermi Generic SL7/CC8`_ - Muon g-2
 
