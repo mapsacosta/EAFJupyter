@@ -16,7 +16,7 @@ Each experiment has different notebook options when starting a server and are gr
 
 `Fermi Generic SL7/CC8`_ - Muon g-2
 
-If you have access to an experiment you are not apart of, please contact <eaf email>.
+*If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.*
 
 Fermi Generic SL7/CC8
 =====================
