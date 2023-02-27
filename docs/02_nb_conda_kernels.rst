@@ -1,5 +1,5 @@
 **********************************************
-Customizing user environments with conda/mamba
+Conda/mamba
 **********************************************
 
 It is possible to customize your environment using anaconda and access that environment in your notebooks.

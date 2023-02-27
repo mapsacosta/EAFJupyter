@@ -1,5 +1,7 @@
+.. _preamble scripts:
+
 **************************************************
-Customizing user environments via preamble scripts
+Preamble scripts
 **************************************************
 
 You can customize your EAF Jupyter installation with your own custom preamble scripts.
