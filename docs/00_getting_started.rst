@@ -70,9 +70,9 @@ Image:
 
 
 
-For more detailed information, check out the following diagram. It has all the packages installed in the server you are interested in and, when it is specfied, the verisons.
+For more detailed information, check out the following diagram. It has all the packages installed in the server you are interested in and, when it is specfied, the verisons. 
 
-.. image:: img/EAFDocker_Structure-Copy of Page-1.drawio.html
+
 
 
 
