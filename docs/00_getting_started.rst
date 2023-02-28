@@ -29,12 +29,28 @@ Fermi Generic SL7/CC8
 
 Basic SL7 Interactive
 -----------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
 
 Basic CC8 Interactive
 -----------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
 
 Rescue Image
 -----------------------
+Image: ?
+
 
 LBNF/DUNE/ProtoDUNE
 =====================
@@ -49,25 +65,32 @@ SL7 Interactive General Purpose Notebook
 -----------------------------------------
 Image: 
 
+Packages
+~~~~~~~~~~
 
+CVMFS
+~~~~~~
 
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 -----------------------------------------
 Image: 
 
+Packages
+~~~~~~~~~~
 
-
-
-
+CVMFS
+~~~~~~
 
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 ----------------------------------------------------
 Image: 
 
+Packages
+~~~~~~~~~~
 
-
-
+CVMFS
+~~~~~~
 
 FIFE/Neutrinos
 =====================
@@ -80,10 +103,35 @@ FIFE/Neutrinos
 
 SL7 Interactive General Purpose Notebook
 ------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 ----------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
+
 
 ACORN/ACCEL-AI
 =====================
@@ -97,20 +145,83 @@ ACORN/ACCEL-AI
 
 ACORN CPU Only SL7 Interactive
 -------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 ACORN AIMPS SL7 Interactive
 ------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 L-CAPE CPU Only SL7 Interactive
 ---------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 READS CPU Only SL7 Interactive
 --------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 READS GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 READS GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
 
 
 
@@ -125,12 +236,43 @@ Cosmic Frontier
    
 SL7 Interactive General Purpose Notebook
 ------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU]
 -----------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
 
 CMSLPC
 =====================
@@ -143,9 +285,59 @@ CMSLPC
 
 SL7 Interactive
 -----------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 COFFEA-DASK SL7 Interactive
 ------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------
+Image: 
+
+Packages
+~~~~~~~~~~
+
+CVMFS
+~~~~~~
+
+
+
+EAF Structure and Packages
+==============================
+
+For more detailed server information, check out this diagram. It lists all of the packages installed and their versions if it was specified in the build. *The server option is not the same as the image, please use the image specified for the server option to navigate this diagram.*
+
+.. image:: img/diagram.png
+   :height: 950
+   :width: 950
+   :align: center
+   :alt: EAF structure diagram.
+ 
+Here is an interactive version of the diagram with layer toggles:
+
+`EAF Interactive Diagram <https://viewer.diagrams.net/?page-id=8oN_c9q_UM9n-6WH7pcY&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=8oN_c9q_UM9n-6WH7pcY#G1A4dTTE_s0VSGPEHtS5nBlI-CGcVstcW_>`_
+
+
