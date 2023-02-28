@@ -24,7 +24,7 @@ Usage
 The ipykernel launcher will execute two different preamble scripts in order:
 
    * ``~/.preamble/global.sh``, which is executed on every notebook flavor.  
-   * ``~/.preamble/${NB_PROFILE.sh}``
+   * ``~/.preamble/${NB_PROFILE}.sh``
 
 The second script allows you to customize notebook flavor-dependent scripts, based on the value of
 the ``NB_PROFILE`` environment variable.
