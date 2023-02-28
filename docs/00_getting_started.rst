@@ -52,6 +52,7 @@ Rescue Image
 Image: ?
 
 
+
 LBNF/DUNE/ProtoDUNE
 =====================
 
@@ -71,6 +72,7 @@ Packages
 CVMFS
 ~~~~~~
 
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7/CC8 images, toggle the "Background" layers in the interactive diagram.
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 -----------------------------------------
@@ -91,6 +93,8 @@ Packages
 
 CVMFS
 ~~~~~~
+
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only LBNF/DUNE/ProtoDUNE images, toggle the "Background" and "DUNE" layers in the interactive diagram.
 
 FIFE/Neutrinos
 =====================
@@ -131,7 +135,7 @@ Packages
 CVMFS
 ~~~~~~
 
-
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only FIFE/Neutrinos images, toggle the "Background" and "FIFE/Neutrinos" layers in the interactive diagram.
 
 ACORN/ACCEL-AI
 =====================
@@ -223,7 +227,7 @@ Packages
 CVMFS
 ~~~~~~
 
-
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Acorn/Accel-ai images, toggle the "Background" and "Acorns/Accel-ai" layers in the interactive diagram.
 
 Cosmic Frontier
 =====================
@@ -274,6 +278,8 @@ Packages
 CVMFS
 ~~~~~~
 
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Cosmic Frontier images, toggle the "Background" and "Cosmic Frontier" layers in the interactive diagram.
+
 CMSLPC
 =====================
 
@@ -323,12 +329,12 @@ Packages
 CVMFS
 ~~~~~~
 
-
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only CMSLPC images, toggle the "Background" and "CMS-LPC" layers in the interactive diagram.
 
 EAF Structure and Packages
 ==============================
 
-For more detailed server information, check out this diagram. It lists all of the packages installed and their versions if it was specified in the build. *The server option is not the same as the image, please use the image specified for the server option to navigate this diagram.*
+For more detailed server option information, check out this diagram. It lists all of the packages installed and their versions if it was specified in the build. *The server option is not the same as the image, please use the image specified for the server option to navigate this diagram.*
 
 .. image:: img/diagram.png
    :height: 950
