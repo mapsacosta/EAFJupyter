@@ -51,7 +51,7 @@ Rescue Image
 -----------------------
 Image: ?
 
-
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7/CC8 images, toggle the "Background" layers in the interactive diagram.
 
 LBNF/DUNE/ProtoDUNE
 =====================
@@ -72,7 +72,6 @@ Packages
 CVMFS
 ~~~~~~
 
-For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7/CC8 images, toggle the "Background" layers in the interactive diagram.
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 -----------------------------------------
