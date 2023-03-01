@@ -294,16 +294,12 @@ Image: cmslpc-notebook
 
 Packages
 ~~~~~~~~~~
-- make
-- cmake3
-- gcc-c++
-- gcc
-- osg-wn-client
-- xrootd-client
-- voms-client
-- HTCondor
-- eos-client
-- eos-xrootd
+
++------------------------+---------------+---------------+---------------+---------------+
+|     make               |    cmake3     |    gcc-c++    |  voms-client  |   HTCondor    |
++------------------------+---------------+---------------+---------------+---------------+
+| .. centered:: gcc      | osg-wn-client | xrootd-client |  eos-client   |  eos-xrootd   |
++------------------------+---------------+---------------+---------------+---------------+
 
 CVMFS
 ~~~~~~
