@@ -290,17 +290,27 @@ CMSLPC
 
 SL7 Interactive
 -----------------
-Image: 
+Image: cmslpc-notebook
 
 Packages
 ~~~~~~~~~~
+- make
+- cmake3
+- gcc-c++
+- gcc
+- osg-wn-client
+- xrootd-client
+- voms-client
+- HTCondor
+- eos-client
+- eos-xrootd
 
 CVMFS
 ~~~~~~
 
 COFFEA-DASK SL7 Interactive
 ------------------------------
-Image: 
+Image: cmslpc-coffea-dask
 
 Packages
 ~~~~~~~~~~
@@ -310,7 +320,7 @@ CVMFS
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------
-Image: 
+Image: cmslpc-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
@@ -320,7 +330,7 @@ CVMFS
 
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------
-Image: 
+Image: cmslpc-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
