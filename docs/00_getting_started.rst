@@ -314,6 +314,56 @@ Image: cmslpc-coffea-dask
 
 Packages
 ~~~~~~~~~~
+- conda-build
+- ipympl
+- aiohttp
+- click
+- dask
+- distributed
+- pyyaml
+- tornado
+- numpy
+- dask-gateway
+- iminuit
+- dask-jobqueue
+- dask-labextension
+- scikit-hep-testdata
+- ipywidgets
+- traitlets
+- ca-policy-lcg
+- cmake
+- xrootd
+- mplhep
+- uproot
+- coffea
+- vector 
+- xgboost
+- hist
+- lz4 
+- python-xhash
+- zstandard
+- pytables
+- pyhf
+- python-rapidjson
+- grpcio
+- geventhttpclient
+- protobuf
+- brotli
+- onnxruntime
+- fastjet
+- tritonclient
+- tflite_runtime
+- htcdaskgateway
+- aiostream
+- tenacity
+- func-adl-servicex
+- func-adl-uproot
+- tcut-to-qastle
+- servicex-databinder
+- correctionlib
+- cabinetry
+- funcx
+- htcondor
 
 CVMFS
 ~~~~~~
