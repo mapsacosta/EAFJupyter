@@ -288,6 +288,8 @@ CMSLPC
    :align: center
    :alt: The CMSLPC server options as displayed on the JupyterHub. The first option is the SL7 Interactive, the second option is COFFEA-DASK SL7 Interactive, the third option is GPU SL7 Interactive (NVIDIA Ampere A100), and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
+Each server opton inherits the packages from the image it was based on. The inheritence is shown in the diagram in `EAF Structure and Packages`_.
+
 SL7 Interactive
 -----------------
 Image: cmslpc-notebook
@@ -343,6 +345,22 @@ Image: cmslpc-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
+
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: cudatoolkit             | .. centered:: cudnn          | .. centered:: pytorch        | .. centered:: mpi4py          | 
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: tensorflow-gpu          | .. centered:: nccl           | .. centered:: bokeh          | .. centered:: tqdm            | 
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: cython                  | .. centered:: akward         | .. centered:: h5py           | .. centered:: ipympl          | 
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: matplotlib-base         | .. centered:: scikit-image   | .. centered:: scikit-learn   |  .. centered:: scipy          |
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: tensorboard-pro         | .. centered:: cupy           | .. centered:: sympy          |  .. centered:: cuda-nvcc-11-7 |
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+| .. centered:: awkward-cuda-kernals    | .. centered:: nsight-systems | .. centered::  ----          |  .. centered::  ----          |
++---------------------------------------+------------------------------+------------------------------+-------------------------------+
+
+
 
 CVMFS
 ~~~~~~
