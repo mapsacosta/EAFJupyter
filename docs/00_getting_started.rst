@@ -376,43 +376,71 @@ Cosmic Frontier
    
 SL7 Interactive General Purpose Notebook
 ------------------------------------------
-Image: 
+Image: astro-notebook
 
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
+.. table:: 
+   :align: center
+   
+   +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
+   | .. centered:: yum-plugin-priorities | .. centered:: krb5-workstation | .. centered:: redhat-lsb-core | .. centered:: libX11-devel | .. centered:: openssl-devel |
+   +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
+   | .. centered:: xrootd-client-libs    | .. centered:: make             | .. centered:: cmake3          | .. centered:: gcc-c++      | .. centered:: gcc           |
+   +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
+   | .. centered:: voms-clients-cpp      | .. centered:: binutils         | .. centered:: libXpm-devel    | .. centered:: libXft-devel | .. centered:: libXext-devel |
+   +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
+   | .. centered:: osg-wn-client         | .. centered:: xrootd-client    | .. centered:: voms            | .. centered:: HTCondor     | .. centered:: xxhash-libs   |
+   +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
 
-GPU SL7 Interactive (NVIDIA Ampere A100)
-------------------------------------------
-Image: 
+
+GPU SL7 Interactive (NVIDIA Ampere A100), GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU], and GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU]
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Image: astro-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
+.. table:: 
+   :align: center
+   
+   +------------------------------------------+------------------------------+---------------------------+-------------------------------+----------------------------+
+   | .. centered:: jupyterlab-tensorboard-pro | .. centered:: tensorflow-gpu | .. centered:: cudatoolkit | .. centered:: matplotlib-base | .. centered:: scikit-image |
+   +------------------------------------------+------------------------------+---------------------------+-------------------------------+----------------------------+
+   | .. centered:: scikit-learn               | .. centered:: cudnn          | .. centered:: pytorch     | .. centered:: mpi4py          | .. centered:: nccl         |
+   +------------------------------------------+------------------------------+---------------------------+-------------------------------+----------------------------+
+   | .. centered:: bokeh                      | .. centered:: tqdm           | .. centered:: cython      | .. centered:: awkward         | .. centered:: h5py         |
+   +------------------------------------------+------------------------------+---------------------------+-------------------------------+----------------------------+
+   | .. centered:: ipympl                     | .. centered:: scipy          | .. centered:: cupy        | .. centered:: sympy           | .. centered:: nvcc         |
+   +------------------------------------------+------------------------------+---------------------------+-------------------------------+----------------------------+
 
-GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+LSST
 -----------------------------------------------------
-Image: 
+**Important: ** This notebook option will be made available in a future update.
+
+Image: lsst-notebook
 
 Packages
 ~~~~~~~~~~
 
+.. table:: 
+   :align: center
+   
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   | .. centered:: yum-plugin-priorities | .. centered:: krb5-workstation | .. centered:: redhat-lsb-core | .. centered:: lsst-jupyter-kernel | .. centered:: voms-clients-cpp |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   | .. centered:: xrootd-client-libs    | .. centered:: make             | .. centered:: cmake3          | .. centered:: gcc-c++             | .. centered:: gcc              |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   | .. centered:: binutils              | .. centered:: libXft-devel     | .. centered:: libXext-devel.  | .. centered:: openssl-devel.      | .. centered:: nss_wrapper      |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   | .. centered:: gettext               | .. centered:: osg-wn-client    | .. centered:: xrootd-client   | .. centered:: voms                | .. centered:: libXpm-devel     |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   | .. centered:: HTCondor              | .. centered:: xxhash-libs      | .. centered:: libX11-devel    | .. centered:: cvmfs-lsst          | .. centered:: --               |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+
 CVMFS
-~~~~~~
-
-GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU]
------------------------------------------------------
-Image: 
-
-Packages
-~~~~~~~~~~
-
-CVMFS
-~~~~~~
+------
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Cosmic Frontier images, toggle the "Background" and "Cosmic Frontier" layers in the interactive diagram.
 
