@@ -2,7 +2,7 @@
 Getting started - Choosing a Notebook
 *********
 
-Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7/CC8. In general, only the servers where the user has an associated experiment should be options when selecting which notebook to open. 
+Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks.
 
 `CMSLPC`_ - CMS, LHC
 
@@ -27,31 +27,46 @@ Fermi Generic SL7/CC8
    :align: center
    :alt: The Fermi Generic SL7/CC8 server options as displayed on the JupyterHub. The first option is the Basic SL7 Interactive, the second option is the Basic CC8 Interactive and the third is the Rescue Image.
 
+**Important:** The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, are documented here<>.
+
 Basic SL7 Interactive
 -----------------------
-Image: 
+Image: fife-notebook
 
 Packages
 ~~~~~~~~~~
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: krb5-workstation       | .. centered:: redhat-lsb-core | .. centered:: make           |
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: yum-plugin-priorities  | .. centered:: cmake3          | .. centered:: gcc-c++        |
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: xrootd-client-libs     | .. centered:: gcc             | .. centered:: binutils       |        
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: voms-client-cpp        | .. centered:: voms            |  .. centered:: openssl-devel |
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: xrootd-client          | .. centered:: osg-wn-client   | .. centered:: libX11-devel   |
++--------------------------------------+-------------------------------+------------------------------+
+| .. centered:: libXpm-devel           | .. centered::libXft-devel     | .. centered:: libXext-devel  |
++--------------------------------------+-------------------------------+------------------------------+
+|.. centered:: nss_wrapper             | .. centered:: gettext         | .. centered:: HTCondor       | 
++--------------------------------------+-------------------------------+------------------------------+
 
 CVMFS
 ~~~~~~
 
-Basic CC8 Interactive
------------------------
-Image: 
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
+| .. centered:: oasis.opensciencegrid.org            | .. centered:: fermilab.opensciencegrid.org | .. centered:: gm2.opensciencegrid.org    |
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
+| .. centered:: icarus.opensciencegrid.org           | .. centered:: lariat.opensciencegrid.org   | .. centered::larsoft.opensciencegrid.org |
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
+| .. centered:: minerva.opensciencegrid.org          | .. centered:: minos.opensciencegrid.org    | .. centered:: mu2e.opensciencegrid.org   |
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
+| .. centered:: nova-development.opensciencegrid.org | .. centered::nova.opensciencegrid.org      | .. centered:: sbnd.opensciencegrid.org   | 
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
+| .. centered:: sbn.opensciencegrid.org              | .. centered::seaquest.opensciencegrid.org  | .. centered::uboone.opensciencegrid.org  |
++----------------------------------------------------+--------------------------------------------+------------------------------------------+
 
-Packages
-~~~~~~~~~~
-
-CVMFS
-~~~~~~
-
-Rescue Image
------------------------
-Image: ?
-
-For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7/CC8 images, toggle the "Background" layers in the interactive diagram.
+For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
 
 LBNF/DUNE/ProtoDUNE
 =====================
@@ -64,34 +79,69 @@ LBNF/DUNE/ProtoDUNE
 
 SL7 Interactive General Purpose Notebook
 -----------------------------------------
-Image: 
+Image: dune-notebook
 
 Packages
 ~~~~~~~~~~
-
-CVMFS
-~~~~~~
-
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: yum-plugin-priorities   | .. centered:: redhat-lsb-core | .. centered:: cmake3   | .. centered:: libcurl-devel | .. centered:: perl-Digest-MD5 | .. centered:: giflib-devel |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: libX11-devel            | .. centered:: nss_wrapper     | .. centered:: gettext  | .. centered:: gl2ps-devel   | .. centered:: gcc             | .. centered:: perl-Digest  |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: osg-wn-client           | .. centered:: xrootd-client   | .. centered:: voms     | .. centered:: subversion    | .. centered::voms-clients-cpp | .. centered:: HTCondor     |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: xrootd-client-libs      | .. centered:: perl-DBD-SQLite | .. centered:: libtool  | .. centered:: ftgl-devel    | .. centered:: gdbm-devel      | .. centered:: binutils     |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: perl-ExtUtils-MakeMaker | .. centered:: glew-devel      | .. centered:: xz-devel | .. centered:: pcre2-devel   | .. centered:: readline-devel  | .. centered:: autoconf     |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: libjpeg-turbo-devel     | .. centered:: bzip2-devel     | .. centered:: asciidoc | .. centered:: libzstd-devel | .. centered:: texinfo         | .. centered:: tcl-devel    |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: mesa-libGL-devel        | .. centered:: ncurses-devel   | .. centered:: xmlto    | .. centered:: libffi-devel  | .. centered:: xxhash-devel    | .. centered:: zstd         |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: libAfterImage-devel     | .. centered:: gcc-c++         | .. centered:: automake | .. centered:: libXi-devel   | .. centered:: libXt-devel     | .. centered:: libXmu-devel |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: mesa-libGLU-devel       | .. centered:: tk-devel        | .. centered:: swig     | .. centered:: lz4-devel     | .. centered:: perl-Digest-SHA | .. centered:: libgcc.i686  |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
+| .. centered:: glibc-devel.i686        | .. centered:: libstdc++.i686  | .. centered:: xxhash   | .. centered:: --            | .. centered:: --              | .. centered:: --           |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 -----------------------------------------
-Image: 
+Image: dune-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
-
-CVMFS
-~~~~~~
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: jupyterlab-tensorboard-pro | .. centered:: torchvision | .. centered:: cudatoolkit | .. centered:: cudnn |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: matplotlib-base            | .. centered:: nccl        | .. centered:: tqdm        | .. centered:: bokeh |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: tensorflow-gpu             | .. centered:: nvcc        | .. centered:: cython      | .. centered:: h5py  |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: scikit-learn               | .. centered:: ipywidgets  | .. centered:: mpi4py      | .. centered:: numba |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: numexpr                    | .. centered:: numpy       | .. centered:: pandas      | .. centered:: pytz  |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: scikit-image               | .. centered:: ipympl      | .. centered:: scipy       | .. centered:: sympy |
++------------------------------------------+---------------------------+---------------------------+---------------------+
+| .. centered:: pytorch                    | .. centered:: yum-utils   |  .. centered:: --         |  .. centered:: --   |
++------------------------------------------+---------------------------+---------------------------+---------------------+
 
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 ----------------------------------------------------
-Image: 
 
-Packages
-~~~~~~~~~~
+See `GPU SL7 Interactive (NVIDIA Ampere A100)`_ , only difference is GPU size.
+
 
 CVMFS
-~~~~~~
+------
+
++-----------------------------------------+--------------------------------------------+
+| .. centered:: oasis.opensciencegrid.org | .. centered:: fermilab.opensciencegrid.org |
++-----------------------------------------+--------------------------------------------+
+| .. centered:: dune.opensciencegrid.org  | .. centered:: larsoft.opensciencegrid.org. |
++-----------------------------------------+--------------------------------------------+
+
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only LBNF/DUNE/ProtoDUNE images, toggle the "Background" and "DUNE" layers in the interactive diagram.
 
