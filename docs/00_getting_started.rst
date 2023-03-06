@@ -28,8 +28,8 @@ Fermi Generic SL7/CC8
    :width: 375
    :align: center
    :alt: The Fermi Generic SL7/CC8 server options as displayed on the JupyterHub. The first option is the Basic SL7 Interactive, the second option is the Basic CC8 Interactive and the third is the Rescue Image.
-   :delim: 
    
+|
 
 .. important::
    
