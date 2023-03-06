@@ -46,25 +46,25 @@ Packages
 +--------------------------------------+-------------------------------+------------------------------+
 | .. centered:: xrootd-client          | .. centered:: osg-wn-client   | .. centered:: libX11-devel   |
 +--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: libXpm-devel           | .. centered::libXft-devel     | .. centered:: libXext-devel  |
+| .. centered:: libXpm-devel           | .. centered:: libXft-devel    | .. centered:: libXext-devel  |
 +--------------------------------------+-------------------------------+------------------------------+
-|.. centered:: nss_wrapper             | .. centered:: gettext         | .. centered:: HTCondor       | 
+| .. centered:: nss_wrapper            | .. centered:: gettext         | .. centered:: HTCondor       | 
 +--------------------------------------+-------------------------------+------------------------------+
 
 CVMFS
 ~~~~~~
 
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
-| .. centered:: oasis.opensciencegrid.org            | .. centered:: fermilab.opensciencegrid.org | .. centered:: gm2.opensciencegrid.org    |
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
-| .. centered:: icarus.opensciencegrid.org           | .. centered:: lariat.opensciencegrid.org   | .. centered::larsoft.opensciencegrid.org |
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
-| .. centered:: minerva.opensciencegrid.org          | .. centered:: minos.opensciencegrid.org    | .. centered:: mu2e.opensciencegrid.org   |
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
-| .. centered:: nova-development.opensciencegrid.org | .. centered::nova.opensciencegrid.org      | .. centered:: sbnd.opensciencegrid.org   | 
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
-| .. centered:: sbn.opensciencegrid.org              | .. centered::seaquest.opensciencegrid.org  | .. centered::uboone.opensciencegrid.org  |
-+----------------------------------------------------+--------------------------------------------+------------------------------------------+
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
+| .. centered:: oasis.opensciencegrid.org            | .. centered:: fermilab.opensciencegrid.org | .. centered:: gm2.opensciencegrid.org     |
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
+| .. centered:: icarus.opensciencegrid.org           | .. centered:: lariat.opensciencegrid.org   | .. centered:: larsoft.opensciencegrid.org |
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
+| .. centered:: minerva.opensciencegrid.org          | .. centered:: minos.opensciencegrid.org    | .. centered:: mu2e.opensciencegrid.org    |
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
+| .. centered:: nova-development.opensciencegrid.org | .. centered:: nova.opensciencegrid.org     | .. centered:: sbnd.opensciencegrid.org    | 
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
+| .. centered:: sbn.opensciencegrid.org              | .. centered:: seaquest.opensciencegrid.org | .. centered:: uboone.opensciencegrid.org  |
++----------------------------------------------------+--------------------------------------------+-------------------------------------------+
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
 
@@ -83,27 +83,31 @@ Image: dune-notebook
 
 Packages
 ~~~~~~~~~~
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: yum-plugin-priorities   | .. centered:: redhat-lsb-core | .. centered:: cmake3   | .. centered:: libcurl-devel | .. centered:: perl-Digest-MD5 | .. centered:: giflib-devel |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: libX11-devel            | .. centered:: nss_wrapper     | .. centered:: gettext  | .. centered:: gl2ps-devel   | .. centered:: gcc             | .. centered:: perl-Digest  |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: osg-wn-client           | .. centered:: xrootd-client   | .. centered:: voms     | .. centered:: subversion    | .. centered::voms-clients-cpp | .. centered:: HTCondor     |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: xrootd-client-libs      | .. centered:: perl-DBD-SQLite | .. centered:: libtool  | .. centered:: ftgl-devel    | .. centered:: gdbm-devel      | .. centered:: binutils     |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: perl-ExtUtils-MakeMaker | .. centered:: glew-devel      | .. centered:: xz-devel | .. centered:: pcre2-devel   | .. centered:: readline-devel  | .. centered:: autoconf     |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: libjpeg-turbo-devel     | .. centered:: bzip2-devel     | .. centered:: asciidoc | .. centered:: libzstd-devel | .. centered:: texinfo         | .. centered:: tcl-devel    |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: mesa-libGL-devel        | .. centered:: ncurses-devel   | .. centered:: xmlto    | .. centered:: libffi-devel  | .. centered:: xxhash-devel    | .. centered:: zstd         |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: libAfterImage-devel     | .. centered:: gcc-c++         | .. centered:: automake | .. centered:: libXi-devel   | .. centered:: libXt-devel     | .. centered:: libXmu-devel |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: mesa-libGLU-devel       | .. centered:: tk-devel        | .. centered:: swig     | .. centered:: lz4-devel     | .. centered:: perl-Digest-SHA | .. centered:: libgcc.i686  |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
-| .. centered:: glibc-devel.i686        | .. centered:: libstdc++.i686  | .. centered:: xxhash   | .. centered:: --            | .. centered:: --              | .. centered:: --           |
-+---------------------------------------+-------------------------------+------------------------+-----------------------------+-------------------------------+----------------------------+
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: yum-plugin-priorities   | .. centered:: redhat-lsb-core | .. centered:: cmake3   | .. centered:: libcurl-devel | .. centered:: perl-Digest-MD5  |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: libX11-devel            | .. centered:: nss_wrapper     | .. centered:: gettext  | .. centered:: gl2ps-devel   | .. centered:: gcc              |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: osg-wn-client           | .. centered:: xrootd-client   | .. centered:: voms     | .. centered:: subversion    | .. centered:: voms-clients-cpp | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: xrootd-client-libs      | .. centered:: perl-DBD-SQLite | .. centered:: libtool  | .. centered:: ftgl-devel    | .. centered:: gdbm-devel       | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: perl-ExtUtils-MakeMaker | .. centered:: glew-devel      | .. centered:: xz-devel | .. centered:: pcre2-devel   | .. centered:: readline-devel   | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: libjpeg-turbo-devel     | .. centered:: bzip2-devel     | .. centered:: asciidoc | .. centered:: libzstd-devel | .. centered:: texinfo          | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: mesa-libGL-devel        | .. centered:: ncurses-devel   | .. centered:: xmlto    | .. centered:: libffi-devel  | .. centered:: xxhash-devel     | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: libAfterImage-devel     | .. centered:: gcc-c++         | .. centered:: automake | .. centered:: libXi-devel   | .. centered:: libXt-devel      | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: mesa-libGLU-devel       | .. centered:: tk-devel        | .. centered:: swig     | .. centered:: lz4-devel     | .. centered:: perl-Digest-SHA  | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: glibc-devel.i686        | .. centered:: libstdc++.i686  | .. centered:: xxhash   | .. centered:: autoconf      | .. centered:: tcl-devel        | 
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: giflib-devel            | .. centered:: perl-Digest     | .. centered:: HTCondor | .. centered:: binutils      | .. centered:: zstd             |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
+| .. centered:: libXmu-devel            | .. centered:: libgcc.i686     | .. centered:: --       | .. centered:: --            | .. centered:: --               |
++---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
 
 GPU SL7 Interactive (NVIDIA Ampere A100)
 -----------------------------------------
