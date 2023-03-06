@@ -35,36 +35,39 @@ Image: fife-notebook
 
 Packages
 ~~~~~~~~~~
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: krb5-workstation       | .. centered:: redhat-lsb-core | .. centered:: make           |
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: yum-plugin-priorities  | .. centered:: cmake3          | .. centered:: gcc-c++        |
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: xrootd-client-libs     | .. centered:: gcc             | .. centered:: binutils       |        
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: voms-client-cpp        | .. centered:: voms            |  .. centered:: openssl-devel |
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: xrootd-client          | .. centered:: osg-wn-client   | .. centered:: libX11-devel   |
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: libXpm-devel           | .. centered:: libXft-devel    | .. centered:: libXext-devel  |
-+--------------------------------------+-------------------------------+------------------------------+
-| .. centered:: nss_wrapper            | .. centered:: gettext         | .. centered:: HTCondor       | 
-+--------------------------------------+-------------------------------+------------------------------+
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+| .. centered:: krb5-workstation       | .. centered:: redhat-lsb-core | .. centered:: make           | .. centered:: nss_wrapper | .. centered:: libXext-devel |
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+| .. centered:: yum-plugin-priorities  | .. centered:: cmake3          | .. centered:: gcc-c++        | .. centered:: HTCondor    | .. centered:: libXpm-devel  | 
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+| .. centered:: xrootd-client-libs     | .. centered:: gcc             | .. centered:: binutils       | .. centered:: gettext     | .. centered:: libXft-devel  |    
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+| .. centered:: voms-client-cpp        | .. centered:: osg-wn-client   | .. centered:: libX11-devel   | .. centered:: voms        | .. centered:: openssl-devel |
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+| .. centered:: xrootd-client          | .. centered:: --              | .. centered:: --             | .. centered:: --          | .. centered:: --            |
++--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
+
 
 CVMFS
 ~~~~~~
 
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
-| .. centered:: oasis.opensciencegrid.org            | .. centered:: fermilab.opensciencegrid.org | .. centered:: gm2.opensciencegrid.org     |
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
-| .. centered:: icarus.opensciencegrid.org           | .. centered:: lariat.opensciencegrid.org   | .. centered:: larsoft.opensciencegrid.org |
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
-| .. centered:: minerva.opensciencegrid.org          | .. centered:: minos.opensciencegrid.org    | .. centered:: mu2e.opensciencegrid.org    |
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
-| .. centered:: nova-development.opensciencegrid.org | .. centered:: nova.opensciencegrid.org     | .. centered:: sbnd.opensciencegrid.org    | 
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
-| .. centered:: sbn.opensciencegrid.org              | .. centered:: seaquest.opensciencegrid.org | .. centered:: uboone.opensciencegrid.org  |
-+----------------------------------------------------+--------------------------------------------+-------------------------------------------+
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: oasis.opensciencegrid.org            | .. centered:: fermilab.opensciencegrid.org | 
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: icarus.opensciencegrid.org           | .. centered:: lariat.opensciencegrid.org   | 
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: minerva.opensciencegrid.org          | .. centered:: minos.opensciencegrid.org    |
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: nova-development.opensciencegrid.org | .. centered:: nova.opensciencegrid.org     | 
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: sbn.opensciencegrid.org              | .. centered:: seaquest.opensciencegrid.org | 
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: gm2.opensciencegrid.org              | .. centered:: larsoft.opensciencegrid.org  |
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: mu2e.opensciencegrid.org             | .. centered:: sbnd.opensciencegrid.org     | 
++----------------------------------------------------+--------------------------------------------+
+| .. centered:: uboone.opensciencegrid.org           | .. centered:: --                           |
++----------------------------------------------------+--------------------------------------------+
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
 
@@ -115,21 +118,19 @@ Image: dune-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: jupyterlab-tensorboard-pro | .. centered:: torchvision | .. centered:: cudatoolkit | .. centered:: cudnn |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: matplotlib-base            | .. centered:: nccl        | .. centered:: tqdm        | .. centered:: bokeh |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: tensorflow-gpu             | .. centered:: nvcc        | .. centered:: cython      | .. centered:: h5py  |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: scikit-learn               | .. centered:: ipywidgets  | .. centered:: mpi4py      | .. centered:: numba |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: numexpr                    | .. centered:: numpy       | .. centered:: pandas      | .. centered:: pytz  |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: scikit-image               | .. centered:: ipympl      | .. centered:: scipy       | .. centered:: sympy |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
-| .. centered:: pytorch                    | .. centered:: yum-utils   |  .. centered:: --         |  .. centered:: --   |
-+------------------------------------------+---------------------------+---------------------------+---------------------+
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: jupyterlab-tensorboard-pro | .. centered:: torchvision | .. centered:: cudatoolkit | .. centered:: cudnn | .. centered:: yum-utils |
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: matplotlib-base            | .. centered:: nccl        | .. centered:: tqdm        | .. centered:: bokeh | .. centered:: pytorch   |
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: tensorflow-gpu             | .. centered:: nvcc        | .. centered:: cython      | .. centered:: h5py  | .. centered:: sympy     |
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: scikit-learn               | .. centered:: ipywidgets  | .. centered:: mpi4py      | .. centered:: numba | .. centered:: scipy     | 
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: numexpr                    | .. centered:: numpy       | .. centered:: pandas      | .. centered:: pytz  | .. centered:: ipympl    |
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
+| .. centered:: scikit-image               | .. centered:: --          | .. centered:: --          | .. centered:: --    | .. centered:: --        |
++------------------------------------------+---------------------------+---------------------------+---------------------+-------------------------+
 
 GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 ----------------------------------------------------
