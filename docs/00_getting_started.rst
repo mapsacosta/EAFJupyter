@@ -442,6 +442,19 @@ Packages
 CVMFS
 ------
 
+.. table:: 
+   :align: center
+   
+       +-----------------------------------------+--------------------------------------------+
+       | .. centered:: oasis.opensciencegrid.org | .. centered:: fermilab.opensciencegrid.org |
+       +-----------------------------------------+--------------------------------------------+
+       | .. centered:: admx.opensciencegrid.org  | .. centered:: darkside.opensciencegrid.org |
+       +-----------------------------------------+--------------------------------------------+
+       | .. centered:: des.opensciencegrid.org.  | .. centered:: sw.lsst.eu                   |
+       +-----------------------------------------+--------------------------------------------+
+
+
+
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Cosmic Frontier images, toggle the "Background" and "Cosmic Frontier" layers in the interactive diagram.
 
 CMSLPC
@@ -462,14 +475,14 @@ Image: cmslpc-notebook
 Packages
 ~~~~~~~~~~
 
-+------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
-|   .. centered:: make   | .. centered:: cmake3        | .. centered:: gcc-c++        |  .. centered:: voms-client  |  .. centered:: HTCondor    |
-+------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
-| .. centered:: gcc      | .. centered:: osg-wn-client | .. centered::  xrootd-client |  .. centered:: eos-client   |  .. centered:: eos-xrootd  |
-+------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
-
-CVMFS
-~~~~~~
+.. table:: 
+   :align: center
+   
+   +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
+   |   .. centered:: make   | .. centered:: cmake3        | .. centered:: gcc-c++        |  .. centered:: voms-client  |  .. centered:: HTCondor    |
+   +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
+   | .. centered:: gcc      | .. centered:: osg-wn-client | .. centered::  xrootd-client |  .. centered:: eos-client   |  .. centered:: eos-xrootd  |
+   +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
 
 COFFEA-DASK SL7 Interactive
 ------------------------------
@@ -478,68 +491,65 @@ Image: cmslpc-coffea-dask
 Packages
 ~~~~~~~~~~
 
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: conda-build             | .. centered:: ipymp         | .. centered:: aiohttp        | .. centered:: click          | .. centered:: dask            |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: distributed             | .. centered:: pyyaml        | .. centered:: tornado        | .. centered:: numpy          | .. centered:: dask-gateway    |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: scikit-hep-testdata     | .. centered:: iminuit       | .. centered:: uproot         | .. centered:: ipywidgets     | .. centered:: traitlets       |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: dask-labextension       | .. centered:: ca-policy-lcg | .. centered:: cmake          |  .. centered:: xrootd        |  .. centered:: mplhep         |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: dask-jobqueue           | .. centered:: coffea        | .. centered:: vector         |  .. centered:: xgboost       |  .. centered:: hist           |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: python-rapidjson        | .. centered:: lz4           | .. centered:: pytables       |  .. centered:: pyhf          |  .. centered:: brotli         |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: geventhttpclient        | .. centered:: grpcio        | .. centered:: funcx          |  .. centered:: python-xhash  |  .. centered:: fastjet        |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: servicex-databinder     | .. centered:: zstandard     | .. centered:: tritonclient   |  .. centered:: aiostream     |  .. centered:: cabinetry      |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: func-adl-servicex       | .. centered:: protobuf      | .. centered:: tflite_runtime |  .. centered:: tenacity      |  .. centered:: htcondor       |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: func-adl-uproot         | .. centered:: onnxruntime   | .. centered:: htcdaskgateway |  .. centered:: correctionlib |  .. centered:: tcut-to-qastle |
-+---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+.. table:: 
+   :align: center
+   
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: conda-build             | .. centered:: ipymp         | .. centered:: aiohttp        | .. centered:: click          | .. centered:: dask            |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: distributed             | .. centered:: pyyaml        | .. centered:: tornado        | .. centered:: numpy          | .. centered:: dask-gateway    |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: scikit-hep-testdata     | .. centered:: iminuit       | .. centered:: uproot         | .. centered:: ipywidgets     | .. centered:: traitlets       |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: dask-labextension       | .. centered:: ca-policy-lcg | .. centered:: cmake          |  .. centered:: xrootd        |  .. centered:: mplhep         |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: dask-jobqueue           | .. centered:: coffea        | .. centered:: vector         |  .. centered:: xgboost       |  .. centered:: hist           |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: python-rapidjson        | .. centered:: lz4           | .. centered:: pytables       |  .. centered:: pyhf          |  .. centered:: brotli         |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: geventhttpclient        | .. centered:: grpcio        | .. centered:: funcx          |  .. centered:: python-xhash  |  .. centered:: fastjet        |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: servicex-databinder     | .. centered:: zstandard     | .. centered:: tritonclient   |  .. centered:: aiostream     |  .. centered:: cabinetry      |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: func-adl-servicex       | .. centered:: protobuf      | .. centered:: tflite_runtime |  .. centered:: tenacity      |  .. centered:: HTCondor       |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
+   | .. centered:: func-adl-uproot         | .. centered:: onnxruntime   | .. centered:: htcdaskgateway |  .. centered:: correctionlib |  .. centered:: tcut-to-qastle |
+   +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
 
 
-CVMFS
-~~~~~~
-
-GPU SL7 Interactive (NVIDIA Ampere A100)
-------------------------------------------
+GPU SL7 Interactive (NVIDIA Ampere A100) and GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+--------------------------------------------------------------------------------------------------
 Image: cmslpc-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
-
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: cudatoolkit             | .. centered:: cudnn          | .. centered:: pytorch        | .. centered:: mpi4py          | 
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: tensorflow-gpu          | .. centered:: nccl           | .. centered:: bokeh          | .. centered:: tqdm            | 
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: cython                  | .. centered:: akward         | .. centered:: h5py           | .. centered:: ipympl          | 
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: matplotlib-base         | .. centered:: scikit-image   | .. centered:: scikit-learn   |  .. centered:: scipy          |
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: tensorboard-pro         | .. centered:: cupy           | .. centered:: sympy          |  .. centered:: cuda-nvcc-11-7 |
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-| .. centered:: awkward-cuda-kernals    | .. centered:: nsight-systems | .. centered::  ---           |  .. centered::  ---           |
-+---------------------------------------+------------------------------+------------------------------+-------------------------------+
-
-
+.. table:: 
+   :align: center
+   
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
+   | .. centered:: cudatoolkit             | .. centered:: cudnn          | .. centered:: pytorch        | .. centered:: mpi4py          | .. centered:: awkward-cuda-kernals |
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
+   | .. centered:: tensorflow-gpu          | .. centered:: nccl           | .. centered:: bokeh          | .. centered:: tqdm            | .. centered:: nsight-systems       |
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
+   | .. centered:: cython                  | .. centered:: akward         | .. centered:: h5py           | .. centered:: ipympl          | .. centered:: nvcc                 |
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
+   | .. centered:: matplotlib-base         | .. centered:: scikit-image   | .. centered:: scikit-learn   | .. centered:: scipy           | .. centered:: sympy                | 
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
+   | .. centered:: tensorboard-pro         | .. centered:: cupy           | .. centered::  ---           |  .. centered::  ---           | .. centered::  ---                 |
+   +---------------------------------------+------------------------------+------------------------------+-------------------------------+------------------------------------+
 
 CVMFS
-~~~~~~
+------
 
-GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
------------------------------------------------------
-Image: cmslpc-notebook (GPU)
-
-Packages
-~~~~~~~~~~
-
-CVMFS
-~~~~~~
-
+.. table:: 
+   :align: center
+   
+   +-------------------------------------------+-----------------------------------------+
+   | .. centered:: cms.cern.ch                 | .. centered:: oasis.opensciencegrid.org |
+   +-------------------------------------------+-----------------------------------------+
+   | .. centered:: cms-lpc.opensciencegrid.org | .. centered:: unpacked.cern.ch          |
+   +-------------------------------------------+-----------------------------------------+
+   
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only CMSLPC images, toggle the "Background" and "CMS-LPC" layers in the interactive diagram.
 
 EAF Structure and Packages
