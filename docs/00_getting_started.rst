@@ -16,7 +16,9 @@ Each experiment has different notebook options when starting a server and are gr
 
 `Fermi Generic SL7/CC8`_ - Muon g-2
 
-*If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.*
+.. note::
+
+   If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.
 
 Fermi Generic SL7/CC8
 =====================
@@ -26,8 +28,11 @@ Fermi Generic SL7/CC8
    :width: 375
    :align: center
    :alt: The Fermi Generic SL7/CC8 server options as displayed on the JupyterHub. The first option is the Basic SL7 Interactive, the second option is the Basic CC8 Interactive and the third is the Rescue Image.
+   :escape: \n
 
-**Important:** The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, are documented here<>.
+.. important::
+   
+   The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, are documented here<>.
 
 Basic SL7 Interactive
 -----------------------
@@ -417,7 +422,9 @@ Packages
 
 LSST
 -----------------------------------------------------
-**Important: ** This notebook option will be made available in a future update.
+.. important::
+   
+   This notebook option will be made available in a future update.
 
 Image: lsst-notebook
 
@@ -427,17 +434,17 @@ Packages
 .. table:: 
    :align: center
    
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
-   | .. centered:: yum-plugin-priorities | .. centered:: krb5-workstation | .. centered:: redhat-lsb-core | .. centered:: lsst-jupyter-kernel | .. centered:: voms-clients-cpp |
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
-   | .. centered:: xrootd-client-libs    | .. centered:: make             | .. centered:: cmake3          | .. centered:: gcc-c++             | .. centered:: gcc              |
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
-   | .. centered:: binutils              | .. centered:: libXft-devel     | .. centered:: libXext-devel.  | .. centered:: openssl-devel.      | .. centered:: nss_wrapper      |
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
-   | .. centered:: gettext               | .. centered:: osg-wn-client    | .. centered:: xrootd-client   | .. centered:: voms                | .. centered:: libXpm-devel     |
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
-   | .. centered:: HTCondor              | .. centered:: xxhash-libs      | .. centered:: libX11-devel    | .. centered:: cvmfs-lsst          | .. centered:: --               |
-   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------------+--------------------------------+
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
+   | .. centered:: yum-plugin-priorities | .. centered:: krb5-workstation | .. centered:: redhat-lsb-core | .. centered:: binutils      | .. centered:: voms-clients-cpp |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
+   | .. centered:: xrootd-client-libs    | .. centered:: make             | .. centered:: cmake3          | .. centered:: gcc-c++       | .. centered:: gcc              |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
+   | .. centered:: lsst-jupyter-kernel   | .. centered:: libXft-devel     | .. centered:: libXext-devel   | .. centered:: openssl-devel | .. centered:: nss_wrapper      |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
+   | .. centered:: gettext               | .. centered:: osg-wn-client    | .. centered:: xrootd-client   | .. centered:: voms          | .. centered:: libXpm-devel     |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
+   | .. centered:: HTCondor              | .. centered:: xxhash-libs      | .. centered:: libX11-devel    | .. centered:: cvmfs-lsst    | .. centered:: --               |
+   +-------------------------------------+--------------------------------+-------------------------------+-----------------------------+--------------------------------+
 
 CVMFS
 ------
@@ -479,7 +486,7 @@ Packages
    :align: center
    
    +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
-   |   .. centered:: make   | .. centered:: cmake3        | .. centered:: gcc-c++        |  .. centered:: voms-client  |  .. centered:: HTCondor    |
+   | .. centered:: make     | .. centered:: cmake3        | .. centered:: gcc-c++        |  .. centered:: voms-client  |  .. centered:: HTCondor    |
    +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
    | .. centered:: gcc      | .. centered:: osg-wn-client | .. centered::  xrootd-client |  .. centered:: eos-client   |  .. centered:: eos-xrootd  |
    +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
