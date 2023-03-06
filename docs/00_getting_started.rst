@@ -32,7 +32,7 @@ Fermi Generic SL7/CC8
 
 .. important::
    
-   The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, are documented here<>.
+   The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, is documented here<>.
 
 Basic SL7 Interactive
 -----------------------
