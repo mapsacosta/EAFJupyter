@@ -35,6 +35,11 @@ Image: fife-notebook
 
 Packages
 ~~~~~~~~~~
+.rst-content .align-center {
+    margin: auto;
+        margin-bottom: auto;
+    display: block;
+}
 +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
 | .. centered:: krb5-workstation       | .. centered:: redhat-lsb-core | .. centered:: make           | .. centered:: nss_wrapper | .. centered:: libXext-devel |
 +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
