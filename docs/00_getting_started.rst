@@ -92,6 +92,8 @@ LBNF/DUNE/ProtoDUNE
    :align: center
    :alt: The LBNF/DUNE/ProtoDUNE server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is the GPU SL7 Interactive (NVIDIA Ampere A100) and the third is the GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
+|
+
 SL7 Interactive General Purpose Notebook
 -----------------------------------------
 Image: dune-notebook
@@ -176,6 +178,8 @@ FIFE/Neutrinos
    :align: center
    :alt: The FIFE/Neutrinos server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is the GPU SL7 Interactive (NVIDIA Ampere A100) and the third is the GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
+|
+
 SL7 Interactive General Purpose Notebook
 ------------------------------------------
 Image: fife-notebook
@@ -256,6 +260,8 @@ ACORN/ACCEL-AI
    :width: 375
    :align: center
    :alt: The ACORN/ACCEL-AI server options as displayed on the JupyterHub. The first option is the ACORN CPU Only SL7 Interactive, the second option is ACORN AIMPS SL7 Interactive, the third option is L-CAPE CPU Only SL7 Interactive, the fourth option is L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100), the fifth option is L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU], the sixth option is READS CPU Only SL7 Interactive, the seventh option is READS GPU SL7 Interactive (NVIDIA Ampere A100), and the eigth option is READS GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
+
+|
 
 ACORN CPU Only SL7 Interactive
 -------------------------------
@@ -380,6 +386,8 @@ Cosmic Frontier
    :align: center
    :alt: The Cosmic Frontier server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is GPU SL7 Interactive (NVIDIA Ampere A100), the third option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU], and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU].
    
+|   
+   
 SL7 Interactive General Purpose Notebook
 ------------------------------------------
 Image: astro-notebook
@@ -474,6 +482,8 @@ CMSLPC
    :align: center
    :alt: The CMSLPC server options as displayed on the JupyterHub. The first option is the SL7 Interactive, the second option is COFFEA-DASK SL7 Interactive, the third option is GPU SL7 Interactive (NVIDIA Ampere A100), and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
+|
+
 Each server opton inherits the packages from the image it was based on. The inheritence is shown in the diagram in `EAF Structure and Packages`_.
 
 SL7 Interactive
@@ -563,7 +573,11 @@ For more detailed information regarding packages, check out the diagram in `EAF 
 EAF Structure and Packages
 ==============================
 
-For more detailed server option information, check out this diagram. It lists all of the packages installed and their versions if it was specified in the build. *The server option is not the same as the image, please use the image specified for the server option to navigate this diagram.*
+For more detailed server option information, check out this diagram. It lists all of the packages installed and their versions if it was specified in the build. 
+
+.. note::
+   
+   The server option is not the same as the image, please use the image specified for the server option to navigate this diagram.
 
 .. image:: img/diagram.png
    :height: 950
@@ -571,6 +585,8 @@ For more detailed server option information, check out this diagram. It lists al
    :align: center
    :alt: EAF structure diagram.
  
+|
+
 Here is an interactive version of the diagram with layer toggles:
 
 `EAF Interactive Diagram <https://viewer.diagrams.net/?page-id=8oN_c9q_UM9n-6WH7pcY&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=8oN_c9q_UM9n-6WH7pcY#G1A4dTTE_s0VSGPEHtS5nBlI-CGcVstcW_>`_
