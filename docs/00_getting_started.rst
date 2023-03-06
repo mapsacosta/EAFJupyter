@@ -292,29 +292,33 @@ Packages
 
 READS CPU Only SL7 Interactive
 --------------------------------
-Image: 
+Image: accel-ai-reads-notebook
 
 Packages
 ~~~~~~~~~~
 
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
+| .. centered:: matplotlib-base | .. centered:: ipywidgets | .. centered:: scikit-image | .. centered:: scikit-learn | .. centered:: cm-super |
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
+| .. centered:: ffmpeg          | .. centered:: dvipng     | .. centered:: pytorch      | .. centered:: cpuonly      | .. centered:: bokeh    |
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
+| .. centered:: tqdm            | .. centered:: cython     | .. centered:: h5py         | .. centered:: ipympl       | .. centered:: numba    |
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
+| .. centered:: numexpr         | .. centered:: numpy      | .. centered:: pandas       | .. centered:: pytz         | .. centered:: scipy    |
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
+| .. centered:: cupy            | .. centered:: sympy      | .. centered:: --           | .. centered:: --           | .. centered:: --       |
++-------------------------------+--------------------------+----------------------------+----------------------------+------------------------+
 
-
-READS GPU SL7 Interactive (NVIDIA Ampere A100)
-------------------------------------------------
-Image: 
+READS GPU SL7 Interactive (NVIDIA Ampere A100) and READS GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+--------------------------------------------------------------------------------------------------------------
+Image: accel-ai-reads-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
 
-
-READS GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
------------------------------------------------------------
-Image: 
-
-Packages
-~~~~~~~~~~
-
-
++------------------------------------------+---------------------------+---------------------+------------------------------+--------------------+
+| .. centered:: jupyterlab-tensorboard-pro | .. centered:: cudatoolkit | .. centered:: cudnn | .. centered:: tensorflow-gpu | .. centered:: nvcc |
++------------------------------------------+---------------------------+---------------------+------------------------------+--------------------+
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Acorn/Accel-ai images, toggle the "Background" and "Acorns/Accel-ai" layers in the interactive diagram.
 
