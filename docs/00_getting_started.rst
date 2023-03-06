@@ -220,7 +220,6 @@ For more detailed information regarding packages, check out the diagram in `EAF 
 ACORN/ACCEL-AI
 =====================
 
-
 .. image:: img/Accel_ai_acorn_hub.png
    :height: 485
    :width: 375
@@ -229,23 +228,38 @@ ACORN/ACCEL-AI
 
 ACORN CPU Only SL7 Interactive
 -------------------------------
-Image: 
+Image: acorn-notebook
 
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: xorg-x11-proto-devel | .. centered:: libX11-devel | .. centered:: libXau-devel | .. centered:: xorg-x11-xauth | .. centered:: xorg-x11-apps |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: xorg-x11-server-Xorg | .. centered:: cm-super     | .. centered:: libX11       | .. centered:: gcc            | .. centered:: nvcc          |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: jupyterlab-drawio    |  .. centered:: ffmpeg      | .. centered:: dvipng       | .. centered:: pytorch        | .. centered:: cpuonly       |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: jupyterlab-github    | .. centered:: bokeh        | .. centered:: tqdm         | .. centered:: cython         | .. centered:: h5py          |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: matplotlib-base      | .. centered:: ipympl       | .. centered:: ipywidgets   | .. centered:: numba          | .. centered:: numexpr       |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: scikit-images        | .. centered:: numpy        | .. centered:: pandas       | .. centered:: pytz           | .. centered:: scipy         |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+| .. centered:: scikit-learn         | .. centered:: cupy         | .. centered:: sympy        | .. centered:: --             | .. centered:: --            |
++------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+
 
 ACORN AIMPS SL7 Interactive
 ------------------------------
-Image: 
+Image: AIMPS-notebook
 
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
++----------------------------+------------------------+---------------------+
+| .. centered:: gcc-gfortran | .. centered:: lfortran | .. centered:: cmake |
++----------------------------+------------------------+---------------------+
 
 L-CAPE CPU Only SL7 Interactive
 ---------------------------------
@@ -254,8 +268,6 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
 
 L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------------
@@ -264,8 +276,6 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
 
 L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------------
@@ -274,8 +284,7 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
+
 
 READS CPU Only SL7 Interactive
 --------------------------------
@@ -284,8 +293,7 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
+
 
 READS GPU SL7 Interactive (NVIDIA Ampere A100)
 ------------------------------------------------
@@ -294,8 +302,6 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
 
 READS GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
 -----------------------------------------------------------
@@ -304,8 +310,7 @@ Image:
 Packages
 ~~~~~~~~~~
 
-CVMFS
-~~~~~~
+
 
 For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Acorn/Accel-ai images, toggle the "Background" and "Acorns/Accel-ai" layers in the interactive diagram.
 
