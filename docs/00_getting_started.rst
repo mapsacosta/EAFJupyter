@@ -263,27 +263,31 @@ Packages
 
 L-CAPE CPU Only SL7 Interactive
 ---------------------------------
-Image: 
+Image: accel-ai-lcape-notebook
 
 Packages
 ~~~~~~~~~~
 
++------------------------------------+----------------------+-----------------------+----------------------------+------------------------+
+| .. centered:: tensorflow-estimator | .. centered:: ffmpeg | .. centered:: cpuonly | .. centered:: scikit-learn | .. centered:: cm-super |
++------------------------------------+----------------------+-----------------------+----------------------------+------------------------+
+| .. centered:: tensorflow           | .. centered:: pandas | .. centered:: dvipng  | .. centered:: matplotlib   | .. centered:: pytorch  |
++------------------------------------+----------------------+-----------------------+----------------------------+------------------------+
+| .. centered:: pytables             | .. centered:: h5py   | .. centered:: seaborn | .. centered:: dask         | .. centered:: hvplot   |
++------------------------------------+----------------------+-----------------------+----------------------------+------------------------+
+| .. centered:: dask-ml              | .. centered:: numpy  | .. centered:: scipy   | .. centered:: sympy        | .. centered:: --       |
++------------------------------------+----------------------+-----------------------+----------------------------+------------------------+
 
-L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100)
-------------------------------------------------
-Image: 
+L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) and L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+---------------------------------------------------------------------------------------------------------------
+Image: accel-ai-lcape-notebook (GPU)
 
 Packages
 ~~~~~~~~~~
 
-
-L-CAPE GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
------------------------------------------------------------
-Image: 
-
-Packages
-~~~~~~~~~~
-
++---------------------------+---------------------+------------------------------+--------------------+
+| .. centered:: cudatoolkit | .. centered:: cudnn | .. centered:: tensorflow-gpu | .. centered:: nvcc |
++---------------------------+---------------------+------------------------------+--------------------+
 
 
 READS CPU Only SL7 Interactive
