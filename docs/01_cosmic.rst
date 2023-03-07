@@ -1,3 +1,5 @@
+.. _astro:
+
 Cosmic Frontier
 =====================
 
