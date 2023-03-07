@@ -24,5 +24,25 @@ Base Image
 ---------------
 Image: base-notebook
 
+The notebooks that directly inherit from this image are CMSLPC: SL7 Interactive, Cosmic Frontier: SL7 Interactive General Purpose Notebook, ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN/ACCEL-AI: ACORN AIMPS SL7 Interactive, ACORN/ACCEL-AI: L-CAPE CPU Only SL7 Interactive, FIFE/Neutrinos: SL7 Interactive General Purpose Notebook, LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook, and Cosmic Frontier: LSST Notebook (not released yet). 
+
 Packages
 ~~~~~~~~~
+
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: jupyterlab-system-monitor | .. centered: krb5-workstation  | .. centered: krb5-libs | .. centered: nss wrapper | .. centered: krb5.conf |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: fonts-liberation          | .. centered: json-passwd       | .. centered: gcc       | .. centered: gettext     | .. centered: bzip2     |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: ca-certificates           | .. centered: sudo              | .. centered: locales   | .. centered: run-one     | .. centered: wget      |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: python-requests           | .. centered: ipywidgets        | .. centered: tcpdump   | .. centered: sssd-client | .. centered: openssl   |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: jupyterlab-drawio         | .. centered: emacs             | .. centered: git       | .. centered: unzip       | .. centered: rsync     |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: typing-extensions         | .. centered: nano              | .. centered: vim       | .. centered: miniforge   | .. centered: tini      |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: nb_conda_kernals          | .. centered: jupyterhub        | .. centered: notebook  | .. centered: jupyterlab  | .. centered: net-tools |
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
+| .. centered: jupyter_server            | .. centered: jupyterlab-it     | .. centered: ssh.conf  | .. centered: rpm         | .. centered: --        | 
++----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
