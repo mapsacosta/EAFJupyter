@@ -4,17 +4,17 @@ Getting started - Choosing a Notebook
 
 Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the base image. This is documented in `Base Image`_.  
 
-'CMSLPC <>'_ - CMS, LHC
+`CMSLPC <>`_ - CMS, LHC
 
-'Cosmic Frontier <>'_ - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
+`Cosmic Frontier <>`_ - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
 
-'ACORN/ACCEL-AI <accelerator_>'_ -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
+`ACORN/ACCEL-AI <accelerator_>`_ -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 
-'FIFE/Neutrinos <>'_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
+`FIFE/Neutrinos <>`_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 
-'LBNF/DUNE/ProtoDUNE <>'_ - DUNE, LBNF
+`LBNF/DUNE/ProtoDUNE <>`_ - DUNE, LBNF
 
-'Fermi Generic SL7/CC8 <>'_ - Everyone
+`Fermi Generic SL7/CC8 <>`_ - Everyone
 
 .. note::
 
