@@ -2,7 +2,7 @@
 Getting started - Choosing a Notebook
 *********
 
-Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks.
+Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the base image. This is documented in `Base Image`_.  
 
 `CMSLPC`_ - CMS, LHC
 
@@ -19,3 +19,10 @@ Each experiment has different notebook options when starting a server and are gr
 .. note::
 
    If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.
+
+Base Image
+---------------
+Image: base-notebook
+
+Packages
+~~~~~~~~~
