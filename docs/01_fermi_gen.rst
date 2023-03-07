@@ -1,3 +1,5 @@
+.. _fermi:
+
 Fermi Generic SL7/CC8
 ======================
 
