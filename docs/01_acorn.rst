@@ -1,4 +1,4 @@
-.. _acorn:
+.. _accelerator:
 
 ACORN/ACCEL-AI
 =====================
