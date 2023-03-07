@@ -6,15 +6,15 @@ Each experiment has different notebook options when starting a server and are gr
 
 `CMSLPC`_ - CMS, LHC
 
-`Cosmic Frontier`_ - LSST, MAGIS-100, Mu2e, DES, DarkSide, Holometer
+`Cosmic Frontier`_ - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
 
-`ACORN/ACCEL-AI`_ - 
+`ACORN/ACCEL-AI`_ -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 
-`FIFE/Neutrinos`_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND
+`FIFE/Neutrinos`_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 
 `LBNF/DUNE/ProtoDUNE`_ - DUNE, LBNF
 
-`Fermi Generic SL7/CC8`_ - Muon g-2
+`Fermi Generic SL7/CC8`_ - Everyone
 
 .. note::
 
