@@ -81,4 +81,4 @@ CVMFS
    | .. centered:: uboone.opensciencegrid.org           | .. centered:: --                           |
    +----------------------------------------------------+--------------------------------------------+
 
-For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only FIFE/Neutrinos images, toggle the "Background" and "FIFE/Neutrinos" layers in the interactive diagram.
+For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only FIFE/Neutrinos images, toggle the "Background" and "FIFE/Neutrinos" layers in the interactive diagram.
