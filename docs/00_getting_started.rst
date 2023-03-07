@@ -4,19 +4,17 @@ Getting started - Choosing a Notebook
 
 Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the base image. This is documented in `Base Image`_.  
 
-`CMSLPC <>`_ - CMS, LHC
+:ref:`CMSLPC<cms>`- CMS, LHC
 
-`Cosmic Frontier <>`_ - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
+:ref:`Cosmic Frontier<astro>` - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
 
-:ref:`ACORN/ACCEL-AI<accelerator>`
+:ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 
-`ACORN/ACCEL-AI<accelerator>`_ -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
+:ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 
-`FIFE/Neutrinos <>`_ - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
+:ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
 
-`LBNF/DUNE/ProtoDUNE <>`_ - DUNE, LBNF
-
-`Fermi Generic SL7/CC8 <>`_ - Everyone
+:ref:`Fermi Generic SL7/CC8<fermi>` - Everyone
 
 .. note::
 
@@ -51,3 +49,5 @@ Packages
    +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
    | .. centered:: jupyter_server            | .. centered:: jupyterlab-it     | .. centered:: ssh.conf  | .. centered:: rpm         | .. centered:: --        | 
    +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+
+For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only the base image, toggle the "Background" layer in the interactive diagram.
