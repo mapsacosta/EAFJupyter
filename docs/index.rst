@@ -34,6 +34,15 @@ Exploring
 .. toctree::
    :maxdepth: 1
    :hidden:
+   :caption: Accounts and authentication
+
+   00_user_accounts.rst
+.. 01_user_visitor_student.rst
+   01_getting_fnal_accounts.rst
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
    :caption: Server and Notebook Options
 
    00_getting_started.rst
@@ -44,15 +53,6 @@ Exploring
    01_acorn.rst
    01_cmslpc.rst
    01_diagram.rst
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Accounts and authentication
-
-   00_user_accounts.rst
-.. 01_user_visitor_student.rst
-   01_getting_fnal_accounts.rst
 
 .. toctree::
    :maxdepth: 1
