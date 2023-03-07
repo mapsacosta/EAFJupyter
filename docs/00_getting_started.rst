@@ -29,6 +29,9 @@ The notebooks that directly inherit from this image are CMSLPC: SL7 Interactive,
 Packages
 ~~~~~~~~~
 
+.. image::
+   ::
+
 +----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
 | .. centered: jupyterlab-system-monitor | .. centered: krb5-workstation  | .. centered: krb5-libs | .. centered: nss wrapper | .. centered: krb5.conf |
 +----------------------------------------+--------------------------------+------------------------+--------------------------+------------------------+
