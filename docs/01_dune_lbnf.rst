@@ -1,3 +1,5 @@
+.. _dune:
+
 LBNF/DUNE/ProtoDUNE
 =====================
 
