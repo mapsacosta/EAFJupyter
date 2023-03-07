@@ -123,4 +123,4 @@ Packages
    | .. centered:: jupyterlab-tensorboard-pro | .. centered:: cudatoolkit | .. centered:: cudnn | .. centered:: tensorflow-gpu | .. centered:: nvcc |
    +------------------------------------------+---------------------------+---------------------+------------------------------+--------------------+
 
-For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only Acorn/Accel-ai images, toggle the "Background" and "Acorns/Accel-ai" layers in the interactive diagram.
+For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only Acorn/Accel-ai images, toggle the "Background" and "Acorns/Accel-ai" layers in the interactive diagram.
