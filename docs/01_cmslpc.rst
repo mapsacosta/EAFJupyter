@@ -95,4 +95,4 @@ CVMFS
    | .. centered:: cms-lpc.opensciencegrid.org | .. centered:: unpacked.cern.ch          |
    +-------------------------------------------+-----------------------------------------+
    
-For more detailed information regarding packages, check out the diagram in `EAF Structure and Packages`_. To look at only CMSLPC images, toggle the "Background" and "CMS-LPC" layers in the interactive diagram.
+For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only CMSLPC images, toggle the "Background" and "CMS-LPC" layers in the interactive diagram.
