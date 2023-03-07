@@ -1,3 +1,5 @@
+.. _diagram:
+
 EAF Structure and Packages
 ==============================
 
