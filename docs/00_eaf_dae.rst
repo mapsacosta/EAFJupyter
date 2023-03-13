@@ -2,29 +2,24 @@
 Data Analysis Ecosystem?
 *********
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
-finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+The Elastic Analysis Facility aims to provide a platform for rapid scientific analysis with modern web and container technologies. As such, Jupyterhub is designed to be the gateway to a diverse ecosystem encompassing data analysis software, services and libraries for all Fermilab experiments. 
 
-Document Section
+Have an idea for a replicable environment that you would like to see on EAF? contact eaf-users@fnal.gov and we will be happy to collaborate on making it posible
+
+
+The idea behind EAF
 ================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
-nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
+To unify and provide tools and development environments for HEP through a modern analysis facility. 
+We are working closely and aligned with `IRIS-HEP <https://iris-hep.org>`_, a software institute funded by the National Science Foundation. It aims to develop the state-of-the-art software cyberinfrastructure required for the challenges of data intensive scientific research at the High Luminosity Large Hadron Collider (HL-LHC) at CERN, and other planned HEP experiments of the 2020’s
 
-Document Subsection
--------------------
+.. image:: img/analysisfacilities.png
+  :alt: EAF vision
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
-nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
 
-Document Subsubsection
-^^^^^^^^^^^^^^^^^^^^^^
+Current ecosystem
+================
+.. image:: img/eaf_ecosystem.png
+  :alt: EAF current ecosystem
 
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
 
-Document Paragraph
-""""""""""""""""""
-
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.

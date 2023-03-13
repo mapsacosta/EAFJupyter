@@ -2,29 +2,15 @@
 Multiple sessions
 *********
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
-finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+We have enabled a feature in JupyterHub that allows our users to have up to 5 named sessions in parallel. If you have many projects or need to use separate environments, JupyterHub will keep track of your notebooks in the home page.
 
-Document Section
+Instructions
 ================
+* Click on the 'Home' button at the right hand, top menu. You will see a webpage with a list of Named Servers. 
+* To add a new server/notebook, enter a DNS-safe name into the textbox 'Name your server'
+* Click on the 'Add new server' hyperlink on the right to the textbox. Jupyter will present server options and will spawn a notebook. 
+* To come back to your notebook list, head back to the home page, where the list of servers will display all active notebooks. 
+* The table display will show a clickable URL link for easy access to any of your active notebooks.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
-nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
-
-Document Subsection
--------------------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
-nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
-
-Document Subsubsection
-^^^^^^^^^^^^^^^^^^^^^^
-
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
-
-Document Paragraph
-""""""""""""""""""
-
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.
+.. image:: img/named_servers.png
+  :alt: Named Servers

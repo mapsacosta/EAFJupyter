@@ -4,9 +4,18 @@ EAF Access and Accounts
 
 General Usage
 ==============
-CMS USERS/VISITORS PLEASE GO TO `CMS Accounts`_.
 
-The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general Fermilab account. If you are offsite, you will also need to use the Fermilab VPN to connect to the EAF, follow `these instructions <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_ if you have not used the VPN before or are having trouble with it.
+CMS USERS/VISITORS PLEASE GO TO `CMS ACCOUNTS <https://eafjupyter.readthedocs.io/en/latest/00_user_accounts.html#cms-accounts>`_
+
+
+The EAF requires users to have a Fermilab services account which can be obtained in different ways depending on your
+affiliation with Fermilab. The links to instructions are provided for users and visitors looking to obtain a general
+Fermilab account.
+
+If you are offsite, you will also need to either use a proxy or VPN.
+
+   * `Fermilab Proxy with FoxyProxy (no RSA token/Yubikey required) <https://library.fnal.gov/off-site-electronic-access-instructions#foxy>`_
+   * `Fermilab VPN (RSA token/Yubikey required) <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_
 
 Still Can't Log-In
 -------------------

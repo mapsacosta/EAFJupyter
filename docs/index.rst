@@ -29,6 +29,7 @@ Exploring
    :caption: 
 
    index.rst
+
 .. 00_comp_capabilities.rst
 
 .. toctree::

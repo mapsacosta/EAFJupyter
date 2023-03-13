@@ -1,5 +1,7 @@
+.. _preamble scripts:
+
 **************************************************
-Customizing user environments via preamble scripts
+Preamble scripts
 **************************************************
 
 You can customize your EAF Jupyter installation with your own custom preamble scripts.
@@ -22,14 +24,15 @@ Usage
 The ipykernel launcher will execute two different preamble scripts in order:
 
    * ``~/.preamble/global.sh``, which is executed on every notebook flavor.  
-   * ``~/.preamble/${NB_PROFILE.sh}``
+   * ``~/.preamble/${NB_PROFILE}.sh``
 
 The second script allows you to customize notebook flavor-dependent scripts, based on the value of
 the ``NB_PROFILE`` environment variable.
 
+.. note:: The preamble scripts only run for the "python-ipykernel" launcher. See :ref:`conda preamble scripts <conda user scripts>` for information on running preamble scripts in a conda/mamba environment.
 
 Example
-^^^^^^^
+=======
 
 ``~/.preamble/global.sh``:
 
@@ -44,13 +47,13 @@ Example
 
   export BAR=locally-set
 
-The second preamble will only run for an astro notebook; ``BAR`` is overwritten:
+The second preamble will only run for an astro notebook server; ``BAR`` is overwritten:
 
 .. image:: img/astro-preamble.png
   :width: 400
   :alt: Screencap from Astro notebook
 
-If you execute from an LPC notebook, the second script does not execute and ``BAR``
+If you execute from an LPC notebook server, the second script does not execute and ``BAR``
 remains unchanged:
 
 .. image:: img/lpc-preamble.png
