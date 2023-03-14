@@ -29,7 +29,7 @@ Exploring
    :caption: 
 
    index.rst
-   00_getting_started.rst
+
 .. 00_comp_capabilities.rst
 
 .. toctree::
@@ -40,6 +40,20 @@ Exploring
    00_user_accounts.rst
 .. 01_user_visitor_student.rst
    01_getting_fnal_accounts.rst
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: Server and Notebook Options
+
+   00_getting_started.rst
+   01_fermi_gen.rst
+   01_fife.rst
+   01_dune_lbnf.rst
+   01_cosmic.rst
+   01_acorn.rst
+   01_cmslpc.rst
+   01_diagram.rst
 
 .. toctree::
    :maxdepth: 1

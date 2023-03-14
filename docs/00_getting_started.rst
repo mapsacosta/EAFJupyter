@@ -1,30 +1,53 @@
 *********
-Getting started
+Getting started - Choosing a Notebook
 *********
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, interdum in ipsum nec,
-finibus dictum velit. Ut eu efficitur arcu, id aliquam erat. In sit amet diam gravida, imperdiet tellus eu,
+Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the base image. This is documented in `Base Image`_.  
 
-Document Section
-================
+:ref:`CMSLPC<cms>`- CMS, LHC
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum nulla vel neque venenatis,
-nec placerat lorem placerat. Cras purus eros, gravida vitae tincidunt id, vehicula nec nulla.
+:ref:`Cosmic Frontier<astro>` - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
 
-Document Subsection
--------------------
+:ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur in eros et blandit. Nunc maximus,
-nisl at auctor vestibulum, justo ex sollicitudin ligula, id faucibus urna orci tristique nisl.
+:ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 
-Document Subsubsection
-^^^^^^^^^^^^^^^^^^^^^^
+:ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
 
-Donec non rutrum lorem. Aenean sagittis metus at pharetra fringilla. Nunc sapien dolor, cursus sed nisi at,
-pretium tristique lectus. Sed pellentesque leo lectus, et convallis ipsum euismod a.
+:ref:`Fermi Generic SL7/CC8<fermi>` - Everyone
 
-Document Paragraph
-""""""""""""""""""
+.. note::
 
-Mauris maximus viverra ante. Donec eu egestas mauris. Morbi vulputate tincidunt euismod. Integer vel porttitor neque.
-Donec at lacus suscipit, lacinia lectus vel, sagittis lectus.
+   If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.
+
+Base Image
+---------------
+Image: base-notebook
+
+The notebooks that directly inherit from this image are CMSLPC: SL7 Interactive, Cosmic Frontier: SL7 Interactive General Purpose Notebook, ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN/ACCEL-AI: ACORN AIMPS SL7 Interactive, ACORN/ACCEL-AI: L-CAPE CPU Only SL7 Interactive, FIFE/Neutrinos: SL7 Interactive General Purpose Notebook, LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook, and Cosmic Frontier: LSST Notebook (not released yet). 
+
+Packages
+~~~~~~~~~
+
+.. table:: 
+   :align: center
+
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: jupyterlab-system-monitor | .. centered:: krb5-workstation  | .. centered:: krb5-libs | .. centered:: nss wrapper | .. centered:: krb5.conf |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: fonts-liberation          | .. centered:: json-passwd       | .. centered:: gcc       | .. centered:: gettext     | .. centered:: bzip2     |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: ca-certificates           | .. centered:: sudo              | .. centered:: locales   | .. centered:: run-one     | .. centered:: wget      |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: python-requests           | .. centered:: ipywidgets        | .. centered:: tcpdump   | .. centered:: sssd-client | .. centered:: openssl   |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: jupyterlab-drawio         | .. centered:: emacs             | .. centered:: git       | .. centered:: unzip       | .. centered:: rsync     |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: typing-extensions         | .. centered:: nano              | .. centered:: vim       | .. centered:: miniforge   | .. centered:: tini      |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: nb_conda_kernals          | .. centered:: jupyterhub        | .. centered:: notebook  | .. centered:: jupyterlab  | .. centered:: net-tools |
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+   | .. centered:: jupyter_server            | .. centered:: jupyterlab-it     | .. centered:: ssh.conf  | .. centered:: rpm         | .. centered:: --        | 
+   +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
+
+For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only the base image, toggle the "Background" layer in the interactive diagram.
