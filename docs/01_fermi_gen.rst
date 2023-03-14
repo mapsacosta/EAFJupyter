@@ -13,7 +13,8 @@ Fermi Generic SL7/CC8
 
 .. important::
    
-   The CC8 notebook will be removed in a future update and the rescue notebook, with instructions on how to use it, is documented here<>.
+   The CC8 notebook will be removed in a future update.
+.. The rescue notebook, with instructions on how to use it, is documented here<>.
 
 Basic SL7 Interactive
 -----------------------
@@ -61,5 +62,7 @@ CVMFS
    | .. centered:: uboone.opensciencegrid.org           | .. centered:: --                           |
    +----------------------------------------------------+--------------------------------------------+
 
-For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
+.. include:: notebook-structure-footer.rst
+
+.. For more detailed information regarding packages, see the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
 

@@ -84,4 +84,4 @@ CVMFS
    +-----------------------------------------+--------------------------------------------+
 
 
-For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only LBNF/DUNE/ProtoDUNE images, toggle the "Background" and "DUNE" layers in the interactive diagram.
+.. include:: notebook-structure-footer.rst

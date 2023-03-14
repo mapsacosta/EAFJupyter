@@ -44,6 +44,19 @@ Exploring
 .. toctree::
    :maxdepth: 1
    :hidden:
+   :caption: Jupyter - the basics
+
+   About JupyterHub <https://jupyterhub.readthedocs.io/en/stable/>
+   01_named_sessions.rst
+   03_help.rst
+.. 01_managing_notebooks.rst
+   Notebook environments <https://pypi.org>
+
+.. toctree::
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
    :caption: Server and Notebook Options
 
    00_getting_started.rst
@@ -55,15 +68,7 @@ Exploring
    01_cmslpc.rst
    01_diagram.rst
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Jupyter - the basics
 
-   About JupyterHub <https://jupyterhub.readthedocs.io/en/stable/>
-   01_named_sessions.rst
-.. 01_managing_notebooks.rst
-   Notebook environments <https://pypi.org>
 
 .. toctree::
   :maxdepth: 1
@@ -92,6 +97,7 @@ Exploring
    01_storage.rst
    02_customization.rst
    02_batch_dask_cms.rst
+
 .. 01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
    02_fileops_jupyter.rst

@@ -2,29 +2,22 @@
 Getting started - Choosing a Notebook
 *********
 
-Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the base image. This is documented in `Base Image`_.  
+Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the `base image`_.
 
-:ref:`CMSLPC<cms>`- CMS, LHC
-
-:ref:`Cosmic Frontier<astro>` - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
-
-:ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
-
-:ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
-
-:ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
-
-:ref:`Fermi Generic SL7/CC8<fermi>` - Everyone
+- :ref:`CMSLPC<cms>`- CMS, LHC
+- :ref:`Cosmic Frontier<astro>` - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
+- :ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
+- :ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
+- :ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
+- :ref:`Fermi Generic SL7/CC8<fermi>` - Everyone
 
 .. note::
 
-   If you do not have access to your experiment, or have access to an experiment you are not apart of, please contact eaf-users@fnal.gov.
+   If you do not have access to your experiment, or have access to an experiment you are not a part of, please contact eaf-users@fnal.gov.
 
 Base Image
 ---------------
-Image: base-notebook
 
-The notebooks that directly inherit from this image are CMSLPC: SL7 Interactive, Cosmic Frontier: SL7 Interactive General Purpose Notebook, ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN/ACCEL-AI: ACORN AIMPS SL7 Interactive, ACORN/ACCEL-AI: L-CAPE CPU Only SL7 Interactive, FIFE/Neutrinos: SL7 Interactive General Purpose Notebook, LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook, and Cosmic Frontier: LSST Notebook (not released yet). 
 
 Packages
 ~~~~~~~~~
@@ -50,4 +43,15 @@ Packages
    | .. centered:: jupyter_server            | .. centered:: jupyterlab-it     | .. centered:: ssh.conf  | .. centered:: rpm         | .. centered:: --        | 
    +-----------------------------------------+---------------------------------+-------------------------+---------------------------+-------------------------+
 
-For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only the base image, toggle the "Background" layer in the interactive diagram.
+
+The notebooks that directly inherit from this image are:
+
+- CMSLPC: SL7 Interactive
+- Cosmic Frontier: SL7 Interactive General Purpose Notebook
+- ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN AIMPS SL7 Interactive, L-CAPE CPU Only SL7 Interactive
+- FIFE/Neutrinos: SL7 Interactive General Purpose Notebook
+- LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook
+
+.. , and Cosmic Frontier: LSST Notebook (not released yet). 
+
+.. include:: notebook-structure-footer.rst

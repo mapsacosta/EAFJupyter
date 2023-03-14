@@ -92,6 +92,4 @@ CVMFS
        | .. centered:: des.opensciencegrid.org.  | .. centered:: sw.lsst.eu                   |
        +-----------------------------------------+--------------------------------------------+
 
-
-
-For more detailed information regarding packages, check out the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only Cosmic Frontier images, toggle the "Background" and "Cosmic Frontier" layers in the interactive diagram.
+.. include:: notebook-structure-footer.rst
