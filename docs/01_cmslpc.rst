@@ -11,7 +11,7 @@ CMSLPC
 
 |
 
-Each server opton inherits the packages from the image it was based on. The inheritence is shown in the diagram in `EAF Structure and Packages`_.
+Each server opton inherits the packages from the image it was based on. The inheritence is shown in the diagram in :ref:`EAF Structure and Packages<diagram>`.
 
 SL7 Interactive
 -----------------
