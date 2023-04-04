@@ -19,7 +19,7 @@ Pip
 It is possible to customize your environment using ``pip install --user``, but requires some additional steps.
 
 .. warning::
-  ``PYTHONNOUSERSITE`` is set by default. It is necessary to either unset the variable via :ref:`Preamble scripts <preamable scripts>`, 
+  ``PYTHONNOUSERSITE`` is set by default. It is necessary to either unset the variable via :ref:`Preamble scripts <preamble scripts>`, 
   or to manually set ``PYTHONPATH`` / ``sys.path``.  If you do not unset the environment variable, you may experience confusing
   behavior that ``pip install`` reports success, but ``pip list`` cannot find the package.
 
