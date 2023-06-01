@@ -3,6 +3,37 @@ Help, something's broken!
 ******************************
 
 ========
+My disk is full!
+========
+
+In the event your storage is full, the server will not be able to start. It should display a message:
+
+.. image:: img/diskfull.png
+  :width: 600
+  :alt: Disk is full
+
+You will need to go back to the hub control panel, and launch a "rescue" server, listed under Fermilab generic notebooks.
+This image has limited CPU and memory resources, and only a Terminal launcher.  In the rescue notebook, your normal
+storage area is mounted as ``/tmphome``.  You can remove files to get back under quota as in the example below,
+and then start a normal server.
+
+.. code-block:: console
+
+  /usr/bin/id: cannot find name for group ID 5063
+
+  *** RESCUE IMAGE: Your home directory is temporarily mounted at /tmphome ***
+
+  /tmphome > df -h --output=size,used,avail,pcent,target .
+   Size  Used Avail Use% Mounted on
+   4.0G  4.0G     0 100% /tmphome
+  /tmphome > rm bigfile
+  /tmphome > df -h --output=size,used,avail,pcent,target .
+   Size  Used Avail Use% Mounted on
+   4.0G  3.7G  372M  91% /tmphome
+  /tmphome >
+
+
+========
 There are no python kernels in my launcher!
 ========
 
