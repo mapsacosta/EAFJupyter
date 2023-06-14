@@ -26,6 +26,8 @@ It is possible to customize your environment using ``pip install --user``, but r
   in order for pip to work properly::
     export -n PYTHONNOUSERSITE
 
+  After adding this line, you will need to restart the notebook kernel for it to take effect.
+
 You may wish to set ``PYTHONUSERBASE`` to something other than ``$HOME`` to avoid conflicting packages from
 being installed when working in different environments. For example::
 
