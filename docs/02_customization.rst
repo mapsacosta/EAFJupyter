@@ -16,28 +16,34 @@ Customizing user environments
 Pip
 **********************************************
 
-It is possible to customize your environment using ``pip install --user``, but requires some additional steps.
+It is possible to customize your environment using ``pip install --user``, but requires some additional work.
 
 .. warning::
-  ``PYTHONNOUSERSITE`` is set by default. It is necessary to either unset the variable via :ref:`Preamble scripts <preamble scripts>`, 
-  or to manually set ``PYTHONPATH`` / ``sys.path``.  If you do not unset the environment variable, you may experience confusing
-  behavior that ``pip install`` reports success, but ``pip list`` cannot find the package.
+  The ``PYTHONNOUSERSITE`` environment variable is set by default in your workspace.  This prevents version conflicts
+  between user-installed packages and the Jupyter environment.
 
-It is also *strongly advised* to set ``PYTHONUSERBASE`` to something other than ``$HOME`` to avoid conflicting packages from
+  You **must** add the following line to ``~/.bash_profile`` and ``~/.preamble/global.sh``
+  in order for pip to work properly::
+    export -n PYTHONNOUSERSITE
+
+You may wish to set ``PYTHONUSERBASE`` to something other than ``$HOME`` to avoid conflicting packages from
 being installed when working in different environments. For example::
 
-  [burt@jupyter ~]$ export -n PYTHONNOUSERSITE
+     [burt@jupyter ~]$ export -n PYTHONNOUSERSITE
 
-  [burt@jupyter ~]$ cd ~/work1
-  [burt@jupyter work1]$ PYTHONUSERBASE=$PWD/.local pip -q install --user numpy==1.24.1
+     [burt@jupyter ~]$ cd ~/work1
+     [burt@jupyter work1]$ PYTHONUSERBASE=$PWD/.local pip -q install --user numpy==1.24.1
 
-  [burt@jupyter work1]$ cd ~/work2
-  [burt@jupyter work2]$ PYTHONUSERBASE=$PWD/.local pip -q install --user numpy==1.21
+     [burt@jupyter work1]$ cd ~/work2
+     [burt@jupyter work2]$ PYTHONUSERBASE=$PWD/.local pip -q install --user numpy==1.21
 
 To work in the work2 environment with NumPy 1.21, one can add the following notebook cell::
 
-  import sys
-  sys.path.append("work2/.local/lib/python{}.{}/site-packages".format(sys.version_info.major,sys.version_info.minor))
+     pythonuserbase = "/home/burt/work2/.local"
+
+     import sys
+     pyver = f"python{sys.version_info.major}.{sys.version_info.minor}"
+     sys.path.append(f"{pythonuserbase}/lib/{pyver}/site-packages")
 
 
 
