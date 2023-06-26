@@ -60,3 +60,39 @@ If more than one browser is connected to your notebook, terminal-based applicati
 will use the lowest screen resolution.  Closing the connection from the browser with the lower resolution
 will resolve the problem; otherwise, you may need to start a new terminal launcher, or as a last restort, 
 restart your server.
+
+=======
+My server is almost out of memory!
+=======
+
+Each time you launch a notebook server, it starts a long-running python process.
+If you have created objects, python will only free the memory if you delete them
+manually (using ``del``), or if you restart the kernel (which kills the original
+long-running process, deleting *all* in-memory objects, and starts a new long-running
+process).
+
+For example:
+
+.. code-block:: 
+
+   import os, psutil
+
+   print(f"{psutil.Process(os.getpid()).memory_info()[0]/1e9} GB in use")
+
+   # create an object that uses 1 GB of memory
+   gb = bytearray(1024*1024*1000)
+
+   print(f"{psutil.Process(os.getpid()).memory_info()[0]/1e9} GB in use")
+
+   # delete the 1 GB object
+   del gb
+
+   print(f"{psutil.Process(os.getpid()).memory_info()[0]/1e9} GB in use")
+
+results in:
+
+.. code-block:: console
+
+   0.065445888 GB in use
+   1.114046464 GB in use
+   0.06547456 GB in use
