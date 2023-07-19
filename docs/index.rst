@@ -7,8 +7,10 @@ These resources are centrally managed by the Scientific Computing Division at Fe
 
 .. important::
 
-    This project is under active development and is currently in beta testing stage. Please provide feedback and include your project requirements at our `GitHub repo <https://github.com/mapsacosta/EAFJupyter>`_ by opening an issue or email us at `eaf-admins@fnal.gov <mailto:eaf-admins@fnal.gov>`_.
-
+    You can get help by:
+       * Filing a ticket via `ServiceNow <https://fermi.servicenowservices.com/wp/?id=evg-service-item&sys_id=2b7101261b58a950d03aec21f54bcb31>`_
+       * Joining the ``#eaf-users`` channel on ``fnal.slack.com`` (e-mail eaf-admins AT fnal.gov for an invitation if you don't already have access to the slack)
+       * Joining and emailing the mailing list: ``eaf-users@fnal.gov``
 
 Quickstart
 ==========
@@ -20,8 +22,6 @@ Quickstart
 3. Log in with your SERVICES account credentials.
 
 
-Exploring
-===========
 
 .. toctree::
    :maxdepth: 1
