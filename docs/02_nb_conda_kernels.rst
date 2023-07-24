@@ -7,7 +7,7 @@ It is possible to customize your environment using anaconda and access that envi
 Configuring conda/mamba (only needed once)
 ==========================================
 
-From a terminal launcher, run ``mamba init``. Then, create a ``.profile`` in your home directory with
+From a terminal launcher, run ``mamba init``. Then, write to ``.bash_profile`` in your home directory with
 the following content::
 
   # Get the aliases and functions
