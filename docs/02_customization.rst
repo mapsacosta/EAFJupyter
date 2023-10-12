@@ -16,22 +16,16 @@ Customizing user environments
 Pip
 **********************************************
 
-It is possible to customize your environment using ``pip install --user``, but requires some additional work.
+It is possible to customize your environment using ``pip install --user``, but there are some caveats.
 
 .. warning::
-  The ``PYTHONNOUSERSITE`` environment variable is set by default in your workspace.  This prevents version conflicts
-  between user-installed packages and the Jupyter environment.
-
-  You **must** add the following line to ``~/.bash_profile`` and ``~/.preamble/global.sh``
-  in order for pip to work properly::
-    export -n PYTHONNOUSERSITE
-
-  After adding this line, you will need to restart the notebook kernel for it to take effect.
+  In order to allow user installation of pip packages, the system creates
+  ``~/.bash_profile`` and ``~/.ipython/profile_default/startup/00-python-user-site.py`` files at first login.
+  If these files are removed or the automatically-generated content is modified, pip may no longer function properly.  To have the
+  system regenerate the appropriate content, remove the ``~/.python_no_user_site_unset`` file and launch a new server.
 
 You may wish to set ``PYTHONUSERBASE`` to something other than ``$HOME`` to avoid conflicting packages from
 being installed when working in different environments. For example::
-
-     [burt@jupyter ~]$ export -n PYTHONNOUSERSITE
 
      [burt@jupyter ~]$ cd ~/work1
      [burt@jupyter work1]$ PYTHONUSERBASE=$PWD/.local pip -q install --user numpy==1.24.1
@@ -45,7 +39,7 @@ To work in the work2 environment with NumPy 1.21, one can add the following note
 
      import sys
      pyver = f"python{sys.version_info.major}.{sys.version_info.minor}"
-     sys.path.append(f"{pythonuserbase}/lib/{pyver}/site-packages")
+     sys.path.insert(0, f"{pythonuserbase}/lib/{pyver}/site-packages")
 
 
 
