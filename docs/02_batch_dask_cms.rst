@@ -37,10 +37,6 @@ If you are unsure which notebook to use, go to :doc:`Getting started - Choosing 
 
 
 
-
-* Our `example notebook <https://github.com/mapsacosta/eaf-jupyter-tutorials/blob/main/examples/EAF-htcdaskgateway.ipynb>`_ is a good place to start gettng familiar with Dask and Dask Gateway.
-* If you have used COFFEA-Casa or other Dask facilities, you will find that EAF is no different and obtaining a `client` is the main difference. To add a new server/notebook, enter a DNS-safe name into the textbox 'Name your server'
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
