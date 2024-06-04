@@ -54,8 +54,6 @@ Once you have decided which notebook works best for your use case, you can eithe
 
 .. csv-table:: Default Image Packages
    :file: /csvfiles/coffea_image_table.csv
-   :widths: 5, 11
-   :header-rows: 0
 
 
 For more details, you can use either docker or github to learn more about this image:
