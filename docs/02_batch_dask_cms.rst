@@ -25,6 +25,7 @@ Before you start connecting, there are some things to know about our dask system
 Depending on your use case, you may be changing all three of these images so it is important to understand how they work together. For dask to successfully run your jobs, each of these images must match. With htcdaskgateway, you have the ability to change both the worker and scheduler images. You can also change the client image through custom environments. 
 
 Here is a diagram detailing how htcdaskgateway works:
+
 .. image:: img/dask_htcondor_diagram.png
   :alt: Diagram detailing the dask system. 
 
