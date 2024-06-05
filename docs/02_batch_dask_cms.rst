@@ -1,6 +1,6 @@
-*********
+***********************
 Dask at Fermilab's EAF
-*********
+***********************
 
 In alignment with IRIS-HEP and the USCMS LHC project COFFEA, EAF has deployed a centralized instance of Dask Gateway to enable fast, reliable and distributed python data processing powered by the LPC batch cluster and Openshift Kubernetes.
 
@@ -8,6 +8,7 @@ In alignment with IRIS-HEP and the USCMS LHC project COFFEA, EAF has deployed a 
   :alt: Named Servers
 
 We have developed a client around Dask Gateway to facilitate user interaction with the Batch cluster. The COFFEA-Dask notebook has the latest version installed. If you are interesting in checking out the code or release information, here are the links:
+
 * Source repo: `HTCDaskgateway <https://github.com/mapsacosta/htcdaskgateway>`_
 * Releases : `Pypi <https://pypi.org/project/htcdaskgateway/>`_ 
 
@@ -35,6 +36,7 @@ Logging In and Setting Up
 If you are new to the EAF, be sure to follow the :doc:`Quickstart </source/index>` for log-in information or :doc:`EAF Access and Accounts </source/00_user_accounts>` to gain access to the EAF. 
 
 Once logged in, you will need to choose a notebook. Only notebooks with "DASK" in the name will be able to use the HTCondor dask cluster. The following are dask enabled notebooks:
+
 * AL9 Dask (Coffea 0.7.x) [stable] 
 * AL8 Dask (Coffea 0.7.x) [stable] 
 * SL7 Dask (Coffea 0.7.x) [stable] 
@@ -52,16 +54,16 @@ If you are unsure which notebook to use, go to :doc:`Getting started - Choosing 
 
 Once you have decided which notebook works best for your use case, you can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-dask-almalinux8:2024.4.0-py3.10, here is a brief summary of the installed packages:
 
-.. csv-table:: Default Image Packages
+.. csv-table::
    :file: /csvfiles/coffea_image_table.csv
-   :widths: 30, 70
-   :header-rows: 1
+   :widths: 30,30,30,30,30
+   :header-rows: 0
 
 
 For more details, you can use either docker or github to learn more about this image:
 
-- `Docker link to Default Image <https://hub.docker.com/layers/coffeateam/coffea-dask-almalinux8/2024.4.0-py3.10/images/sha256-a9516771d340e8ef56ff75fea8e2a3be8dcbe77f5085e038652d11c6b872cd1b?context=explore>`_. 
-- `Github link to Default Image <https://github.com/CoffeaTeam/docker-coffea-dask/blob/main/dask-almalinux8/Dockerfile>`_. 
+* `Docker link to Default Image <https://hub.docker.com/layers/coffeateam/coffea-dask-almalinux8/2024.4.0-py3.10/images/sha256-a9516771d340e8ef56ff75fea8e2a3be8dcbe77f5085e038652d11c6b872cd1b?context=explore>`_. 
+* `Github link to Default Image <https://github.com/CoffeaTeam/docker-coffea-dask/blob/main/dask-almalinux8/Dockerfile>`_. 
 
 
 
@@ -78,7 +80,7 @@ Using Dask with Default Image
 .. _default image:
 
 Using Dask with Non-Default Image
------------------------------
+---------------------------------
 .. _nondefault image:
 
 
