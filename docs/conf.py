@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Fermilab Elastic Analysis Facility'
-copyright = '2022, Fermilab, a DOE National Laboratory'
+copyright = '2024, Fermilab, a DOE National Laboratory'
 author = 'Maria Acosta Flechas'
 
 release = '0.1'
