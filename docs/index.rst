@@ -48,6 +48,7 @@ Quickstart
 
    About JupyterHub <https://jupyterhub.readthedocs.io/en/stable/>
    01_named_sessions.rst
+   02_vscode.rst
    03_help.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
