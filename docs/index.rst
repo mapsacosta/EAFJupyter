@@ -95,6 +95,7 @@ Quickstart
    :caption: EAF DAE (Data Analysis Ecosystem)
 
    00_eaf_dae.rst
+   01_jobsub.rst
    01_storage.rst
    02_customization.rst
    02_batch_dask_cms.rst
