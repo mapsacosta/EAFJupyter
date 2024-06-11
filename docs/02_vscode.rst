@@ -1,6 +1,6 @@
-*******************
-Virtual Studio Code
-*******************
+******************
+Visual Studio Code
+******************
 
 Jupyterhub has good support for using VS Code.
 
