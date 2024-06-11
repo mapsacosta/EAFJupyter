@@ -1,5 +1,8 @@
+Submitting Jobs
+===============
+
 Overview
-========
+--------
 
 ``jobsub_lite`` is a wrapper for Condor job submission, intended to be backwards compatible with the actively used options of the past Fermilab jobsub tools, while being smaller and easier to maintain, and handling new requirements (i.e., SciTokens authentication, etc.)
 
