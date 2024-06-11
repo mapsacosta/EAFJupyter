@@ -1,4 +1,4 @@
-Submitting Jobs
+Submitting Jobs to FermiGrid
 ===============
 
 Overview
