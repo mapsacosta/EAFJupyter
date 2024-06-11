@@ -46,7 +46,7 @@ Quickstart
    :hidden:
    :caption: Jupyter - the basics
 
-   About JupyterHub <https://jupyterhub.readthedocs.io/en/stable/>
+   About JupyterHub (external link) <https://jupyterhub.readthedocs.io/en/stable/>
    01_named_sessions.rst
    02_vscode.rst
    03_help.rst
