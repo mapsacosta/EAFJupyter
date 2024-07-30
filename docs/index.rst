@@ -100,6 +100,7 @@ Quickstart
    01_storage.rst
    02_customization.rst
    02_batch_dask_cms.rst
+   03_root_kernel.rst
 
 .. 01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
