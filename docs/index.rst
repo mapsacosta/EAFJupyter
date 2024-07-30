@@ -50,6 +50,7 @@ Quickstart
    01_named_sessions.rst
    02_vscode.rst
    03_help.rst
+   03_proxy.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
