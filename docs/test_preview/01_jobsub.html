@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submitting Jobs to FermiGrid &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Storage" href="01_storage.html" />
+    <link rel="prev" title="Data Analysis Ecosystem?" href="00_eaf_dae.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub (external link)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_vscode.html">Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_getting_started.html">Getting started - Choosing a Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermi Generic SL7/CC8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE/Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF/DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN/ACCEL-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_eaf_dae.html">Data Analysis Ecosystem?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Submitting Jobs to FermiGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-jobsub-lite-within-eaf-jupyter-notebooks">Using <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> within EAF Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites-authentication">Prerequisites: Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-kerberos-authentication">Step 1: Kerberos Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-submission-command">Example Submission Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submitting-jobs-from-a-notebook">Submitting Jobs from a Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-file-using-ifdh">Transfer file using ifdh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage-examples">Usage Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-ifdh-to-transfer-file">setup ifdh to transfer file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-job-script">example job script:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-documentation">User Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables-used-by-jobsub-lite">Environment Variables Used By <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing user environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_batch_dask_cms.html">Using Dask with COFFEA at Fermilab’s EAF</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Submitting Jobs to FermiGrid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/01_jobsub.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="submitting-jobs-to-fermigrid">
+<h1>Submitting Jobs to FermiGrid<a class="headerlink" href="#submitting-jobs-to-fermigrid" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> is a wrapper for Condor job submission, intended to be backwards compatible with the actively used options of the past Fermilab jobsub tools, while being smaller and easier to maintain, and handling new requirements (i.e., SciTokens authentication, etc.)</p>
+</section>
+<section id="using-jobsub-lite-within-eaf-jupyter-notebooks">
+<h2>Using <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> within EAF Jupyter Notebooks<a class="headerlink" href="#using-jobsub-lite-within-eaf-jupyter-notebooks" title="Link to this heading"></a></h2>
+<p>With the environment properly configured, <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> can be used within Jupyter notebooks to submit jobs. Here’s how to use it along with an explanation of the options:</p>
+</section>
+<section id="prerequisites-authentication">
+<h2>Prerequisites: Authentication<a class="headerlink" href="#prerequisites-authentication" title="Link to this heading"></a></h2>
+<p>Before starting with the usage of <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> within Jupyter notebooks, it is essential to ensure that you are properly authenticated using Kerberos and have obtained a bearer token through <code class="docutils literal notranslate"><span class="pre">htgettoken</span></code>. These authentication steps are crucial for securely accessing the services and submitting jobs.</p>
+<section id="step-1-kerberos-authentication">
+<h3>Step 1: Kerberos Authentication<a class="headerlink" href="#step-1-kerberos-authentication" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Obtain a Kerberos Ticket</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kinit</span>
+</pre></div>
+</div>
+<p>You will be prompted to enter your password. Upon successful authentication, a Kerberos ticket will be granted.</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Basic Command</strong>: <code class="docutils literal notranslate"><span class="pre">jobsub_submit</span></code> is used to submit jobs to the Condor batch system.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-G</span></code> specifies the group (e.g., DUNE).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-N</span></code> specifies the number of jobs to submit.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<section id="example-submission-command">
+<h3>Example Submission Command<a class="headerlink" href="#example-submission-command" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jobsub_submit</span> <span class="o">-</span><span class="n">G</span> <span class="n">dune</span> <span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">path_to_executable_file</span>
+</pre></div>
+</div>
+<p>This command submits a job to the DUNE pool.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Monitoring Your Job Submissions</span>
+<span class="n">jobsub_q</span> <span class="o">-</span><span class="n">G</span> <span class="n">dune</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span>
+</pre></div>
+</div>
+</section>
+<section id="submitting-jobs-from-a-notebook">
+<h3>Submitting Jobs from a Notebook<a class="headerlink" href="#submitting-jobs-from-a-notebook" title="Link to this heading"></a></h3>
+<p>To submit a job from a notebook cell, use the <code class="docutils literal notranslate"><span class="pre">!</span></code> syntax to execute shell commands, followed by the <code class="docutils literal notranslate"><span class="pre">jobsub_submit</span></code> command with the desired options.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Submit a job to the DUNE group without specifying a global pool
+!jobsub_submit -G dune -N 10 file:///path_to_executable_file
+</pre></div>
+</div>
+<p>This command submits 10 jobs to the DUNE group.
+For more information visit <a class="reference external" href="https://github.com/fermitools/jobsub_lite/wiki#environment-variables-used-by-jobsub_lite">Jobsub lite wiki page</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Monitoring Your Job Submissions
+!jobsub_q -G dune -u username
+</pre></div>
+</div>
+</section>
+</section>
+<section id="transfer-file-using-ifdh">
+<h2>Transfer file using ifdh<a class="headerlink" href="#transfer-file-using-ifdh" title="Link to this heading"></a></h2>
+<p>ifdh (Intensity Frontier Data Handling). The ifdh command line tool is widely used in high-energy physics for data handling, particularly for managing file transfers, metadata, and directory structures in grid computing environments.</p>
+<section id="usage-examples">
+<h3>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading"></a></h3>
+</section>
+<section id="setup-ifdh-to-transfer-file">
+<h3>setup ifdh to transfer file<a class="headerlink" href="#setup-ifdh-to-transfer-file" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ source /cvmfs/fermilab.opensciencegrid.org/products/common/etc/setups.sh
+$ setup ifdhc
+$ unsetup cigetcert # Force ifdhc to use the EAF-installed cigetcert
+$ export EXPERIMENT=accel
+$ unset BEARER_TOKEN_FILE # Force ifdhc to generate and use a VOMS proxy
+</pre></div>
+</div>
+</section>
+<section id="example-job-script">
+<h3>example job script:<a class="headerlink" href="#example-job-script" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+<span class="c1"># Make some data</span>
+<span class="n">echo</span> <span class="s2">&quot;Test grid copying...&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">testfilegrid</span>
+<span class="c1"># Copy data to dCache</span>
+<span class="n">source</span> <span class="o">/</span><span class="n">cvmfs</span><span class="o">/</span><span class="n">fermilab</span><span class="o">.</span><span class="n">opensciencegrid</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">products</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">setups</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">setup</span> <span class="n">ifdhc</span>
+<span class="n">ifdh</span> <span class="n">cp</span> <span class="o">-</span><span class="n">D</span> <span class="n">testfilegrid</span> <span class="o">/</span><span class="n">pnfs</span><span class="o">/</span><span class="n">accel</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">users</span><span class="o">/</span><span class="n">wallbank</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>By following these setup instructions, users can leverage the <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> command within Jupyter notebooks to submit jobs to the Condor batch system efficiently. This integration enhances the functionality of JupyterHub for computational tasks, allowing for a smoother workflow in research and development projects.</p>
+</section>
+<section id="user-documentation">
+<h2>User Documentation<a class="headerlink" href="#user-documentation" title="Link to this heading"></a></h2>
+<p>For additional information, please visit the <a class="reference external" href="https://fifewiki.fnal.gov/wiki/Jobsub_Lite">official Jobsub lite wiki</a>.</p>
+</section>
+<section id="environment-variables-used-by-jobsub-lite">
+<h2>Environment Variables Used By <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code><a class="headerlink" href="#environment-variables-used-by-jobsub-lite" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>BEARER_TOKEN_FILE</strong>: The path to a valid bearer (access) token file for the user.</p></li>
+<li><p><strong>X509_USER_PROXY</strong>: The path to a valid VOMS-extended X509 proxy certificate for the user.</p></li>
+<li><p><strong>HTGETTOKENOPTS</strong>: Options to pass to underlying token-obtaining/storing code (htgettoken).</p></li>
+<li><p><strong>GROUP/JOBSUB_GROUP</strong>: Experiment/group used to run <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> commands. Either this must be set or the <code class="docutils literal notranslate"><span class="pre">-G</span></code> must be passed for all commands.</p></li>
+<li><p><strong>JOBSUB_DROPBOX_SERVER_LIST</strong>: A space-separated list of servers hostnames for <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> to query for the RCDS dropbox API endpoints.</p></li>
+<li><p><strong>JOBSUB_OUTPUT_URL</strong>: HTTP endpoint used by <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> wrapper scripts to send job logs to at the end of a job.</p></li>
+<li><p><strong>JOBSUB_FETCHLOG_URL</strong>: HTTP endpoint used by <code class="docutils literal notranslate"><span class="pre">jobsub_lite</span></code> by default to fetch logs.</p></li>
+<li><p><strong>CMTCONFIG</strong>: Legacy environment variable for use with minervasoft job submissions.</p></li>
+<li><p><strong>JOBSUB_POOL_MAP</strong>: JSON information for the <code class="docutils literal notranslate"><span class="pre">--global-pool=</span></code> command line option.</p></li>
+<li><p><strong>JOBSUB_EXTRA_JOB_INFO</strong>: Comma-separated values to add as <code class="docutils literal notranslate"><span class="pre">--job-info</span></code> script command line options (option also added in #373).</p></li>
+<li><p><strong>JOBSUB_EXTRA_LINES</strong>: Comma-separated values to add as <code class="docutils literal notranslate"><span class="pre">--lines</span></code> options.</p></li>
+<li><p><strong>JOBSUB_EXTRA_ENVIRONMENT</strong>: Comma-separated values to add as extra <code class="docutils literal notranslate"><span class="pre">--environment</span></code> options.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00_eaf_dae.html" class="btn btn-neutral float-left" title="Data Analysis Ecosystem?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="01_storage.html" class="btn btn-neutral float-right" title="Storage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dask at Fermilab’s EAF (CMS Accounts) &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Customizing user environments" href="02_customization.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub (external link)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_vscode.html">Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_getting_started.html">Getting started - Choosing a Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermi Generic SL7/CC8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE/Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF/DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN/ACCEL-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_eaf_dae.html">Data Analysis Ecosystem?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_jobsub.html">Submitting Jobs to FermiGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing user environments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dask at Fermilab’s EAF (CMS Accounts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-started-with-dask">Get Started with Dask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-it-works">How It Works</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-in-and-setting-up">Logging In and Setting Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-by-step-instructions">Step-by-Step Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-dask-with-default-image">Using Dask with Default Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-dask-with-non-default-image">Using Dask with Non-Default Image</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Dask at Fermilab’s EAF (CMS Accounts)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/02_batch_dask_cms.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dask-at-fermilab-s-eaf-cms-accounts">
+<h1>Dask at Fermilab’s EAF (CMS Accounts)<a class="headerlink" href="#dask-at-fermilab-s-eaf-cms-accounts" title="Link to this heading"></a></h1>
+<p>In alignment with IRIS-HEP and the USCMS LHC project COFFEA, EAF has deployed a centralized instance of Dask Gateway to enable fast, reliable and distributed python data processing powered by the LPC batch cluster and Openshift Kubernetes.</p>
+<img alt="Named Servers" src="_images/eaf-facility.png" />
+<p>We have developed a client around Dask Gateway to facilitate user interaction with the Batch cluster. The COFFEA-Dask notebooks have the latest version installed. If you are interesting in checking out the code or release information, here are the links:</p>
+<ul class="simple">
+<li><p>Source repo: <a class="reference external" href="https://github.com/mapsacosta/htcdaskgateway">HTCDaskgateway</a></p></li>
+<li><p>Releases : <a class="reference external" href="https://pypi.org/project/htcdaskgateway/">Pypi</a></p></li>
+</ul>
+<section id="get-started-with-dask">
+<h2>Get Started with Dask<a class="headerlink" href="#get-started-with-dask" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You MUST have have an active CMS LPC account. For instructions on how to obtain one please go to the <a class="reference external" href="https://uscms.org/uscms_at_work/physics/computing/getstarted/getaccount_fermilab.shtml">LPC computing website</a>. Non-CMS dask is a work in progress, if you are not able to obtain an LPC account due to experiment affiliation, please contact us via <a class="reference internal" href="index.html"><span class="doc">slack or email</span></a>.</p>
+</div>
+<section id="how-it-works">
+<span id="id1"></span><h3>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h3>
+<p>Before you start connecting, there are some things to know about our dask system, and dask in general, that will help with both utilizing the htcdaskgateway system and understand errors. There are three important images that are used by dask: client image, worker image, and scheduler image. For the EAF, the client image is the image being used by your notebook. It is either specified by the server option you choose when logging in or can be specified by you. The worker image is the image you give to the workers to use when you call the htcdaskgateway. Lastly, the scheduler image is the image configured by htcdaskgateway when it is called, similar to the worker.</p>
+<p>Depending on your use case, you may be changing all of these images so it is important to understand how they work together. For dask to successfully run your jobs, each of these images should match, meaning they need to have the same packages installed. With htcdaskgateway, you have the ability to change both the worker and scheduler images. You can also change the client image through custom environments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The images need to be mostly the same, they can have different packages but these can lead to errors and issues running your code. The images MUST have the same major.minor (i.e. 3.10) python versions and the same dask, dask-gateway and dask-distributed versions.</p>
+</div>
+<p>Here is a diagram detailing how our dask system works:</p>
+<img alt="Diagram detailing the dask system. The client is in a bubble at the top right, it is the EAF notebook's image. From the client, you start workers and connect to the scheduler via code calling htcdaskgateway. The worker and scheduler have an image that gets specified either by the default in htcdaskgateway or by the user in the code calling htcdaskgateway. The workers are connected to the HTCondor schedd and are connected to the worker pod through a dask.jdl file. This file also connects the worker to the OKD API server. The worker pod and API server are then connected to the shecduler pod that talks to the client notebook. The scheduler is connected to the dask gateway controller that connects to the API server as well. This then connects to the scheduler pod that talks to the client. So we have the client start workers as htcondor workers and connect to the scheduler." src="_images/dask_htcondor_diagram.png" />
+</section>
+</section>
+<section id="logging-in-and-setting-up">
+<h2>Logging In and Setting Up<a class="headerlink" href="#logging-in-and-setting-up" title="Link to this heading"></a></h2>
+<p>If you are new to the EAF, be sure to follow the <a class="reference internal" href="index.html"><span class="doc">Quickstart</span></a> for log-in information or <a class="reference internal" href="00_user_accounts.html"><span class="doc">EAF Access and Accounts</span></a> to gain access to the EAF.</p>
+<p>Once logged in, you will need to choose a notebook. Only notebooks with “DASK” in the name will be able to use the HTCondor dask cluster. The following are dask enabled notebooks:</p>
+<ul class="simple">
+<li><p>AL9 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>AL8 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>(Deprecated) SL7 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>AL9 Dask (Coffea 2024.x) [devel]</p></li>
+<li><p>AL8 Dask (Coffea 2024.x) [devel]</p></li>
+<li><p>(Deprecated) SL7 Dask (Coffea 2024.x) [devel]</p></li>
+</ul>
+<p>In the server options on EAF you will see this:</p>
+<img alt="Image of the server options with the dask enabled notebooks marked with a red box." src="_images/dask_notebook_options.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do NOT need to be a coffea user to access dask. Any of these notebooks can be used for other custom environments within the notebooks. See <a class="reference internal" href="#nondefault-image"><span class="std std-ref">Using Dask with Non-Default Image</span></a>.</p>
+</div>
+<p>You can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-dask-almalinux8:2024.4.0-py3.10, here is a brief summary of the installed packages:</p>
+<p>For more details, you can use either docker or github to learn more about this image:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://hub.docker.com/layers/coffeateam/coffea-dask-almalinux8/2024.4.0-py3.10/images/sha256-a9516771d340e8ef56ff75fea8e2a3be8dcbe77f5085e038652d11c6b872cd1b?context=explore">Docker link to Default Image</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/CoffeaTeam/docker-coffea-dask/blob/main/dask-almalinux8/Dockerfile">Github link to Default Image</a>.</p></li>
+</ul>
+<p>For using the default image, follow the instructions in <a class="reference internal" href="#default-image"><span class="std std-ref">Using Dask with Default Image</span></a>. For using a non-default image, follow the instructions in <a class="reference internal" href="#nondefault-image"><span class="std std-ref">Using Dask with Non-Default Image</span></a>.</p>
+</section>
+<section id="step-by-step-instructions">
+<h2>Step-by-Step Instructions<a class="headerlink" href="#step-by-step-instructions" title="Link to this heading"></a></h2>
+<section id="using-dask-with-default-image">
+<span id="default-image"></span><h3>Using Dask with Default Image<a class="headerlink" href="#using-dask-with-default-image" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Log in to the EAF and select one of the following servers:</p>
+<ul class="simple">
+<li><p>AL9 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>AL8 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>(Deprecated) SL7 Dask (Coffea 0.7.x) [stable]</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is highly recommended to use AL8 or AL9. SL7 has been deprecated.</p>
+</div>
+</li>
+<li><p>Make sure you have a voms proxy. Here is the <a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid">voms CMS Twiki</a> if you need help.</p></li>
+<li><p>Open a jupyterhub notebook and copy in the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">htcdaskgateway</span> <span class="kn">import</span> <span class="n">HTCGateway</span>
+
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">HTCGateway</span><span class="p">()</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">()</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do NOT forget to shut down your cluster, see step 5.</p>
+</div>
+</li>
+<li><p>You are now connected to our batch cluster!</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your cluster is not working, please contact us via <a class="reference internal" href="index.html"><span class="doc">slack or email</span></a>. In the message, please specify the image you are trying to use.</p>
+</div>
+</li>
+<li><p>You must shutdown your cluster once you are finished using it. Add this line of code when you are finished with your workers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="using-dask-with-non-default-image">
+<span id="nondefault-image"></span><h3>Using Dask with Non-Default Image<a class="headerlink" href="#using-dask-with-non-default-image" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The image you want to use MUST be in cvmfs. You can check cvmfs using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>/cvmfs/unpacked.cern.ch/registry.hub.docker.com/
+</pre></div>
+</div>
+<p>If your image is not in cvmfs, please contact us via <a class="reference internal" href="index.html"><span class="doc">slack or email</span></a>.</p>
+</div>
+<p>For a non-default image, there are a few extra steps in order to make sure your jobs won’t fail. See <a class="reference internal" href="#how-it-works"><span class="std std-ref">How It Works</span></a> to better understand the extra steps.</p>
+<ol class="arabic">
+<li><p>Log in to the EAF and select one of the following servers:</p>
+<ul class="simple">
+<li><p>AL9 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>AL8 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>(Deprecated) SL7 Dask (Coffea 0.7.x) [stable]</p></li>
+<li><p>AL9 Dask (Coffea 2024.x) [devel]</p></li>
+<li><p>AL8 Dask (Coffea 2024.x) [devel]</p></li>
+<li><p>(Deprecated) SL7 Dask (Coffea 2024.x) [devel]</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is highly recommended to use AL8 or AL9. SL7 has been deprecated.</p>
+</div>
+<p>If you are a coffea 2024.x user, go to step 2. If not, go to step 3.</p>
+</li>
+<li><p>The client image aka the server image may or may not be compatible with your image. Most coffeateam/coffea-dask-almalinux8 images are compatible that have matching coffea versions and python versions. Continue to step 4.</p></li>
+<li><p>The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See <a class="reference internal" href="02_customization.html"><span class="doc">Customizing User Environments</span></a> for how to do this. Particularly, “Example: installing biopython in the snowflakes conda environment”. You can still pip/mamba/conda install in your environment once you activate it.</p></li>
+<li><p>Make sure you have a voms proxy. Here is the <a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid">voms CMS Twiki</a> if you need help.</p></li>
+<li><p>Open a jupyterhub notebook and copy in the following code, REPLACE &lt;your_image_repo/your_image_name&gt; with your image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">htcdaskgateway</span> <span class="kn">import</span> <span class="n">HTCGateway</span>
+
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">HTCGateway</span><span class="p">()</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="s1">&#39;&lt;your_image_repo/your_image_name&gt;&#39;</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do NOT forget to shut down your cluster, see step 7.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>COFFEA USERS: If your cluster is not working, please try step 3.</p>
+</div>
+</li>
+<li><p>You are now connected to our batch cluster!</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your cluster is not working, please contact us via <a class="reference internal" href="index.html"><span class="doc">slack or email</span></a>. In the message, please specify the image you are trying to use.</p>
+</div>
+</li>
+<li><p>You must shutdown your cluster once you are finished using it. Add this line of code when you are finished with your workers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="02_customization.html" class="btn btn-neutral float-left" title="Customizing user environments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

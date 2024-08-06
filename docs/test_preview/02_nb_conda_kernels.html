@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conda/mamba &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub (external link)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_vscode.html">Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_getting_started.html">Getting started - Choosing a Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermi Generic SL7/CC8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE/Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF/DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN/ACCEL-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_eaf_dae.html">Data Analysis Ecosystem?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_jobsub.html">Submitting Jobs to FermiGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing user environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_batch_dask_cms.html">Using Dask with COFFEA at Fermilab’s EAF</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Conda/mamba</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/02_nb_conda_kernels.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conda-mamba">
+<h1>Conda/mamba<a class="headerlink" href="#conda-mamba" title="Link to this heading"></a></h1>
+<p>It is possible to customize your environment using anaconda and access that environment in your notebooks.</p>
+<section id="configuring-conda-mamba-only-needed-once">
+<h2>Configuring conda/mamba (only needed once)<a class="headerlink" href="#configuring-conda-mamba-only-needed-once" title="Link to this heading"></a></h2>
+<p>From a terminal launcher, run <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">init</span></code>. Then, write to <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> in your home directory with
+the following content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the aliases and functions</span>
+<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="o">~/.</span><span class="n">bashrc</span> <span class="p">];</span> <span class="n">then</span>
+    <span class="o">.</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">fi</span>
+</pre></div>
+</div>
+</section>
+<section id="using-conda-mamba">
+<h2>Using conda/mamba<a class="headerlink" href="#using-conda-mamba" title="Link to this heading"></a></h2>
+<p>Conda is well-documented at <a class="reference external" href="https://conda.io">https://conda.io</a> (its use is outside the scope of this documentation).  You can safely
+substitute <code class="docutils literal notranslate"><span class="pre">mamba</span></code> for <code class="docutils literal notranslate"><span class="pre">conda</span></code> wherever it is listed; it is a faster reimplementation in C++ of conda.</p>
+<section id="installing-launchers">
+<h3>Installing launchers<a class="headerlink" href="#installing-launchers" title="Link to this heading"></a></h3>
+<p>You must install the <cite>ipykernel</cite> package in order to make your custom environment available as a notebook kernel.
+After a minute or so, a new launcher should appear corresponding to your environment; it may be necessary
+to reload the web page.</p>
+</section>
+<section id="customizing-conda-with-user-scripts">
+<span id="conda-user-scripts"></span><h3>Customizing conda with user scripts<a class="headerlink" href="#customizing-conda-with-user-scripts" title="Link to this heading"></a></h3>
+<p>For conda environments, you can add preamble scripts to <code class="docutils literal notranslate"><span class="pre">${CONDA_PREFIX}/etc/conda/activate.d</span></code>; these will run before
+your notebook starts. For example, in the <cite>snowflakes</cite> conda environment example below,
+additional preamble scripts could be added to <code class="docutils literal notranslate"><span class="pre">~/.conda/env/snowflakes/etc/conda/activate.d</span></code>.</p>
+</section>
+</section>
+<section id="example-installing-biopython-in-the-snowflakes-conda-environment">
+<h2>Example: installing biopython in the <cite>snowflakes</cite> conda environment<a class="headerlink" href="#example-installing-biopython-in-the-snowflakes-conda-environment" title="Link to this heading"></a></h2>
+<p>The vanilla launcher screen shows the two default launchers: python, and python-safemode.</p>
+<a class="reference internal image-reference" href="_images/nb_conda_pre.png"><img alt="Launcher with no conda environments" src="_images/nb_conda_pre.png" style="width: 400px;" />
+</a>
+<p>We then install a new environment named <cite>snowflakes</cite>, including the <cite>biopython</cite> package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[burt@jupyter-burt-lpc ~]$ mamba create -q -y -n snowflakes biopython ipykernel
+Package                            Version  Build                Channel                    Size
+────────────────────────────────────────────────────────────────────────────────────────────────────
+Install:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
++ _libgcc_mutex                        0.1  conda_forge          conda-forge/linux-64     Cached
++ _openmp_mutex                        4.5  2_gnu                conda-forge/linux-64     Cached
+[ ... snipped for brevity ... ]
++ zeromq                             4.3.4  h9c3ff4c_1           conda-forge/linux-64     Cached
+
+Summary:
+
+Install: 66 packages
+
+Total download: 3MB
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+</pre></div>
+</div>
+<p>The newer launcher now appears, with its full name visible via tooltip, indicating the name of the conda environment:</p>
+<a class="reference internal image-reference" href="_images/nb_conda_post.png"><img alt="Launcher with new conda environments" src="_images/nb_conda_post.png" style="width: 400px;" />
+</a>
+<p>And the Bio module from biopython is available:</p>
+<a class="reference internal image-reference" href="_images/nb_conda_post_2.png"><img alt="" src="_images/nb_conda_post_2.png" style="width: 600px;" />
+</a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

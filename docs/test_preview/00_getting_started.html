@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started - Choosing a Notebook &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fermi Generic SL7/CC8" href="01_fermi_gen.html" />
+    <link rel="prev" title="Help, something’s broken!" href="03_help.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub (external link)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_vscode.html">Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started - Choosing a Notebook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#base-image">Base Image</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#packages">Packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermi Generic SL7/CC8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE/Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF/DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN/ACCEL-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_eaf_dae.html">Data Analysis Ecosystem?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_jobsub.html">Submitting Jobs to FermiGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing user environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_batch_dask_cms.html">Using Dask with COFFEA at Fermilab’s EAF</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting started - Choosing a Notebook</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/00_getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started-choosing-a-notebook">
+<h1>Getting started - Choosing a Notebook<a class="headerlink" href="#getting-started-choosing-a-notebook" title="Link to this heading"></a></h1>
+<p>Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the <a class="reference internal" href="#base-image">base image</a>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="01_cmslpc.html#cms"><span class="std std-ref">CMSLPC</span></a>- CMS, LHC</p></li>
+<li><p><a class="reference internal" href="01_cosmic.html#astro"><span class="std std-ref">Cosmic Frontier</span></a> - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV</p></li>
+<li><p><a class="reference internal" href="01_acorn.html#accelerator"><span class="std std-ref">ACORN/ACCEL-AI</span></a> -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider</p></li>
+<li><p><a class="reference internal" href="01_fife.html#fife"><span class="std std-ref">FIFE/Neutrinos</span></a> - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2</p></li>
+<li><p><a class="reference internal" href="01_dune_lbnf.html#dune"><span class="std std-ref">LBNF/DUNE/ProtoDUNE</span></a> - DUNE, LBNF</p></li>
+<li><p><a class="reference internal" href="01_fermi_gen.html#fermi"><span class="std std-ref">Fermi Generic SL7/CC8</span></a> - Everyone</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not have access to your experiment, or have access to an experiment you are not a part of, please contact <a class="reference external" href="mailto:eaf-users&#37;&#52;&#48;fnal&#46;gov">eaf-users<span>&#64;</span>fnal<span>&#46;</span>gov</a>.</p>
+</div>
+<section id="base-image">
+<h2>Base Image<a class="headerlink" href="#base-image" title="Link to this heading"></a></h2>
+<section id="packages">
+<h3>Packages<a class="headerlink" href="#packages" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<tbody>
+<tr class="row-odd"><td><p class="centered">
+<strong>jupyterlab-system-monitor</strong></p></td>
+<td><p class="centered">
+<strong>krb5-workstation</strong></p></td>
+<td><p class="centered">
+<strong>krb5-libs</strong></p></td>
+<td><p class="centered">
+<strong>nss wrapper</strong></p></td>
+<td><p class="centered">
+<strong>krb5.conf</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="centered">
+<strong>fonts-liberation</strong></p></td>
+<td><p class="centered">
+<strong>json-passwd</strong></p></td>
+<td><p class="centered">
+<strong>gcc</strong></p></td>
+<td><p class="centered">
+<strong>gettext</strong></p></td>
+<td><p class="centered">
+<strong>bzip2</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="centered">
+<strong>ca-certificates</strong></p></td>
+<td><p class="centered">
+<strong>sudo</strong></p></td>
+<td><p class="centered">
+<strong>locales</strong></p></td>
+<td><p class="centered">
+<strong>run-one</strong></p></td>
+<td><p class="centered">
+<strong>wget</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="centered">
+<strong>python-requests</strong></p></td>
+<td><p class="centered">
+<strong>ipywidgets</strong></p></td>
+<td><p class="centered">
+<strong>tcpdump</strong></p></td>
+<td><p class="centered">
+<strong>sssd-client</strong></p></td>
+<td><p class="centered">
+<strong>openssl</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="centered">
+<strong>jupyterlab-drawio</strong></p></td>
+<td><p class="centered">
+<strong>emacs</strong></p></td>
+<td><p class="centered">
+<strong>git</strong></p></td>
+<td><p class="centered">
+<strong>unzip</strong></p></td>
+<td><p class="centered">
+<strong>rsync</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="centered">
+<strong>typing-extensions</strong></p></td>
+<td><p class="centered">
+<strong>nano</strong></p></td>
+<td><p class="centered">
+<strong>vim</strong></p></td>
+<td><p class="centered">
+<strong>miniforge</strong></p></td>
+<td><p class="centered">
+<strong>tini</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="centered">
+<strong>nb_conda_kernals</strong></p></td>
+<td><p class="centered">
+<strong>jupyterhub</strong></p></td>
+<td><p class="centered">
+<strong>notebook</strong></p></td>
+<td><p class="centered">
+<strong>jupyterlab</strong></p></td>
+<td><p class="centered">
+<strong>net-tools</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="centered">
+<strong>jupyter_server</strong></p></td>
+<td><p class="centered">
+<strong>jupyterlab-it</strong></p></td>
+<td><p class="centered">
+<strong>ssh.conf</strong></p></td>
+<td><p class="centered">
+<strong>rpm</strong></p></td>
+<td><p class="centered">
+<strong>–</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>The notebooks that directly inherit from this image are:</p>
+<ul class="simple">
+<li><p>CMSLPC: SL7 Interactive</p></li>
+<li><p>Cosmic Frontier: SL7 Interactive General Purpose Notebook</p></li>
+<li><p>ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN AIMPS SL7 Interactive, L-CAPE CPU Only SL7 Interactive</p></li>
+<li><p>FIFE/Neutrinos: SL7 Interactive General Purpose Notebook</p></li>
+<li><p>LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook</p></li>
+</ul>
+<p>For more detailed information regarding packages, see the diagram in <a class="reference internal" href="01_diagram.html#diagram"><span class="std std-ref">EAF Structure and Packages</span></a>.
+To look at different image classes, toggle the layers in the interactive diagram (e.g. toggle “Background” to
+view the base notebook image).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="03_help.html" class="btn btn-neutral float-left" title="Help, something’s broken!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="01_fermi_gen.html" class="btn btn-neutral float-right" title="Fermi Generic SL7/CC8" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
