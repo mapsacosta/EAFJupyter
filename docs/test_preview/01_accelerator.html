@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCEL-AI &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CMSLPC" href="01_cmslpc.html" />
+    <link rel="prev" title="ACORN" href="01_acorn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_baseimages.html">Base Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermilab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Astro/Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ACCEL-AI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cpu-interactives">CPU Interactives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#al9">AL9</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#packages">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al8">AL8</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al9-dask-coffea-0-7-x-stable">AL9 Dask (Coffea 0.7.x) [stable]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al8-dask-coffea-0-7-x-stable">AL8 Dask (Coffea 0.7.x) [stable]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al9-dask-coffea-2024-x-devel">AL9 Dask (Coffea 2024.x) [devel]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al8-dask-coffea-2024-x-devel">AL8 Dask (Coffea 2024.x) [devel]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al9-bigmem-max-128-gb">AL9-BigMem (max 128 GB)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sl7">SL7</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sl7-dask-coffea-0-7-x-stable">SL7 Dask (Coffea 0.7.x) [stable]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sl7-dask-coffea-2024-x-devel">SL7 Dask (Coffea 2024.x) [devel]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nvidia-a100-gpu">NVIDIA® A100 GPU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#al9-10gb-20gb-40gb-gpu-slot">AL9 - 10GB/20GB/40GB GPU slot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#al8-10gb-20gb-40gb-gpu-slot">AL8 - 10GB/20GB/40GB GPU slot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sl7-10gb-20gb-40gb-gpu-slot">SL7 - 10GB/20GB/40GB GPU slot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_eaf_dae.html">Data Analysis Ecosystem?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing User Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_batch_dask_cms.html">Dask at Fermilab’s EAF</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ACCEL-AI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/01_accelerator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="accel-ai">
+<h1>ACCEL-AI<a class="headerlink" href="#accel-ai" title="Link to this heading"></a></h1>
+<p>There are several types of notebooks available to an ACCEL-AI user. You can choose between CPU and GPU notbooks and L-CAPE and READS notebooks. If you are unsure what notebook to use, see the <a class="reference internal" href="01_choosing_a_notebook.html"><span class="doc">Choosing a Notebook</span></a> page. Each notebook inherits packages from a base notebook, the base notebook will be listed with each image along with the link to it’s packages. To see all the OS base images, you can look at the <a class="reference internal" href="01_baseimages.html"><span class="doc">Base Images page</span></a>. Some notebooks also inherit from the other CPU Interactive notebooks, these will be listed as well.</p>
+<p>To learn what packages are in each notebook, select a notebook below:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><cite>CPU Interactives &lt;cpu notebooks&gt;</cite></dt><dd><ul>
+<li><p><cite>SL7 &lt;sl7 cmslpc&gt;</cite></p></li>
+<li><p><cite>SL7 Dask (Coffea 0.7.x) [stable] &lt;sl7 dask coffea stable&gt;</cite></p></li>
+<li><p><cite>SL7 Dask (Coffea 2024.x) [devel] &lt;sl7 dask coffea devel&gt;</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>NVIDIA® A100 GPU &lt;gpu notebooks&gt;</cite></dt><dd><ul>
+<li><p><cite>AL9 - 10GB/20GB/40GB GPU slot &lt;al9 10/20/40 gb&gt;</cite></p></li>
+<li><p><cite>AL8 - 10GB/20GB/40GB GPU slot &lt;al8 10/20/40 gb&gt;</cite></p></li>
+<li><p><cite>SL7 - 10GB/20GB/40GB GPU slot &lt;sl7 10/20/40 gb&gt;</cite></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="cpu-interactives">
+<span id="cpu-notebooks"></span><h2>CPU Interactives<a class="headerlink" href="#cpu-interactives" title="Link to this heading"></a></h2>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/CMSLPC_hub.png"><img alt="The CMSLPC notebook options as displayed on the JupyterHub. The first option is the SL7 Interactive, the second option is COFFEA-DASK SL7 Interactive, the third option is GPU SL7 Interactive (NVIDIA Ampere A100), and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]." class="align-center" src="_images/CMSLPC_hub.png" style="width: 375px; height: 485px;" />
+</a>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The TESTING notebooks are for developer use only, unless you have explicit permission to use them. If you think you need to use a TESTING notebook, contact us via <a class="reference internal" href="index.html"><span class="doc">slack or email</span></a>.</p>
+</div>
+<section id="al9">
+<span id="al9-cmslpc"></span><h3>AL9<a class="headerlink" href="#al9" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al9-base"><span class="std std-ref">OS AL9</span></a></p>
+<p>Usage: General purpose AL9 computer, non-dask, non-coffea</p>
+<section id="packages">
+<h4>Packages<a class="headerlink" href="#packages" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al8">
+<span id="al8-cmslpc"></span><h3>AL8<a class="headerlink" href="#al8" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al8-base"><span class="std std-ref">OS AL8</span></a></p>
+<p>Usage: General purpose AL8 computer, non-dask, non-coffea</p>
+<section id="id1">
+<h4>Packages<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al9-dask-coffea-0-7-x-stable">
+<span id="al9-dask-coffea-stable"></span><h3>AL9 Dask (Coffea 0.7.x) [stable]<a class="headerlink" href="#al9-dask-coffea-0-7-x-stable" title="Link to this heading"></a></h3>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#al9-base"><span class="std std-ref">OS AL9</span></a>, <a class="reference internal" href="01_cmslpc.html#al9-cmslpc"><span class="std std-ref">AL9 CMSLPC</span></a></p>
+<p>Usage: General purpose AL9 computer with coffea and dask enabled, coffea version is 0.7.x</p>
+<section id="id2">
+<h4>Packages<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al8-dask-coffea-0-7-x-stable">
+<span id="al8-dask-coffea-stable"></span><h3>AL8 Dask (Coffea 0.7.x) [stable]<a class="headerlink" href="#al8-dask-coffea-0-7-x-stable" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al8-base"><span class="std std-ref">OS AL8</span></a>, <a class="reference internal" href="01_cmslpc.html#al8-cmslpc"><span class="std std-ref">AL8 CMSLPC</span></a></p>
+<p>Usage: General purpose AL8 computer with coffea and dask enabled, coffea version is 0.7.x</p>
+<section id="id3">
+<h4>Packages<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al9-dask-coffea-2024-x-devel">
+<span id="al9-dask-coffea-devel"></span><h3>AL9 Dask (Coffea 2024.x) [devel]<a class="headerlink" href="#al9-dask-coffea-2024-x-devel" title="Link to this heading"></a></h3>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#al9-base"><span class="std std-ref">OS AL9</span></a>, <a class="reference internal" href="01_cmslpc.html#al9-cmslpc"><span class="std std-ref">AL9 CMSLPC</span></a></p>
+<p>Usage: General purpose AL9 computer with coffea and dask enabled, coffea version is 2024.x</p>
+<section id="id4">
+<h4>Packages<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al8-dask-coffea-2024-x-devel">
+<span id="al8-dask-coffea-devel"></span><h3>AL8 Dask (Coffea 2024.x) [devel]<a class="headerlink" href="#al8-dask-coffea-2024-x-devel" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al8-base"><span class="std std-ref">OS AL8</span></a>, <a class="reference internal" href="01_cmslpc.html#al8-cmslpc"><span class="std std-ref">AL8 CMSLPC</span></a></p>
+<p>Usage: General purpose AL8 computer with coffea and dask enabled, coffea version is 2024.x</p>
+<section id="id5">
+<h4>Packages<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al9-bigmem-max-128-gb">
+<span id="al9-big-mem"></span><h3>AL9-BigMem (max 128 GB)<a class="headerlink" href="#al9-bigmem-max-128-gb" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al9-base"><span class="std std-ref">OS AL9</span></a>, <a class="reference internal" href="01_cmslpc.html#al9-cmslpc"><span class="std std-ref">AL9 CMSLPC</span></a></p>
+<p>Usage: General purpose AL9 computer with larger memory of 128 GB, non-dask, non-coffea</p>
+<section id="id6">
+<h4>Packages<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sl7">
+<span id="sl7-cmslpc"></span><h3>SL7<a class="headerlink" href="#sl7" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>SL7 notebooks will be deprecated, please use an AL8 or AL9 image.</p>
+</div>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#sl7-base"><span class="std std-ref">OS SL7</span></a></p>
+<p>Usage: General purpose SL7 computer, non-dask, non-coffea</p>
+<section id="id7">
+<h4>Packages<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sl7-dask-coffea-0-7-x-stable">
+<span id="sl7-dask-coffea-stable"></span><h3>SL7 Dask (Coffea 0.7.x) [stable]<a class="headerlink" href="#sl7-dask-coffea-0-7-x-stable" title="Link to this heading"></a></h3>
+<p>Base Image: <a class="reference internal" href="01_baseimages.html#al8-base"><span class="std std-ref">OS SL7</span></a>, <a class="reference internal" href="01_cmslpc.html#sl7-cmslpc"><span class="std std-ref">SL7 CMSLPC</span></a></p>
+<p>Usage: General purpose SL&amp; computer with coffea and dask enabled, coffea version is 0.7.x</p>
+<section id="id8">
+<h4>Packages<a class="headerlink" href="#id8" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sl7-dask-coffea-2024-x-devel">
+<span id="sl7-dask-coffea-devel"></span><h3>SL7 Dask (Coffea 2024.x) [devel]<a class="headerlink" href="#sl7-dask-coffea-2024-x-devel" title="Link to this heading"></a></h3>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#sl7-base"><span class="std std-ref">OS SL7</span></a>, <a class="reference internal" href="01_cmslpc.html#sl7-cmslpc"><span class="std std-ref">SL7 CMSLPC</span></a></p>
+<p>Usage: General purpose SL7 computer with coffea and dask enabled, coffea version is 2024.x</p>
+<section id="id9">
+<h4>Packages<a class="headerlink" href="#id9" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="nvidia-a100-gpu">
+<span id="gpu-notebooks"></span><h2>NVIDIA® A100 GPU<a class="headerlink" href="#nvidia-a100-gpu" title="Link to this heading"></a></h2>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/CMSLPC_hub.png"><img alt="The CMSLPC notebook options as displayed on the JupyterHub. The first option is the SL7 Interactive, the second option is COFFEA-DASK SL7 Interactive, the third option is GPU SL7 Interactive (NVIDIA Ampere A100), and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]." class="align-center" src="_images/CMSLPC_hub.png" style="width: 375px; height: 485px;" />
+</a>
+</div></blockquote>
+<section id="al9-10gb-20gb-40gb-gpu-slot">
+<span id="al9-10-20-40-gb"></span><h3>AL9 - 10GB/20GB/40GB GPU slot<a class="headerlink" href="#al9-10gb-20gb-40gb-gpu-slot" title="Link to this heading"></a></h3>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#al9-base"><span class="std std-ref">OS AL9</span></a>, <a class="reference internal" href="01_cmslpc.html#al9-cmslpc"><span class="std std-ref">AL9 CMSLPC</span></a></p>
+<p>Usage: General purpose AL9 GPU with 10GB/20GB/40GB, non-dask, non-coffea</p>
+<section id="id10">
+<h4>Packages<a class="headerlink" href="#id10" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="al8-10gb-20gb-40gb-gpu-slot">
+<span id="al8-10-20-40-gb"></span><h3>AL8 - 10GB/20GB/40GB GPU slot<a class="headerlink" href="#al8-10gb-20gb-40gb-gpu-slot" title="Link to this heading"></a></h3>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#al8-base"><span class="std std-ref">OS AL8</span></a>, <a class="reference internal" href="01_cmslpc.html#al8-cmslpc"><span class="std std-ref">AL8 CMSLPC</span></a></p>
+<p>Usage: General purpose AL8 GPU with 10GB/20GB/40GB, non-dask, non-coffea</p>
+<section id="id11">
+<h4>Packages<a class="headerlink" href="#id11" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sl7-10gb-20gb-40gb-gpu-slot">
+<span id="sl7-10-20-40-gb"></span><h3>SL7 - 10GB/20GB/40GB GPU slot<a class="headerlink" href="#sl7-10gb-20gb-40gb-gpu-slot" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>SL7 will be deprecated, please use AL8 or AL9 notebooks.</p>
+</div>
+<p>Base Images: <a class="reference internal" href="01_baseimages.html#sl7-base"><span class="std std-ref">OS SL7</span></a>, <a class="reference internal" href="01_cmslpc.html#sl7-cmslpc"><span class="std std-ref">SL7 CMSLPC</span></a></p>
+<p>Usage: General purpose SL7 GPU with 10GB/20GB/40GB, non-dask, non-coffea</p>
+<section id="id12">
+<h4>Packages<a class="headerlink" href="#id12" title="Link to this heading"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>conda-build</p></td>
+<td><p>curl</p></td>
+<td><p>jemalloc</p></td>
+<td><p>python-blosc</p></td>
+<td><p>cytoolz</p></td>
+</tr>
+<tr class="row-even"><td><p>bokeh 2.4.3</p></td>
+<td><p>dask 2023.3.1</p></td>
+<td><p>distributed 2023.3.1</p></td>
+<td><p>dask-gateway</p></td>
+<td><p>dask-jobqueue</p></td>
+</tr>
+<tr class="row-odd"><td><p>nomkl</p></td>
+<td><p>scipy</p></td>
+<td><p>tini</p></td>
+<td><p>jupyter-server-proxy</p></td>
+<td><p>htcondor 9.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fsspec-xrootd</p></td>
+<td><p>bzip2</p></td>
+<td><p>libfortran</p></td>
+<td><p>git</p></td>
+<td><p>which</p></td>
+</tr>
+<tr class="row-odd"><td><p>zsh</p></td>
+<td><p>python 3.10</p></td>
+<td><p>gxx</p></td>
+<td><p>voms</p></td>
+<td><p>jupyterlab</p></td>
+</tr>
+<tr class="row-even"><td><p>ipympl</p></td>
+<td><p>dask_labextension</p></td>
+<td><p>ca-policy-lcg</p></td>
+<td><p>xrootd</p></td>
+<td><p>uproot &gt;= 4.0.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>coffea 0.7.22</p></td>
+<td><p>vector</p></td>
+<td><p>xgboost</p></td>
+<td><p>lz4</p></td>
+</tr>
+<tr class="row-even"><td><p>python-xxhash</p></td>
+<td><p>zstandard</p></td>
+<td><p>h5py</p></td>
+<td><p>pytables</p></td>
+<td><p>python-rapidjson</p></td>
+</tr>
+<tr class="row-odd"><td><p>geventhttpclient</p></td>
+<td><p>brotli</p></td>
+<td><p>fastjet 3.4.0.1</p></td>
+<td><p>tritonclient[all]</p></td>
+<td><p>torch &lt; 1.13</p></td>
+</tr>
+<tr class="row-even"><td><p>tflite-runtime</p></td>
+<td><p>onnxruntime</p></td>
+<td><p>torch-scatter</p></td>
+<td><p>torch-sparse</p></td>
+<td><p>torch-cluster</p></td>
+</tr>
+<tr class="row-odd"><td><p>torch-spline-conv</p></td>
+<td><p>torch-geometric</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="01_acorn.html" class="btn btn-neutral float-left" title="ACORN" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="01_cmslpc.html" class="btn btn-neutral float-right" title="CMSLPC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

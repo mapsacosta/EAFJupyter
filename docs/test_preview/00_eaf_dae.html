@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analysis Ecosystem? &mdash; Fermilab Elastic Analysis Facility 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Storage" href="01_storage.html" />
+    <link rel="prev" title="EAF Structure and Packages" href="01_diagram.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Fermilab Elastic Analysis Facility
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Accounts and authentication</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_user_accounts.html">EAF Access and Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Jupyter - the basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">About JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_named_sessions.html">Multiple sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_help.html">Help, something’s broken!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Server and Notebook Options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00_getting_started.html">Getting started - Choosing a Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fermi_gen.html">Fermi Generic SL7/CC8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_fife.html">FIFE/Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_dune_lbnf.html">LBNF/DUNE/ProtoDUNE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cosmic.html">Cosmic Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_acorn.html">ACORN/ACCEL-AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_cmslpc.html">CMSLPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_diagram.html">EAF Structure and Packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EAF DAE (Data Analysis Ecosystem)</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Analysis Ecosystem?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-idea-behind-eaf">The idea behind EAF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#current-ecosystem">Current ecosystem</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01_storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_customization.html">Customizing user environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_batch_dask_cms.html">Dask at Fermilab’s EAF</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fermilab Elastic Analysis Facility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Analysis Ecosystem?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/00_eaf_dae.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-analysis-ecosystem">
+<h1>Data Analysis Ecosystem?<a class="headerlink" href="#data-analysis-ecosystem" title="Link to this heading"></a></h1>
+<p>The Elastic Analysis Facility aims to provide a platform for rapid scientific analysis with modern web and container technologies. As such, Jupyterhub is designed to be the gateway to a diverse ecosystem encompassing data analysis software, services and libraries for all Fermilab experiments.</p>
+<p>Have an idea for a replicable environment that you would like to see on EAF? contact <a class="reference external" href="mailto:eaf-users&#37;&#52;&#48;fnal&#46;gov">eaf-users<span>&#64;</span>fnal<span>&#46;</span>gov</a> and we will be happy to collaborate on making it posible</p>
+<section id="the-idea-behind-eaf">
+<h2>The idea behind EAF<a class="headerlink" href="#the-idea-behind-eaf" title="Link to this heading"></a></h2>
+<p>To unify and provide tools and development environments for HEP through a modern analysis facility.
+We are working closely and aligned with <a class="reference external" href="https://iris-hep.org">IRIS-HEP</a>, a software institute funded by the National Science Foundation. It aims to develop the state-of-the-art software cyberinfrastructure required for the challenges of data intensive scientific research at the High Luminosity Large Hadron Collider (HL-LHC) at CERN, and other planned HEP experiments of the 2020’s</p>
+<img alt="EAF vision" src="_images/analysisfacilities.png" />
+</section>
+<section id="current-ecosystem">
+<h2>Current ecosystem<a class="headerlink" href="#current-ecosystem" title="Link to this heading"></a></h2>
+<img alt="EAF current ecosystem" src="_images/eaf_ecosystem.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="01_diagram.html" class="btn btn-neutral float-left" title="EAF Structure and Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="01_storage.html" class="btn btn-neutral float-right" title="Storage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Fermilab, a DOE National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
