@@ -23,9 +23,13 @@ Step 1. Set up the proxy in your browser
 
 3. Click on the FoxyProxy extension to enter its configuration.
 
+   .. image:: img/foxy_extension.png
+   :align: center
+
 4. Click 'Options' and in the 'Proxies' tab, click 'Add'.
 
-   ** General**
+   .. image:: img/foxy_add.png
+   :align: center
 
      * **Title**: A short title, i.e., Fermilab
 
