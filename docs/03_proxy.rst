@@ -21,15 +21,11 @@ Step 1. Set up the proxy in your browser
 
 2. Once that is installed and integrated with Firefox, navigate to the 'puzzle piece' extensions icon (top right).
 
-3. Click on the FoxyProxy extension to enter its configuration.
+3. Click on the FoxyProxy extension icon, then enter its configuration page through the 'Options' button
 
    .. image:: img/foxy_extension.png
-   :align: center
 
-4. Click 'Options' and in the 'Proxies' tab, click 'Add'.
-
-   .. image:: img/foxy_add.png
-   :align: center
+4. In the 'Proxies' tab, click 'Add' and enter the following values:
 
      * **Title**: A short title, i.e., Fermilab
 
@@ -41,8 +37,11 @@ Step 1. Set up the proxy in your browser
 
      * Save
 
+   .. image:: img/foxy_add.png
+
    * **URL patterns (optional)**:
      * You may configure URL patterns when you want specific IPs/sites to route connections through the tunnel.
+
 
 5. To let the browser know about the proxy, navigate to the extension and select your newly created proxy 'Fermilab'.
 
@@ -58,4 +57,4 @@ Step 2. Get the SSH tunnel up
 
         ssh -D 1080 your_user_name@fnalu.fnal.gov
 
-2. [Click here! to test and be redirected to EAF](https://analytics-hub.fnal.gov/)
+2. `Click here to test and be redirected to EAF <https://analytics-hub.fnal.gov/>`_
