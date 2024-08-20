@@ -10,6 +10,7 @@ October 2 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: Issues connecting to the EAF over wifi
 
 .. code::
+
     Hi folks,
 
     There appears to be a network issue between the fgz wireless network and
