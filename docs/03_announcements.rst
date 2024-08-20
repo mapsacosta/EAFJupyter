@@ -2,6 +2,42 @@
 Announcements history (from eaf-users mailing list)
 ******************************
 
+October 2023
+=============
+
+October 2 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Issues connecting to the EAF over wifi
+
+.. code::
+    Hi folks,
+
+    There appears to be a network issue between the fgz wireless network and
+    the EAF. A ticket with networking is being opened and we will let you
+    know when it resolved. As a workaround, you should be able to still
+    access the EAF via wired networking, as well as the solutions you would
+    use when off-site (VPN or tunnelling).
+    
+    Thanks for your patience!
+    
+    - B
+
+Subject: Re: Issues connecting to the EAF over wifi
+
+.. code::
+
+    And we're back!
+    
+    It turns out not to be a networking issue at all (sorry: networking 
+    folks always get blamed first), but one of the infrastructure 
+    controllers in failure mode.  For some reason (which we will 
+    investigate), this led to a failure for some connections (but not all).
+    
+    As always we appreciate your patience.
+    
+    - B
+
+
 August 2023
 =============
 
@@ -10,6 +46,7 @@ August 11 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: Interruption in service: Aug 16, 9-12
 
 .. code::
+
    Hi EAF users,
 
     There will be interruptions in service on Wednesday morning as we update
@@ -29,6 +66,7 @@ August 2 2023 (Maria P. Acosta <macosta@FNAL.GOV>)
 Subject: Re: Changing GID assignment for EAF notebooks
 
 .. code::
+
     Dear EAF users,
 
     Due to the end of summer internships being close, we will re-schedule this change for Thursday, August 17th.
@@ -39,6 +77,7 @@ Subject: Re: Changing GID assignment for EAF notebooks
 Subject: Changing GID assignment for EAF notebooks
 
 .. code::
+
    Dear EAF users,
 
     On Thursday August 3rd, we will be rolling out a change that may impact file/user permissions. In order to stay consistent, we will be assigning your GID according to FERRY, our centralized user data source, depending on which notebook flavor you pick.
@@ -63,6 +102,7 @@ July 31 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF is back!
 
 .. code::
+
     Hi folks,
 
     The underlying issue has been fixed and the EAF is available again.
@@ -87,6 +127,7 @@ July 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF: PYTHONNOUSERSITE update
 
 .. code::
+
    Hi EAF users,
 
     We know that the global setting of the PYTHONNOUSERSITE environment 
@@ -130,6 +171,7 @@ Jun 1 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: Re: Setting PYTHONNOUSERSITE globally
 
 .. code::
+
     Hi folks,
 
     This one fell through the cracks, but no longer! We will deploy
@@ -147,6 +189,7 @@ May 23 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: FYI: cosmetic changes to server selection screen
 
 .. code::
+
     Hi folks,
 
     Just wanted to give you a heads-up - we're rolling out a cosmetic change
