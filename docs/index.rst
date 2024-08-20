@@ -51,7 +51,6 @@ Quickstart
    02_vscode.rst
    03_help.rst
    03_proxy.rst
-   03_announcements.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
