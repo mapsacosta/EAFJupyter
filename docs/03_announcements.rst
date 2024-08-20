@@ -10,7 +10,7 @@ January 2023
 
 Subject: **POSTPONED** Re: Downtime scheduled for Wed, 25 Jan 2023 9-5 CST
 
-.. code-block::
+.. code::
 
     Hi folks,
     
