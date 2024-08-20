@@ -12,9 +12,10 @@ Web browser proxy for offsite access (Firefox)
 Instructions 
 ========
 
-This is a TWO step process, please follow all the instructions before trying to reach EAF.
+This is a TWO step process, please follow all the instructions before trying to reach EAF through your browser proxy.
 
 Step 1. Set up the proxy in your browser
+----------------------------------------
 
 1. Download FoxyProxy for use with the Firefox browser or install it as an extension from the official `Firefox extensions <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>`_ catalog.
 
@@ -24,12 +25,18 @@ Step 1. Set up the proxy in your browser
 
 4. Click 'Options' and in the 'Proxies' tab, click 'Add'.
 
-   * **General**
+   ** General**
+
      * **Title**: A short title, i.e., Fermilab
+
      * Select **SOCKS5** from the Proxy Type dropdown.
+
      * **Proxy IP address or DNS name**: localhost
+
      * **Port**: 1080 (free to choose here but must match the tunnel created)
+
      * Save
+
    * **URL patterns (optional)**:
      * You may configure URL patterns when you want specific IPs/sites to route connections through the tunnel.
 
@@ -40,10 +47,11 @@ Step 1. Set up the proxy in your browser
 
 *Source*: https://library.fnal.gov/off-site-electronic-access-instructions/
 
-Step 2. Get the proxy running
+Step 2. Get the SSH tunnel up
+-----------------------------
 
 1. Create a ssh tunnel to the CMSLPC/fnalu, using Putty or a shell run:
 
         ssh -D 1080 your_user_name@fnalu.fnal.gov
 
-2. To test the network, [click here!](https://analytics-hub.fnal.gov/)
+2. [Click here! to test and be redirected to EAF](https://analytics-hub.fnal.gov/)
