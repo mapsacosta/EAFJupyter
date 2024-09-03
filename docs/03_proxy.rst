@@ -1,5 +1,5 @@
 ******************************
-Web browser proxy for offsite access (Firefox)
+Web browser proxy for offsite access
 ******************************
 
 .. important::
@@ -17,9 +17,9 @@ This is a TWO step process, please follow all the instructions before trying to 
 Step 1. Set up the proxy in your browser
 ----------------------------------------
 
-1. Download FoxyProxy for use with the Firefox browser or install it as an extension from the official `Firefox extensions <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>`_ catalog.
+1. Download the FoxyProxy browser extension for `Chrome <https://chromewebstore.google.com/detail/foxyproxy/gcknhkkoolaabfmlnjonogaaifnjlfnp>`_ or `Firefox <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>`_
 
-2. Once that is installed and integrated with Firefox, navigate to the 'puzzle piece' extensions icon (top right).
+2. Navigate to the 'puzzle piece' extensions icon (top right) and select "Pin to Toolbar".
 
 3. Click on the FoxyProxy extension icon, then enter its configuration page through the 'Options' button
 
@@ -27,26 +27,26 @@ Step 1. Set up the proxy in your browser
 
 4. In the 'Proxies' tab, click 'Add' and enter the following values:
 
-     * **Title**: A short title, i.e., Fermilab
-
+     * **Title**: ``Fermilab``
      * Select **SOCKS5** from the Proxy Type dropdown.
+     * **Proxy IP address or DNS name**: ``localhost``
+     * **Port**: ``3128`` (free to choose here but must match the tunnel created)
 
-     * **Proxy IP address or DNS name**: localhost
+   * **URL patterns**:
 
-     * **Port**: 1080 (free to choose here but must match the tunnel created)
+     * Click the plus button next to **Pattern**.
+     * Under **Pattern**, type ``*.fnal.gov``
 
-     * Save
+   * Save
 
-   .. image:: img/foxy_add.png
+.. image:: img/fp-settings.jpg
+  :alt: FoxyProxy settings
 
-   * **URL patterns (optional)**:
-     * You may configure URL patterns when you want specific IPs/sites to route connections through the tunnel.
+5. To let the browser know about the proxy, click on the FoxyProxy button on the toolbar and select
+   "Proxy by Patterns".
 
-
-5. To let the browser know about the proxy, navigate to the extension and select your newly created proxy 'Fermilab'.
-
-6. You’re done! You should now notice a little fox face in the top-right corner of your browser. The color should match the color selected in the “Options” menu (default is blue, but you can change it, which is nice if you have more than one proxy setting).
-
+#. You’re done! You should now notice the FoxyProxy button has a wireframe globe. To disable the proxy,
+   click the button and select "Disable".
 
 *Source*: https://library.fnal.gov/off-site-electronic-access-instructions/
 
@@ -55,6 +55,8 @@ Step 2. Get the SSH tunnel up
 
 1. Create a ssh tunnel to the CMSLPC/fnalu, using Putty or a shell run:
 
-        ssh -D 1080 your_user_name@fnalu.fnal.gov
+.. code-block:: console
+
+   ssh -D 3128 your_user_name@fnalu.fnal.gov
 
 2. `Click here to test and be redirected to EAF <https://analytics-hub.fnal.gov/>`_
