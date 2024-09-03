@@ -45,6 +45,7 @@ Quickstart
    01_named_sessions.rst
    02_vscode.rst
    03_help.rst
+   03_proxy.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
@@ -95,6 +96,7 @@ Quickstart
    01_storage.rst
    02_customization.rst
    02_batch_dask_cms.rst
+   03_root_kernel.rst
 
 .. 01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
