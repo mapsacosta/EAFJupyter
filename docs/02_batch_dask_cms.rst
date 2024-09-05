@@ -71,6 +71,9 @@ For using the default image, follow the instructions in :ref:`Using Dask with De
 Step-by-Step Instructions
 ==========================
 
+.. important::
+  Coffea 0.7.x users must use a non-default image. Go to :ref:`Using Dask with Non-Default Image <nondefault image>`.
+
 .. _default image:
 
 Using Dask with Default Image
@@ -78,8 +81,8 @@ Using Dask with Default Image
 
 #. Log in to the EAF and select one of the following servers:
 
-   * AL9 Dask (Coffea 0.7.x) [stable] 
-   * AL8 Dask (Coffea 0.7.x) [stable] 
+   * AL9 Dask (Coffea 2024.x) [devel] 
+   * AL8 Dask (Coffea 2024.x) [devel] 
 
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
 
@@ -102,7 +105,7 @@ Using Dask with Default Image
 #. You are now connected to our batch cluster! 
    
    .. important::
-      If your cluster is not working, please contact us via :doc:`slack or email <index>`. In the message, please specify the image you are trying to use.
+      If your cluster is not working, please contact us via :doc:`slack or email <index>`. Note that if you need to use a different image, go to :ref:`Using Dask with Non-Default Image <nondefault image>`.
 
 #. You must shutdown your cluster once you are finished using it. Add this line of code when you are finished with your workers. 
    
@@ -135,7 +138,7 @@ For a non-default image, there are a few extra steps in order to make sure your 
   
    If you are a coffea 2024.x user, go to step 2. If not, go to step 3.
 
-#. The client image aka the server image may or may not be compatible with your image. Most coffeateam/coffea-dask-almalinux8 images are compatible that have matching coffea versions and python versions. Continue to step 4.    
+#. The client image aka the server image may or may not be compatible with your image. Most coffeateam/coffea-dask-almalinux8 images are compatible that have matching coffea versions and python versions. For Coffea 0.7.x, the current known working image is: coffeateam/coffea-base-almalinux8:0.7.22-py3.10. Continue to step 4.
 
 #. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
    
