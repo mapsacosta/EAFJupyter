@@ -42,10 +42,8 @@ Once logged in, you will need to choose a notebook. Only notebooks with "DASK" i
 
 * AL9 Dask (Coffea 0.7.x) [stable] 
 * AL8 Dask (Coffea 0.7.x) [stable] 
-* (Deprecated) SL7 Dask (Coffea 0.7.x) [stable] 
 * AL9 Dask (Coffea 2024.x) [devel] 
 * AL8 Dask (Coffea 2024.x) [devel] 
-* (Deprecated) SL7 Dask (Coffea 2024.x) [devel] 
 
 In the server options on EAF you will see this:
 
@@ -82,10 +80,6 @@ Using Dask with Default Image
 
    * AL9 Dask (Coffea 0.7.x) [stable] 
    * AL8 Dask (Coffea 0.7.x) [stable] 
-   * (Deprecated) SL7 Dask (Coffea 0.7.x) [stable]
-   
-   .. note::
-    It is highly recommended to use AL8 or AL9. SL7 has been deprecated.
 
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
 
@@ -136,13 +130,8 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
    * AL9 Dask (Coffea 0.7.x) [stable] 
    * AL8 Dask (Coffea 0.7.x) [stable] 
-   * (Deprecated) SL7 Dask (Coffea 0.7.x) [stable] 
    * AL9 Dask (Coffea 2024.x) [devel] 
    * AL8 Dask (Coffea 2024.x) [devel] 
-   * (Deprecated) SL7 Dask (Coffea 2024.x) [devel] 
-
-   .. note::
-    It is highly recommended to use AL8 or AL9. SL7 has been deprecated. 
   
    If you are a coffea 2024.x user, go to step 2. If not, go to step 3.
 
