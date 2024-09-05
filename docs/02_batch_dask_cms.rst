@@ -160,7 +160,7 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. important::
     Do NOT forget to shut down your cluster, see step 7.
 
-   .. warning::
+   .. note::
     COFFEA USERS: If your cluster is not working, please try step 3.
 
 #. You are now connected to our batch cluster!
