@@ -38,7 +38,7 @@ Logging In and Setting Up
 ==========================
 If you are new to the EAF, be sure to follow the :doc:`Quickstart <index>` for log-in information or :doc:`EAF Access and Accounts <00_user_accounts>` to gain access to the EAF. 
 
-Once logged in, you will need to choose a notebook. Only notebooks with "DASK" in the name will be able to use the HTCondor dask cluster. The following are dask enabled notebooks:
+Once logged in, you will need to choose a notebook. Only notebooks with "DASK" in the name will be able to use the HTCondor dask cluster. Notebooks with labeled [stable] work out of the box with htcdaskgateway cluster code. The following are dask enabled notebooks:
 
 * AL9 Dask (Coffea 0.7.x) [stable] 
 * AL8 Dask (Coffea 0.7.x) [stable] 
