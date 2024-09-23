@@ -53,7 +53,7 @@ In the server options on EAF you will see this:
 .. Note::
   You do NOT need to be a coffea user to access dask. Any of these notebooks can be used for other custom environments within the notebooks. See :ref:`Using Dask with Non-Default Image <nondefault image>`.
 
-You can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-dask-almalinux8:2024.4.0-py3.10, here is a brief summary of the installed packages:
+You can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-base-almalinux8:0.7.22-py3.10, here is a brief summary of the installed packages:
 
 .. csv-table::
    :file: /csvfiles/coffea_image_table.csv
@@ -63,7 +63,7 @@ You can either use dask with the installation default or you can use an image of
 
 For more details, you can use either docker or github to learn more about this image:
 
-* `Docker link to Default Image <https://hub.docker.com/layers/coffeateam/coffea-dask-almalinux8/2024.4.0-py3.10/images/sha256-a9516771d340e8ef56ff75fea8e2a3be8dcbe77f5085e038652d11c6b872cd1b?context=explore>`_. 
+* `Docker link to Default Image <https://hub.docker.com/layers/coffeateam/coffea-base-almalinux8/0.7.22-py3.10/images/sha256-fa7ed8a997d8a34e98e2ce309a88d9658e64d52ff3d500994cc6f7097b40da30?context=explore>`_. 
 * `Github link to Default Image <https://github.com/CoffeaTeam/docker-coffea-dask/blob/main/dask-almalinux8/Dockerfile>`_. 
 
 For using the default image, follow the instructions in :ref:`Using Dask with Default Image <default image>`. For using a non-default image, follow the instructions in :ref:`Using Dask with Non-Default Image <nondefault image>`.
@@ -72,7 +72,7 @@ Step-by-Step Instructions
 ==========================
 
 .. important::
-  Coffea 0.7.x users must use a non-default image. Go to :ref:`Using Dask with Non-Default Image <nondefault image>`.
+  Coffea 2024.x users must use a non-default image. Go to :ref:`Using Dask with Non-Default Image <nondefault image>`.
 
 .. _default image:
 
@@ -81,8 +81,8 @@ Using Dask with Default Image
 
 #. Log in to the EAF and select one of the following servers:
 
-   * AL9 Dask (Coffea 2024.x) [devel] 
-   * AL8 Dask (Coffea 2024.x) [devel] 
+   * AL9 Dask (Coffea 0.7.x) [stable] 
+   * AL8 Dask (Coffea 0.7.x) [stable] 
 
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
 
@@ -135,10 +135,6 @@ For a non-default image, there are a few extra steps in order to make sure your 
    * AL8 Dask (Coffea 0.7.x) [stable] 
    * AL9 Dask (Coffea 2024.x) [devel] 
    * AL8 Dask (Coffea 2024.x) [devel] 
-  
-   If you are a coffea 2024.x user, go to step 2. If not, go to step 3.
-
-#. The client image aka the server image may or may not be compatible with your image. Most coffeateam/coffea-dask-almalinux8 images are compatible that have matching coffea versions and python versions. For Coffea 0.7.x, the current known working image is: coffeateam/coffea-base-almalinux8:0.7.22-py3.10. Continue to step 4.
 
 #. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
    
@@ -159,9 +155,6 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
    .. important::
     Do NOT forget to shut down your cluster, see step 7.
-
-   .. note::
-    COFFEA USERS: If your cluster is not working, please try step 3.
 
 #. You are now connected to our batch cluster!
    
