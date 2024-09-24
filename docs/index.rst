@@ -5,12 +5,7 @@ Welcome to the Fermilab EAF documentation!
 The **Fermilab Elastic Analysis Facility** is a kubernetes-based platform providing services for integrated data, software and computational resources to execute one or more elements of scientific analysis workflows for Fermilab experiments and scientists. 
 These resources are centrally managed by the Scientific Computing Division at Fermilab as part of the EAF project and generally available for all Fermilab users. Check out the :doc:`userdocs/index` section for more information on environments, general user documentation for the analysis tools ecosystem and navigating the UI.
 
-.. important::
-
-    You can get help by:
-       * Filing a ticket via `ServiceNow <https://fermi.servicenowservices.com/wp/?id=evg-service-item&sys_id=2b7101261b58a950d03aec21f54bcb31>`_
-       * Joining the ``#eaf-users`` channel on ``fnal.slack.com`` (e-mail eaf-admins AT fnal.gov for an invitation if you don't already have access to the slack)
-       * Joining and emailing the mailing list: ``eaf-users@fnal.gov``
+.. include:: help.rst
 
 Quickstart
 ==========
@@ -50,6 +45,7 @@ Quickstart
    01_named_sessions.rst
    02_vscode.rst
    03_help.rst
+   03_proxy.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
@@ -95,10 +91,12 @@ Quickstart
    :caption: EAF DAE (Data Analysis Ecosystem)
 
    00_eaf_dae.rst
+   01_inference.rst
    01_jobsub.rst
    01_storage.rst
    02_customization.rst
    02_batch_dask_cms.rst
+   03_root_kernel.rst
 
 .. 01_jupyterhub_extensions.rst
    02_preinstalled_libs.rst
