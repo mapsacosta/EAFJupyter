@@ -29,13 +29,13 @@ Instructions
    python3.9 -m JupyROOT.kernel.rootkernel "$@"
 
 
-3. Ensure the script has the right permissions to execute
+4. Ensure the script has the right permissions to execute
 
 .. code-block::
 
    chmod +x go.sh
 
-4. Modify ``kernel.json`` in that same directory to point ``argv`` to the kernel startup script. Replace the <username> in the path with your username.
+5. Modify ``kernel.json`` in that same directory to point ``argv`` to the kernel startup script. Replace the <username> in the path with your username.
 
 .. code-block:: json
 
