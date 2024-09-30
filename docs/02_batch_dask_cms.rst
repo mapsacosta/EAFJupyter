@@ -124,9 +124,12 @@ Using Dask with Non-Default Image
   
   .. code-block:: bash
 
-    ls /cvmfs/unpacked.cern.ch/registry.hub.docker.com/
+    ls /cvmfs/unpacked.cern.ch/<image_registry>/<image_dir>/<image_name>
 
   If your image is not in cvmfs, please contact us via :doc:`slack or email <index>`.
+
+.. important::
+  These instructions assume that your image is from /cvmfs/unpacked.cern.ch/registry.hub.docker.com/, it is the default registry. If your image is from a different registry please see the :ref:`Non-Default Registry instructions <nondefault registry>`. If you are unsure, you can check your image registry (the place your image lives i.e. registry.hub.docker.com) by using the code in the warning above.
 
 For a non-default image, there are a few extra steps in order to make sure your jobs won't fail. See :ref:`How It Works <how it works>` to better understand the extra steps. 
 
@@ -155,6 +158,71 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     cluster = gateway.new_cluster(image='<your_image_repo/your_image_name>')
     cluster.scale(10)
+
+    client = cluster.get_client()
+
+   .. important::
+    Do NOT forget to shut down your cluster, see step 7.
+
+   .. note::
+    COFFEA USERS: If your cluster is not working, please try step 3.
+
+#. You are now connected to our batch cluster!
+   
+   .. important::
+      If your cluster is not working, please contact us via :doc:`slack or email <index>`. In the message, please specify the image you are trying to use. 
+
+#. You must shutdown your cluster once you are finished using it. Add this line of code when you are finished with your workers. 
+   
+   .. code-block:: python
+
+    cluster.shutdown()
+
+HTCDaskGateway Features
+========================
+
+.. _nondefault registry:
+
+Non-Default Image Registry
+---------------------------
+
+The default registry is registry.hub.docker.com, but there are other registries in cvmfs. You can specify which registry your image is in with the 'image_registry' option in the cluster creation.
+
+Step by Step Instructions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. warning::
+  The image you want to use MUST be in cvmfs. You can check cvmfs using:
+  
+  .. code-block:: bash
+
+    ls /cvmfs/unpacked.cern.ch/<image_registry>/<image_dir>/<image_name>
+
+  If your image is not in cvmfs, please contact us via :doc:`slack or email <index>`.
+
+For a non-default image, there are a few extra steps in order to make sure your jobs won't fail. See :ref:`How It Works <how it works>` to better understand the extra steps. 
+
+#. Log in to the EAF and select one of the following servers:
+
+   * AL9 Dask (Coffea 0.7.x) [stable] 
+   * AL8 Dask (Coffea 0.7.x) [stable] 
+   * AL9 Dask (Coffea 2024.x) [devel] 
+   * AL8 Dask (Coffea 2024.x) [devel] 
+
+#. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
+   
+#. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
+   
+#. Open a jupyterhub notebook and copy in the following code, REPLACE <your_image_repo/your_image_name> with your image:
+   
+   .. code-block:: python
+
+    from htcdaskgateway import HTCGateway
+
+    gateway = HTCGateway()
+
+    cluster = gateway.new_cluster(image_registry='<your_image_registry>',image='<your_image_repo/your_image_name>')
+    cluster.scale(10) #or however many workers you want
 
     client = cluster.get_client()
 
