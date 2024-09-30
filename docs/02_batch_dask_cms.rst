@@ -178,6 +178,9 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     cluster.shutdown()
 
+.. note:
+  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality.
+
 HTCDaskGateway Features
 ========================
 
@@ -239,6 +242,9 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. code-block:: python
 
     cluster.shutdown()
+
+.. note:
+  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality.
 
 
 .. toctree::
