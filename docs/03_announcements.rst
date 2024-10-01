@@ -2,8 +2,330 @@
 Announcements history (from eaf-users mailing list)
 ******************************
 
+June 2024
+=============
+
+June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
+------------------------------------------
+Subject: [SOLVED] Re: Connection issues with registry
+
+.. code::
+
+   Dear EAF users,
+
+    We have applied a fix for this and are back to normal operations, please let us know if you see any further issues.
+    
+    We apologize for the inconvenience and thank you for your patience while we worked on it.
+    
+    Maria A.
+
+
+June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
+------------------------------------------
+Subject: Connection issues with registry
+
+.. code::
+
+   Dear EAF users,
+
+    We are experiencing connectivity issues between EAF and the image registry. Our infrastructure team is working hard to resolve this. We apologize for any inconvenience this may cause and will report back when the issue is sorted out.
+    
+    Thanks,
+    
+    Maria A.
+
+
+May 2024
+=============
+
+May 28 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF downtime: June 5, 9-5 (all day)
+
+.. code::
+
+   Hi folks,
+
+    We're scheduling a downtime all day on Wed, June 5 to improve network routing.  As always, we hope to be done sooner than EOB, in which case we will let you know when the system will be available.
+    
+    Thanks!
+    
+    - B
+
+
+April 2024
+=============
+
+April 11 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: New GPUs added to the EAF
+
+.. code::
+
+   Hi folks,
+
+    We've just added many new GPUs to the EAF.
+    
+    40 GB slices have increased from 2 to 18
+    
+    20 GB slices have increased from 20 to 36
+    
+    10 GB slices have increased from 10 to 24
+    
+    Please let us know (via tickets or the #eaf-users slack) if there are
+    any issues.
+    
+    - B
+
+
+March 2024
+=============
+
+March 5 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Default notebook choices have changed
+
+.. code::
+
+    Hi folks,
+
+    With the latest updates, the order of notebook choices has changed; AL9 is now selected by default, and SL7 is further down in the drop down list.  We will also prioritize adding the notebook flavor and OS to the status bar.
+    
+    Sorry for the inconvenience - I should have sent out an announcement before the defaults changed.
+    
+    - B
+    
+
+February 2024
+=============
+
+February 20 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF is back
+
+.. code::
+
+    Hi folks,
+    
+    The issues with the underlying storage were resolved, and the EAF should
+    once again be available.  You may not need to restart any existing
+    notebooks (but may need to rerun any cells that were running when the
+    service was interrupted).
+    
+    - B
+
+February 20 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF currently unavailable
+
+.. code::
+
+   Hi folks,
+
+    The storage cluster underlying the EAF is having issues this morning. It
+    is being investigated and worked on, but for the time being, the login
+    screen will display "service unavailable".  If you had notebooks open,
+    running cells probably will be interrupted; it's also possible that we
+    will need to reboot nodes.
+    
+    I'll send an update when we know more - we appreciate your patience and
+    will get you back up as soon as we can.
+    
+    - B
+
+February 16 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: /scratch temporarily unavailable; possible reboots on Monday at 10 am
+
+.. code::
+
+   Hi EAF users,
+
+    Writes and reads are currently hanging to the /scratch filesystem. We
+    will restart some services on Monday after 10 am; please save/checkpoint
+    your work, since this may shut down your notebook.
+    
+    Thanks for your patience!
+    
+    - B
+
+
+January 2024
+=============
+
+January 25 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Removing old SL7/AL8/AL9 images
+
+.. code::
+   Hi everyone,
+
+    Just a heads-up - it's been a month and we haven't received any reports
+    of issues with the NEW images; shortly we'll reconfigure to remove the
+    OLD option.
+    
+    Thanks for testing!
+    
+    - B
+
+
+December 2024
+=============
+
+December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF: Service interruption: Jan 3 at 1 pm CST
+
+.. code::
+   Hi folks,
+
+    We need to reboot the cluster nodes that serve the EAF. If you have an
+    active server at that time, it should migrate and respawn - but all
+    processes in the current server will be terminated -- meaning that all
+    kernels/terminal processes will stop and you'll need to restart. Please
+    plan accordingly - thanks!
+    
+    - B
+
+
+December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF: New SL7, Alma8, Alma9 images - please test!
+
+.. code::
+   Hi folks,
+
+    We just reconfigured the EAF with new SL7, Alma8, and Alma9 images. We
+    refactored our build system in order to do this efficiently. It's
+    possible during this process we missed including some software that you
+    need; we'd appreciate if you could verify that the new SL7 image is
+    working for you.
+    To give you time to let us know if there's a problem, we are providing
+    both the current/old and new SL7 images available on the server
+    selection screen.
+    
+    The "OLD SL7" is what you've been using up until now.
+    The "NEW SL7" is SL7 using our new build process.
+    
+    As always, drop us a line through the usual channels - servicenow
+    tickets and/or the #eaf-users slack channel.  (If you need an invite to
+    #eaf-users, send me an e-mail privately).
+    
+    - B
+
+
+November 2023
+=============
+
+November 16 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF: back to (nearly) full service
+
+.. code::
+   Hi folks,
+
+    We now have all GPUs back in the EAF, monitoring working correctly, and
+    CMS areas (nobackup, data, etc) mounted and responding correctly.
+    Thanks again for your patience; please contact us if you see any
+    remaining issues.
+    - B
+
+
+November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF back up with degraded services
+
+.. code::
+
+    Hi everyone,
+
+    The EAF is again available, but with some degraded services:
+    
+       * GPU availability/monitoring is offline
+       * Only half the GPUs are available
+       * CMS NFS areas (scratch, data1-3) are not available
+    
+    We are continuing to work these issues.
+    
+    - B
+
+November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF update: still in maintenance
+
+.. code::
+   Hi folks,
+
+    We are making progress with the migration but are now working through
+    some issues with mounting shared filesystems correctly.  I'll send an
+    update before the end of the day - hopefully sooner.
+    
+    - B
+
+November 13 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Extending EAF downtime through tomorrow
+
+.. code::
+   Hi folks,
+
+    Unfortunately, it's taking a lot longer than expected to sync files
+    between the old and new subvolumes for EAF. Because of this, we're
+    extending the downtime through tomorrow - I'll keep you posted and let
+    you know as soon as we're open for business.
+    
+    Thanks for your patience,
+    
+    - B
+
+
+November 10 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: 11/13 downtime reminder
+
+.. code::
+
+   Hi folks,
+    
+   Just a reminder that the EAF will be unavailable potentially all day
+   (Fermilab time) on Monday.
+    
+    Thanks!
+    - B
+
+
 October 2023
 =============
+
+October 30 2023 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Upcoming degradation (11/3) and downtime (11/13) for EAF
+
+.. code::
+
+   Hi folks,
+
+
+    We are in the long-overdue process of migrating to newer (faster, more
+    reliable) infrastructure. Unfortunately, we need to migrate one of the
+    GPU nodes ahead of time - which is half of the GPUs - in order to avoid
+    an extended service outage when we migrate the rest of the system.
+    
+    11/3 (Friday): we stop scheduling new notebooks to the GPU node, but
+    ones that are already running can keep running over the weekend.  I will
+    send a mail to affected users on the cordoned node.
+    
+    11/6 (Monday): degraded GPU service: migration of the GPU node - any
+    notebooks running there are terminated.
+    
+    11/13 (Monday): DOWNTIME: migration of the remainder of the EAF. The EAF
+    will be unavailable all day.
+    
+    As always, we appreciate your patience, and we will strive to restore
+    full service as quickly as possible.
+    
+    - B
+
 
 October 2 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
@@ -22,6 +344,7 @@ Subject: Issues connecting to the EAF over wifi
     Thanks for your patience!
     
     - B
+
 
 Subject: Re: Issues connecting to the EAF over wifi
 
