@@ -54,15 +54,7 @@ In the server options on EAF you will see this:
 .. Note::
   You do NOT need to be a coffea user to access dask. Any of these notebooks can be used for other custom environments within the notebooks. See :ref:`Using Dask with Non-Default Image <nondefault image>`.
 
-You can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-base-almalinux8:0.7.22-py3.10, here is a brief summary of the installed packages:
-
-.. csv-table::
-   :file: /csvfiles/coffea_image_table.csv
-   :widths: 30,30,30,30,30
-   :header-rows: 0
-
-
-For more details, you can use either docker or github to learn more about this image:
+You can either use dask with the installation default or you can use an image of your choice. The default image is coffeateam/coffea-base-almalinux8:0.7.22-py3.10. For more details, you can use either docker or github to learn more about this image:
 
 * `Docker link to Default Image <https://hub.docker.com/layers/coffeateam/coffea-base-almalinux8/0.7.22-py3.10/images/sha256-fa7ed8a997d8a34e98e2ce309a88d9658e64d52ff3d500994cc6f7097b40da30?context=explore>`_. 
 * `Github link to Default Image <https://github.com/CoffeaTeam/docker-coffea-dask/blob/main/dask-almalinux8/Dockerfile>`_. 
@@ -128,6 +120,9 @@ Using Dask with Non-Default Image
 
   If your image is not in cvmfs, please contact us via :doc:`slack or email <index>`.
 
+.. warning::
+  You MUST have dask, distributed and dask-gateway installed on your image.
+
 .. important::
   These instructions assume that your image is from /cvmfs/unpacked.cern.ch/registry.hub.docker.com/, it is the default registry. If your image is from a different registry please see the :ref:`Non-Default Registry instructions <nondefault registry>`. If you are unsure, you can check your image registry (the place your image lives i.e. registry.hub.docker.com) by using the code in the warning above.
 
@@ -145,6 +140,13 @@ For a non-default image, there are a few extra steps in order to make sure your 
 #. The client image aka the server image may or may not be compatible with your image. Most coffeateam/coffea-dask-almalinux8 images are compatible that have matching coffea versions and python versions. For Coffea 2024.x the current known working image is coffeateam/coffea-dask-almalinux8:2024.4.0-py3.10. Continue to step 4.
 
 #. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
+
+.. warning::
+  In order for your image to work with the gateway, you MUST pip install htcdaskgateway in your notebook environment. You can use:
+
+  .. code-block:: bash
+
+    pip install --user htcdaskgateway
    
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
    
@@ -161,8 +163,17 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     client = cluster.get_client()
 
+   .. warning:
+      If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang. 
+
+    .. image:: img/mismatch_table_dask.png
+  :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
+
    .. important::
     Do NOT forget to shut down your cluster, see step 7.
+
+   .. note:
+  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality. To check on your workers, you can use the condor commands i.e. condor_q. You can also check logs in the sanbox directory.
 
    .. note::
     COFFEA USERS: If your cluster is not working, please try step 3.
@@ -177,9 +188,6 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. code-block:: python
 
     cluster.shutdown()
-
-.. note:
-  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality. To check on your workers, you can use the condor commands i.e. condor_q. You can also check logs in the sanbox directory.
 
 HTCDaskGateway Features
 ========================
@@ -203,6 +211,9 @@ Step by Step Instructions
 
   If your image is not in cvmfs, please contact us via :doc:`slack or email <index>`.
 
+.. warning::
+  You MUST have dask, distributed and dask-gateway installed on your image.
+
 For a non-default image, there are a few extra steps in order to make sure your jobs won't fail. See :ref:`How It Works <how it works>` to better understand the extra steps. 
 
 #. Log in to the EAF and select one of the following servers:
@@ -213,6 +224,9 @@ For a non-default image, there are a few extra steps in order to make sure your 
    * AL8 Dask (Coffea 2024.x) [devel] 
 
 #. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
+
+.. warning::
+  In order for your image to work with the gateway, you MUST pip install htcdaskgateway in your notebook environment. You can use:
    
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
    
@@ -229,8 +243,17 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     client = cluster.get_client()
 
+   .. warning:
+      If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang. 
+
+    .. image:: img/mismatch_table_dask.png
+  :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
+   
    .. important::
     Do NOT forget to shut down your cluster, see step 6.
+
+   .. note:
+  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh installed and pinned properly in your images to have full dashboard functionality. To check on your workers, you can use the condor commands i.e. condor_q. You can also check logs in the sanbox directory.
 
 #. You are now connected to our batch cluster!
    
@@ -242,9 +265,6 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. code-block:: python
 
     cluster.shutdown()
-
-.. note:
-  Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality. To check on your workers, you can use the condor commands i.e. condor_q. You can also check logs in the sanbox directory.
 
 
 .. toctree::
