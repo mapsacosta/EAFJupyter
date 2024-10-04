@@ -141,12 +141,12 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
 #. The client image aka the server image is not compatible with your image. This means you will need to set up a custom environment for your jupyter notebook. See :doc:`Customizing User Environments <02_customization>` for how to do this. Particularly, "Example: installing biopython in the snowflakes conda environment". You can still pip/mamba/conda install in your environment once you activate it. 
 
-.. warning::
-  In order for your image to work with the gateway, you MUST pip install htcdaskgateway in your notebook environment. You can use:
+   .. warning::
+     In order for your image to work with the gateway, you MUST pip install htcdaskgateway in your notebook environment. You can use:
 
-  .. code-block:: bash
+     .. code-block:: bash
 
-    pip install --user htcdaskgateway
+       pip install --user htcdaskgateway
    
 #. Make sure you have a voms proxy. Here is the `voms CMS Twiki <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid>`_ if you need help.
    
