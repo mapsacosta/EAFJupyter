@@ -248,7 +248,8 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
       .. image:: img/mismatch_table_dask.png
         :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
-   
+
+
    .. important::
     Do NOT forget to shut down your cluster, see step 6.
 
