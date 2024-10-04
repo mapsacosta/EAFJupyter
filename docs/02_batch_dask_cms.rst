@@ -163,7 +163,7 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     client = cluster.get_client()
 
-   .. warning:
+   .. warning::
       If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang.
       .. image:: img/mismatch_table_dask.png
          :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
@@ -171,7 +171,7 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. important::
       Do NOT forget to shut down your cluster, see step 7.
 
-   .. note:
+   .. note::
      Because you are using a non-default image, it is likely some of the dask extra features will not work such as the dashboard. This is because you need packages like bokeh pinned properly in your images to have full dashboard functionality. To check on your workers, you can use the condor commands i.e. condor_q. You can also check logs in the sanbox directory.
 
    .. note::
@@ -253,7 +253,7 @@ For a non-default image, there are a few extra steps in order to make sure your 
    .. important::
       If your cluster is not working, please contact us via :doc:`slack or email <index>`. In the message, please specify the image you are trying to use. 
 
-   .. warning:
+   .. warning::
       If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang.
       .. image:: img/mismatch_table_dask.png
          :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
