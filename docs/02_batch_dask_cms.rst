@@ -242,11 +242,6 @@ For a non-default image, there are a few extra steps in order to make sure your 
 
     client = cluster.get_client()
 
-   .. warning:
-      If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang.
-      .. image:: img/mismatch_table_dask.png
-         :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
-
    .. important::
     Do NOT forget to shut down your cluster, see step 6.
 
@@ -257,6 +252,11 @@ For a non-default image, there are a few extra steps in order to make sure your 
    
    .. important::
       If your cluster is not working, please contact us via :doc:`slack or email <index>`. In the message, please specify the image you are trying to use. 
+
+   .. warning:
+      If you get the following error/warning in dask, it means that the packages installed by your image (on the scheduler) do not match the packages on the notebook (the client). To solve this, you must install/downgrade/upgrade the packages to match on the image and on the client through pip, mamba, or conda. Some mismatches won't cause issues, but any mismatches with dask or distributed will cause the workers to crash, error out, or hang.
+      .. image:: img/mismatch_table_dask.png
+         :alt: Image of the warning message when the packages are mismatched between the client and scheduler. It is a table with the mismatched packages and the versions.
 
 #. You must shutdown your cluster once you are finished using it. Add this line of code when you are finished with your workers. 
    
