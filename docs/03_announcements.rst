@@ -293,7 +293,7 @@ Subject: Removing old SL7/AL8/AL9 images
     - B
 
 
-December 2024
+December 2023
 =============
 
 December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
@@ -301,6 +301,7 @@ December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF: Service interruption: Jan 3 at 1 pm CST
 
 .. code-block:: none
+
    Hi folks,
 
     We need to reboot the cluster nodes that serve the EAF. If you have an
@@ -317,6 +318,7 @@ December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF: New SL7, Alma8, Alma9 images - please test!
 
 .. code-block:: none
+
    Hi folks,
 
     We just reconfigured the EAF with new SL7, Alma8, and Alma9 images. We
@@ -346,6 +348,7 @@ November 16 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF: back to (nearly) full service
 
 .. code-block:: none
+
    Hi folks,
 
     We now have all GPUs back in the EAF, monitoring working correctly, and
@@ -378,6 +381,7 @@ November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF update: still in maintenance
 
 .. code-block:: none
+
    Hi folks,
 
     We are making progress with the migration but are now working through
@@ -391,6 +395,7 @@ November 13 2023 (Burt Holzman <burt@FNAL.GOV>)
 Subject: Extending EAF downtime through tomorrow
 
 .. code-block:: none
+
    Hi folks,
 
     Unfortunately, it's taking a lot longer than expected to sync files
