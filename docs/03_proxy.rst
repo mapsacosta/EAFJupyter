@@ -1,9 +1,5 @@
 ******************************
-<<<<<<< HEAD
-Web browser proxy for offsite access (Firefox)
-=======
 Web browser proxy for offsite access
->>>>>>> master
 ******************************
 
 .. important::
