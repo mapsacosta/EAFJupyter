@@ -282,6 +282,7 @@ January 25 2024 (Burt Holzman <burt@FNAL.GOV>)
 Subject: Removing old SL7/AL8/AL9 images
 
 .. code-block:: none
+
    Hi everyone,
 
     Just a heads-up - it's been a month and we haven't received any reports
