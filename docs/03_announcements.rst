@@ -27,7 +27,7 @@ July 24 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: FW: Statement on scientific computing services during the Fermilab closure
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -40,7 +40,7 @@ July 15 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Reminder: python 3.10 is now live
 
-.. code:: 
+.. code-block:: none 
 
     Hi folks,
     
@@ -55,7 +55,7 @@ July 2 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF: update python to 3.10, openssl to v3
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -75,7 +75,7 @@ June 24 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: [Errata] SL7 end of life and EAF
 
-.. code::
+.. code-block:: none
 
    Dear EAF users,
 
@@ -90,7 +90,7 @@ June 24 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: SL7 end of life and EAF
 
-.. code::
+.. code-block:: none
 
     Dear EAF users,
     
@@ -113,7 +113,7 @@ June 24 2024 (Farrukh A. Khan <fkhan@FNAL.GOV>)
 ------------------------------------------
 Subject: LPC EOS Downtime (Wednesday, June 26)
 
-.. code::
+.. code-block:: none
 
     Hi everyone,
 
@@ -133,7 +133,7 @@ June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: [SOLVED] Re: Connection issues with registry
 
-.. code::
+.. code-block:: none
 
    Dear EAF users,
 
@@ -148,7 +148,7 @@ June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: Connection issues with registry
 
-.. code::
+.. code-block:: none
 
    Dear EAF users,
 
@@ -166,7 +166,7 @@ May 28 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF downtime: June 5, 9-5 (all day)
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -184,7 +184,7 @@ April 11 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: New GPUs added to the EAF
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -209,7 +209,7 @@ March 5 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Default notebook choices have changed
 
-.. code::
+.. code-block:: none
 
     Hi folks,
 
@@ -227,7 +227,7 @@ February 20 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF is back
 
-.. code::
+.. code-block:: none
 
     Hi folks,
     
@@ -242,7 +242,7 @@ February 20 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF currently unavailable
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -261,7 +261,7 @@ February 16 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: /scratch temporarily unavailable; possible reboots on Monday at 10 am
 
-.. code::
+.. code-block:: none
 
    Hi EAF users,
 
@@ -281,7 +281,7 @@ January 25 2024 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Removing old SL7/AL8/AL9 images
 
-.. code::
+.. code-block:: none
    Hi everyone,
 
     Just a heads-up - it's been a month and we haven't received any reports
@@ -300,7 +300,7 @@ December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF: Service interruption: Jan 3 at 1 pm CST
 
-.. code::
+.. code-block:: none
    Hi folks,
 
     We need to reboot the cluster nodes that serve the EAF. If you have an
@@ -316,7 +316,7 @@ December 20 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF: New SL7, Alma8, Alma9 images - please test!
 
-.. code::
+.. code-block:: none
    Hi folks,
 
     We just reconfigured the EAF with new SL7, Alma8, and Alma9 images. We
@@ -345,7 +345,7 @@ November 16 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF: back to (nearly) full service
 
-.. code::
+.. code-block:: none
    Hi folks,
 
     We now have all GPUs back in the EAF, monitoring working correctly, and
@@ -359,7 +359,7 @@ November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF back up with degraded services
 
-.. code::
+.. code-block:: none
 
     Hi everyone,
 
@@ -377,7 +377,7 @@ November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF update: still in maintenance
 
-.. code::
+.. code-block:: none
    Hi folks,
 
     We are making progress with the migration but are now working through
@@ -390,7 +390,7 @@ November 13 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Extending EAF downtime through tomorrow
 
-.. code::
+.. code-block:: none
    Hi folks,
 
     Unfortunately, it's taking a lot longer than expected to sync files
@@ -407,7 +407,7 @@ November 10 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: 11/13 downtime reminder
 
-.. code::
+.. code-block:: none
 
    Hi folks,
     
@@ -425,7 +425,7 @@ October 30 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Upcoming degradation (11/3) and downtime (11/13) for EAF
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -455,7 +455,7 @@ October 2 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Issues connecting to the EAF over wifi
 
-.. code::
+.. code-block:: none
 
     Hi folks,
 
@@ -472,7 +472,7 @@ Subject: Issues connecting to the EAF over wifi
 
 Subject: Re: Issues connecting to the EAF over wifi
 
-.. code::
+.. code-block:: none
 
     And we're back!
     
@@ -493,7 +493,7 @@ August 11 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Interruption in service: Aug 16, 9-12
 
-.. code::
+.. code-block:: none
 
    Hi EAF users,
 
@@ -513,7 +513,7 @@ August 2 2023 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: Re: Changing GID assignment for EAF notebooks
 
-.. code::
+.. code-block:: none
 
     Dear EAF users,
 
@@ -524,7 +524,7 @@ Subject: Re: Changing GID assignment for EAF notebooks
 
 Subject: Changing GID assignment for EAF notebooks
 
-.. code::
+.. code-block:: none
 
    Dear EAF users,
 
@@ -549,7 +549,7 @@ July 31 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF is back!
 
-.. code::
+.. code-block:: none
 
     Hi folks,
 
@@ -560,7 +560,7 @@ Subject: EAF is back!
 
 Subject: EAF currently down
 
-.. code::
+.. code-block:: none
 
     Hi folks,
     
@@ -574,7 +574,7 @@ July 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF: PYTHONNOUSERSITE update
 
-.. code::
+.. code-block:: none
 
    Hi EAF users,
 
@@ -618,7 +618,7 @@ Jun 1 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Re: Setting PYTHONNOUSERSITE globally
 
-.. code::
+.. code-block:: none
 
     Hi folks,
 
@@ -636,7 +636,7 @@ May 23 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: FYI: cosmetic changes to server selection screen
 
-.. code::
+.. code-block:: none
 
     Hi folks,
 
@@ -655,7 +655,7 @@ May 9 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Re: EAF downtime, Tuesday May 9
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -671,7 +671,7 @@ May 5 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF downtime, Tuesday May 9
 
-.. code::
+.. code-block:: none
 
     Hi EAF users!
     
@@ -699,7 +699,7 @@ Feb 23 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF downtime over: in degraded mode
 
-.. code::
+.. code-block:: none
 
    Hi folks,
 
@@ -721,7 +721,7 @@ Feb 21 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: Setting PYTHONNOUSERSITE globally
 
-.. code::
+.. code-block:: none
 
     Hi EAF users!
     
@@ -757,7 +757,7 @@ Feb 20 2023 (Burt Holzman <burt@FNAL.GOV>)
 
 Subject: Downtime scheduled for Thu, Feb 23, 9-5 CST
 
-.. code::
+.. code-block:: none
 
    Hi EAF users,
 
@@ -783,7 +783,7 @@ Jan 23 2023 (Burt Holzman <burt@FNAL.GOV>)
 
 Subject: **POSTPONED** Re: Downtime scheduled for Wed, 25 Jan 2023 9-5 CST
 
-.. code::
+.. code-block:: none
 
     Hi folks,
     
@@ -814,7 +814,7 @@ Jan 17 2023 (Burt Holzman <burt@FNAL.GOV>)
 
 Subject: Downtime scheduled for Wed, 25 Jan 2023 9-5 CST
 
-.. code::
+.. code-block:: none
 
     Hi EAF users,
     
