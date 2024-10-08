@@ -2,8 +2,132 @@
 Announcements history (from eaf-users mailing list)
 ******************************
 
+September 2024
+=============
+
+September 3 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Service interruption on Wed, Sep 11 @ 9 am
+
+.. code-block:: none
+
+   Hi folks,
+
+    We’re going to be doing rolling reboots on September 11, starting at 9 am central.  During this time, the pod hosting your notebook server may be restarted on another node (equivalent to stopping and restarting a server).  This may happen several times depending on where the pod migrates to so please save early and save often.
+    
+    Thanks!
+    
+    -B
+
+
+July 2024
+=============
+
+July 24 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: FW: Statement on scientific computing services during the Fermilab closure
+
+.. code::
+
+   Hi folks,
+
+    Note that EAF is not on the facility list below – so we’ll keep the lights on and fingers crossed, but if anything breaks we will not be looking at it until the lab closing/shutdown is over.
+    
+    - B
+
+
+July 15 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: Reminder: python 3.10 is now live
+
+.. code:: 
+
+    Hi folks,
+    
+    Just a reminder that we have updated to py3.10.  If you've installed packages with pip, you may need to reinstall them, since the old packages were installed in $HOME/.local/lib/python3.9, but python will look in $HOME/.local/lib/python3.10 by default now.
+    
+    If you are frustrated by this issue, please let us know - we can deploy a py3.9 option for a little while to help ease the transition.
+    
+    - B
+
+
+July 2 2024 (Burt Holzman <burt@FNAL.GOV>)
+------------------------------------------
+Subject: EAF: update python to 3.10, openssl to v3
+
+.. code::
+
+   Hi folks,
+
+    We’d like to bump the default python in the image to version 3.10 and openssl to version 3.  This may also bring along some minor version updates to packages.
+    
+    We will deploy the updated images next week on Thursday, July 11.
+    
+    Thanks,
+    
+    - B
+      
+
 June 2024
 =============
+
+June 24 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
+------------------------------------------
+Subject: [Errata] SL7 end of life and EAF
+
+.. code::
+
+   Dear EAF users,
+
+    Apologies, there was a typo on the initial announcement.
+    
+    “HTCondor submissions to the LPC and FermiGrid pools will be disabled on Wednesday JUNE 26th, 2024 (Today)”
+    
+    Maria A.
+
+
+June 24 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
+------------------------------------------
+Subject: SL7 end of life and EAF
+
+.. code::
+
+    Dear EAF users,
+    
+    As many of you know, Scientific Linux 7 (SL7) is reaching end of life on June 30th, 2024.
+    
+    We will not push security patches or software updates to our current SL7 offerings after this date and HTCondor submissions to the LPC and FermiGrid pools will be disabled on Wednesday July 26th, 2024. Please plan accordingly.
+    
+    We encourage you to use a variant of AlmaLinux (AL8/AL9) available in our catalog as we will officially retire our SL7 notebook offerings on July 15th 2024.
+    
+    If you have any questions or comments, please don’t hesitate to reach out or open a SNOW ticket at your earliest convenience.
+    
+    Thanks,
+    
+    Maria A.
+    On behalf of the EAF administration team
+
+
+
+June 24 2024 (Farrukh A. Khan <fkhan@FNAL.GOV>)
+------------------------------------------
+Subject: LPC EOS Downtime (Wednesday, June 26)
+
+.. code::
+
+    Hi everyone,
+
+    This is a reminder for the upcoming LPC EOS downtime on Wednesday, June 26.
+    
+    During the downtime we plan to upgrade the EOS MGM nodes to Alma Linux 9. The upgrade will start at 8 am and is expected to last until 4 pm. EOS service will be unavailable during this time. Other services such as batch and interactives will remain unaffected.
+    
+    Thank you for your patience!
+    
+    Best regards,
+    Farrukh Khan
+    on behalf of the CMS facility administration team
+
+
 
 June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
