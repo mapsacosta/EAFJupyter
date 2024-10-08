@@ -340,6 +340,8 @@ Subject: EAF: New SL7, Alma8, Alma9 images - please test!
     - B
 
 
+
+
 November 2023
 =============
 
@@ -356,6 +358,8 @@ Subject: EAF: back to (nearly) full service
     Thanks again for your patience; please contact us if you see any
     remaining issues.
     - B
+
+
 
 
 November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
@@ -376,6 +380,8 @@ Subject: EAF back up with degraded services
     
     - B
 
+
+
 November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
 Subject: EAF update: still in maintenance
@@ -389,6 +395,8 @@ Subject: EAF update: still in maintenance
     update before the end of the day - hopefully sooner.
     
     - B
+
+
 
 November 13 2023 (Burt Holzman <burt@FNAL.GOV>)
 ------------------------------------------
