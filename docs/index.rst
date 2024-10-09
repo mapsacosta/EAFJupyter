@@ -46,6 +46,7 @@ Quickstart
    02_vscode.rst
    03_help.rst
    03_proxy.rst
+   03_announcements.rst
 .. 01_managing_notebooks.rst
    Notebook environments <https://pypi.org>
 
@@ -73,7 +74,7 @@ Quickstart
   :caption: Jupyter - advanced usage [WIP]
 
 .. 01_jupyterhub_terminal.rst
-   00_jupyter_advanced.rst
+  00_jupyter_advanced.rst
   01_new_users_python.rst
   01_jupyterhub_terminal.rst
   01_jupyterhub_terminal_howto.rst
