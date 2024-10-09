@@ -11,9 +11,13 @@ Subject: Service interruption on Wed, Sep 11 @ 9 am
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    We’re going to be doing rolling reboots on September 11, starting at 9 am central.  During this time, the pod hosting your notebook server may be restarted on another node (equivalent to stopping and restarting a server).  This may happen several times depending on where the pod migrates to so please save early and save often.
+    We’re going to be doing rolling reboots on September 11, starting
+    at 9 am central.  During this time, the pod hosting your notebook
+    server may be restarted on another node (equivalent to stopping
+    and restarting a server).  This may happen several times depending
+    on where the pod migrates to so please save early and save often.
     
     Thanks!
     
@@ -29,9 +33,11 @@ Subject: FW: Statement on scientific computing services during the Fermilab clos
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    Note that EAF is not on the facility list below – so we’ll keep the lights on and fingers crossed, but if anything breaks we will not be looking at it until the lab closing/shutdown is over.
+    Note that EAF is not on the facility list below – so we’ll keep
+    the lights on and fingers crossed, but if anything breaks we will
+    not be looking at it until the lab closing/shutdown is over.
     
     - B
 
@@ -44,9 +50,14 @@ Subject: Reminder: python 3.10 is now live
 
     Hi folks,
     
-    Just a reminder that we have updated to py3.10.  If you've installed packages with pip, you may need to reinstall them, since the old packages were installed in $HOME/.local/lib/python3.9, but python will look in $HOME/.local/lib/python3.10 by default now.
+    Just a reminder that we have updated to py3.10.  If you've
+    installed packages with pip, you may need to reinstall them, since
+    the old packages were installed in $HOME/.local/lib/python3.9, but
+    python will look in $HOME/.local/lib/python3.10 by default now.
     
-    If you are frustrated by this issue, please let us know - we can deploy a py3.9 option for a little while to help ease the transition.
+    If you are frustrated by this issue, please let us know - we can
+    deploy a py3.9 option for a little while to help ease the
+    transition.
     
     - B
 
@@ -56,10 +67,12 @@ July 2 2024 (Burt Holzman <burt@FNAL.GOV>)
 Subject: EAF: update python to 3.10, openssl to v3
 
 .. code-block:: none
+ 
+    Hi folks,
 
-   Hi folks,
-
-    We’d like to bump the default python in the image to version 3.10 and openssl to version 3.  This may also bring along some minor version updates to packages.
+    We’d like to bump the default python in the image to version 3.10
+    and openssl to version 3.  This may also bring along some minor
+    version updates to packages.
     
     We will deploy the updated images next week on Thursday, July 11.
     
@@ -79,13 +92,14 @@ Subject: [Errata] SL7 end of life and EAF
 
    Dear EAF users,
 
-    Apologies, there was a typo on the initial announcement.
+   Apologies, there was a typo on the initial announcement.
     
-    “HTCondor submissions to the LPC and FermiGrid pools will be disabled on Wednesday JUNE 26th, 2024 (Today)”
-    
-    Maria A.
+   “HTCondor submissions to the LPC and FermiGrid pools will be
+   disabled on Wednesday JUNE 26th, 2024 (Today)”
+   
+   Maria A.
 
-
+   
 June 24 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
 ------------------------------------------
 Subject: SL7 end of life and EAF
@@ -94,13 +108,20 @@ Subject: SL7 end of life and EAF
 
     Dear EAF users,
     
-    As many of you know, Scientific Linux 7 (SL7) is reaching end of life on June 30th, 2024.
+    As many of you know, Scientific Linux 7 (SL7) is reaching end of
+    life on June 30th, 2024.
     
-    We will not push security patches or software updates to our current SL7 offerings after this date and HTCondor submissions to the LPC and FermiGrid pools will be disabled on Wednesday July 26th, 2024. Please plan accordingly.
+    We will not push security patches or software updates to our
+    current SL7 offerings after this date and HTCondor submissions to
+    the LPC and FermiGrid pools will be disabled on Wednesday July
+    26th, 2024. Please plan accordingly.
     
-    We encourage you to use a variant of AlmaLinux (AL8/AL9) available in our catalog as we will officially retire our SL7 notebook offerings on July 15th 2024.
+    We encourage you to use a variant of AlmaLinux (AL8/AL9) available
+    in our catalog as we will officially retire our SL7 notebook
+    offerings on July 15th 2024.
     
-    If you have any questions or comments, please don’t hesitate to reach out or open a SNOW ticket at your earliest convenience.
+    If you have any questions or comments, please don’t hesitate to
+    reach out or open a SNOW ticket at your earliest convenience.
     
     Thanks,
     
@@ -117,9 +138,14 @@ Subject: LPC EOS Downtime (Wednesday, June 26)
 
     Hi everyone,
 
-    This is a reminder for the upcoming LPC EOS downtime on Wednesday, June 26.
+    This is a reminder for the upcoming LPC EOS downtime on Wednesday,
+    June 26.
     
-    During the downtime we plan to upgrade the EOS MGM nodes to Alma Linux 9. The upgrade will start at 8 am and is expected to last until 4 pm. EOS service will be unavailable during this time. Other services such as batch and interactives will remain unaffected.
+    During the downtime we plan to upgrade the EOS MGM nodes to Alma
+    Linux 9. The upgrade will start at 8 am and is expected to last
+    until 4 pm. EOS service will be unavailable during this
+    time. Other services such as batch and interactives will remain
+    unaffected.
     
     Thank you for your patience!
     
@@ -137,11 +163,13 @@ Subject: [SOLVED] Re: Connection issues with registry
 
    Dear EAF users,
 
-    We have applied a fix for this and are back to normal operations, please let us know if you see any further issues.
+   We have applied a fix for this and are back to normal operations,
+   please let us know if you see any further issues.
     
-    We apologize for the inconvenience and thank you for your patience while we worked on it.
+   We apologize for the inconvenience and thank you for your patience
+   while we worked on it.
     
-    Maria A.
+   Maria A.
 
 
 June 21 2024 (Maria P. Acosta <macosta@FNAL.GOV>)
@@ -152,11 +180,14 @@ Subject: Connection issues with registry
 
    Dear EAF users,
 
-    We are experiencing connectivity issues between EAF and the image registry. Our infrastructure team is working hard to resolve this. We apologize for any inconvenience this may cause and will report back when the issue is sorted out.
+   We are experiencing connectivity issues between EAF and the image
+   registry. Our infrastructure team is working hard to resolve
+   this. We apologize for any inconvenience this may cause and will
+   report back when the issue is sorted out.
     
-    Thanks,
+   Thanks,
     
-    Maria A.
+   Maria A.
 
 
 May 2024
@@ -170,11 +201,13 @@ Subject: EAF downtime: June 5, 9-5 (all day)
 
    Hi folks,
 
-    We're scheduling a downtime all day on Wed, June 5 to improve network routing.  As always, we hope to be done sooner than EOB, in which case we will let you know when the system will be available.
+   We're scheduling a downtime all day on Wed, June 5 to improve
+   network routing.  As always, we hope to be done sooner than EOB, in
+   which case we will let you know when the system will be available.
     
-    Thanks!
+   Thanks!
     
-    - B
+   - B
 
 
 April 2024
@@ -186,7 +219,7 @@ Subject: New GPUs added to the EAF
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
     We've just added many new GPUs to the EAF.
     
@@ -196,8 +229,8 @@ Subject: New GPUs added to the EAF
     
     10 GB slices have increased from 10 to 24
     
-    Please let us know (via tickets or the #eaf-users slack) if there are
-    any issues.
+    Please let us know (via tickets or the #eaf-users slack) if there
+    are any issues.
     
     - B
 
@@ -213,9 +246,13 @@ Subject: Default notebook choices have changed
 
     Hi folks,
 
-    With the latest updates, the order of notebook choices has changed; AL9 is now selected by default, and SL7 is further down in the drop down list.  We will also prioritize adding the notebook flavor and OS to the status bar.
+    With the latest updates, the order of notebook choices has
+    changed; AL9 is now selected by default, and SL7 is further down
+    in the drop down list.  We will also prioritize adding the
+    notebook flavor and OS to the status bar.
     
-    Sorry for the inconvenience - I should have sent out an announcement before the defaults changed.
+    Sorry for the inconvenience - I should have sent out an
+    announcement before the defaults changed.
     
     - B
     
@@ -231,10 +268,10 @@ Subject: EAF is back
 
     Hi folks,
     
-    The issues with the underlying storage were resolved, and the EAF should
-    once again be available.  You may not need to restart any existing
-    notebooks (but may need to rerun any cells that were running when the
-    service was interrupted).
+    The issues with the underlying storage were resolved, and the EAF
+    should once again be available.  You may not need to restart any
+    existing notebooks (but may need to rerun any cells that were
+    running when the service was interrupted).
     
     - B
 
@@ -244,16 +281,16 @@ Subject: EAF currently unavailable
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    The storage cluster underlying the EAF is having issues this morning. It
-    is being investigated and worked on, but for the time being, the login
-    screen will display "service unavailable".  If you had notebooks open,
-    running cells probably will be interrupted; it's also possible that we
-    will need to reboot nodes.
+    The storage cluster underlying the EAF is having issues this
+    morning. It is being investigated and worked on, but for the time
+    being, the login screen will display "service unavailable".  If
+    you had notebooks open, running cells probably will be
+    interrupted; it's also possible that we will need to reboot nodes.
     
-    I'll send an update when we know more - we appreciate your patience and
-    will get you back up as soon as we can.
+    I'll send an update when we know more - we appreciate your
+    patience and will get you back up as soon as we can.
     
     - B
 
@@ -263,11 +300,12 @@ Subject: /scratch temporarily unavailable; possible reboots on Monday at 10 am
 
 .. code-block:: none
 
-   Hi EAF users,
+    Hi EAF users,
 
-    Writes and reads are currently hanging to the /scratch filesystem. We
-    will restart some services on Monday after 10 am; please save/checkpoint
-    your work, since this may shut down your notebook.
+    Writes and reads are currently hanging to the /scratch
+    filesystem. We will restart some services on Monday after 10 am;
+    please save/checkpoint your work, since this may shut down your
+    notebook.
     
     Thanks for your patience!
     
@@ -283,11 +321,11 @@ Subject: Removing old SL7/AL8/AL9 images
 
 .. code-block:: none
 
-   Hi everyone,
+    Hi everyone,
 
-    Just a heads-up - it's been a month and we haven't received any reports
-    of issues with the NEW images; shortly we'll reconfigure to remove the
-    OLD option.
+    Just a heads-up - it's been a month and we haven't received any
+    reports of issues with the NEW images; shortly we'll reconfigure
+    to remove the OLD option.
     
     Thanks for testing!
     
@@ -303,13 +341,13 @@ Subject: EAF: Service interruption: Jan 3 at 1 pm CST
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    We need to reboot the cluster nodes that serve the EAF. If you have an
-    active server at that time, it should migrate and respawn - but all
-    processes in the current server will be terminated -- meaning that all
-    kernels/terminal processes will stop and you'll need to restart. Please
-    plan accordingly - thanks!
+    We need to reboot the cluster nodes that serve the EAF. If you
+    have an active server at that time, it should migrate and
+    respawn - but all processes in the current server will be
+    terminated -- meaning that all kernels/terminal processes will
+    stop and you'll need to restart. Please plan accordingly - thanks!
     
     - B
 
@@ -320,23 +358,23 @@ Subject: EAF: New SL7, Alma8, Alma9 images - please test!
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    We just reconfigured the EAF with new SL7, Alma8, and Alma9 images. We
-    refactored our build system in order to do this efficiently. It's
-    possible during this process we missed including some software that you
-    need; we'd appreciate if you could verify that the new SL7 image is
-    working for you.
-    To give you time to let us know if there's a problem, we are providing
-    both the current/old and new SL7 images available on the server
-    selection screen.
+    We just reconfigured the EAF with new SL7, Alma8, and Alma9
+    images. We refactored our build system in order to do this
+    efficiently. It's possible during this process we missed including
+    some software that you need; we'd appreciate if you could verify
+    that the new SL7 image is working for you.  To give you time to
+    let us know if there's a problem, we are providing both the
+    current/old and new SL7 images available on the server selection
+    screen.
     
-    The "OLD SL7" is what you've been using up until now.
-    The "NEW SL7" is SL7 using our new build process.
+    The "OLD SL7" is what you've been using up until now.  The "NEW
+    SL7" is SL7 using our new build process.
     
     As always, drop us a line through the usual channels - servicenow
-    tickets and/or the #eaf-users slack channel.  (If you need an invite to
-    #eaf-users, send me an e-mail privately).
+    tickets and/or the #eaf-users slack channel.  (If you need an
+    invite to #eaf-users, send me an e-mail privately).
     
     - B
 
@@ -352,15 +390,14 @@ Subject: EAF: back to (nearly) full service
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
-    We now have all GPUs back in the EAF, monitoring working correctly, and
-    CMS areas (nobackup, data, etc) mounted and responding correctly.
-    Thanks again for your patience; please contact us if you see any
-    remaining issues.
+    We now have all GPUs back in the EAF, monitoring working
+    correctly, and CMS areas (nobackup, data, etc) mounted and
+    responding correctly.  Thanks again for your patience; please
+    contact us if you see any remaining issues.
+
     - B
-
-
 
 
 November 14 2023 (Burt Holzman <burt@FNAL.GOV>)
@@ -509,15 +546,16 @@ Subject: Interruption in service: Aug 16, 9-12
 
 .. code-block:: none
 
-   Hi EAF users,
+    Hi EAF users,
 
-    There will be interruptions in service on Wednesday morning as we update
-    certificates and switch the outgoing network gateway. We're hoping this
-    is transparent, but I can't guarantee that - so please prepare for
-    disruption to your work during that time.
+    There will be interruptions in service on Wednesday morning as we
+    update certificates and switch the outgoing network gateway. We're
+    hoping this is transparent, but I can't guarantee that - so please
+    prepare for disruption to your work during that time.
     
-    We will also move the work originally planned for Thursday (changing
-    GIDs for some users) to occur during that timeframe as well.
+    We will also move the work originally planned for Thursday
+    (changing GIDs for some users) to occur during that timeframe as
+    well.
     
     Thanks,
     - B
@@ -531,7 +569,8 @@ Subject: Re: Changing GID assignment for EAF notebooks
 
     Dear EAF users,
 
-    Due to the end of summer internships being close, we will re-schedule this change for Thursday, August 17th.
+    Due to the end of summer internships being close, we will
+    re-schedule this change for Thursday, August 17th.
 
     Maria A.
 
@@ -540,20 +579,28 @@ Subject: Changing GID assignment for EAF notebooks
 
 .. code-block:: none
 
-   Dear EAF users,
+    Dear EAF users,
 
-    On Thursday August 3rd, we will be rolling out a change that may impact file/user permissions. In order to stay consistent, we will be assigning your GID according to FERRY, our centralized user data source, depending on which notebook flavor you pick.
+    On Thursday August 3rd, we will be rolling out a change that may
+    impact file/user permissions. In order to stay consistent, we will
+    be assigning your GID according to FERRY, our centralized user
+    data source, depending on which notebook flavor you pick.
     
-    The following group (GID) assignments are going to apply from now on:
+    The following group (GID) assignments are going to apply from now
+    on:
+    
     DUNE: dune (9010)
     CMS: us_cms (5063)
     FIFE/Astro: fnalgrid (9767)
     ACCEL-AI: accelai (8754)
     ACORN: accel (8776)
     
-    Please note that this restricts the use of notebooks to VOs you are a member of but we don't expect any breaking changes to happen to your current home directories.
+    Please note that this restricts the use of notebooks to VOs you
+    are a member of but we don't expect any breaking changes to happen
+    to your current home directories.
     
-    For any questions/comments please email eaf_admins@fnal.gov or open a SNOW ticket.
+    For any questions/comments please email eaf_admins@fnal.gov or
+    open a SNOW ticket.
 
 
 July 2023
@@ -567,8 +614,8 @@ Subject: EAF is back!
 
     Hi folks,
 
-    The underlying issue has been fixed and the EAF is available again.
-    Sorry for the inconvenience!
+    The underlying issue has been fixed and the EAF is available
+    again.  Sorry for the inconvenience!
     
     - B
 
@@ -590,7 +637,7 @@ Subject: EAF: PYTHONNOUSERSITE update
 
 .. code-block:: none
 
-   Hi EAF users,
+    Hi EAF users,
 
     We know that the global setting of the PYTHONNOUSERSITE environment 
     variable has caused issues for some of you. In particular, if you have 
@@ -715,7 +762,7 @@ Subject: EAF downtime over: in degraded mode
 
 .. code-block:: none
 
-   Hi folks,
+    Hi folks,
 
     We've finished the downtime, but have two ongoing issues:
     CMS data and scratch areas are currently unavailable (accessing them
@@ -773,7 +820,7 @@ Subject: Downtime scheduled for Thu, Feb 23, 9-5 CST
 
 .. code-block:: none
 
-   Hi EAF users,
+    Hi EAF users,
 
     This is the continuation of the previously postponed downtime to
     reconfigure our network stack; here's the message I sent previously:
@@ -786,8 +833,8 @@ Subject: Downtime scheduled for Thu, Feb 23, 9-5 CST
     The facility may appear to be available during this time, but be aware
     that your notebook/server pod may disappear at any point.  I'll send out
     an all-clear if the work finishes early.
-    - B
 
+    - B
 
 January 2023
 ============
