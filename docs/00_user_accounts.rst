@@ -14,7 +14,7 @@ Fermilab account.
 
 If you are offsite, you will also need to either use a proxy or VPN.
 
-   * `Fermilab Proxy with FoxyProxy (no RSA token/Yubikey required) <https://library.fnal.gov/off-site-electronic-access-instructions#foxy>`_
+   * :doc:`Fermilab Proxy with FoxyProxy (no RSA token/Yubikey required) <03_proxy>`
    * `Fermilab VPN (RSA token/Yubikey required) <https://fermi.servicenowservices.com/wp/?id=evg-kb-article&sys_id=567a699a1b73f0104726a8efe54bcbe3>`_
 
 Still Can't Log-In
