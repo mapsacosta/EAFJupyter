@@ -17,11 +17,11 @@ This is a TWO step process, please follow all the instructions before trying to 
 Step 1. Set up the proxy in your browser
 ----------------------------------------
 
-1. Download the FoxyProxy browser extension for `Chrome <https://chromewebstore.google.com/detail/foxyproxy/gcknhkkoolaabfmlnjonogaaifnjlfnp>`_ or `Firefox <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>`_
+1. Download the FoxyProxy browser extension for `Chrome <https://chromewebstore.google.com/detail/foxyproxy/gcknhkkoolaabfmlnjonogaaifnjlfnp>`_ or `Firefox <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>`_.
 
-2. Navigate to the 'puzzle piece' extensions icon (top right) and select "Pin to Toolbar".
+2. (Chrome only) Navigate to the 'puzzle piece' extensions icon (top right) and select "Pin to Toolbar".
 
-3. Click on the FoxyProxy extension icon, then enter its configuration page through the 'Options' button
+3. Click on the FoxyProxy extension icon, then enter its configuration page through the 'Options' button.
 
    .. image:: img/foxy_extension.png
 
