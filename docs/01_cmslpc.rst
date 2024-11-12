@@ -4,8 +4,6 @@ CMSLPC
 =====================
 
 .. image:: img/cms.png
-   :height: 485
-   :width: 375
    :align: center
    :alt: The CMSLPC server options as displayed on the JupyterHub. 
 

@@ -4,8 +4,6 @@ ACORN/ACCEL-AI
 =====================
 
 .. image:: img/acorn-accleai.png
-   :height: 485
-   :width: 375
    :align: center
 
 |

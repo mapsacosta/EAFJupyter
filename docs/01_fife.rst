@@ -4,8 +4,6 @@ FIFE/Neutrinos
 =====================
 
 .. image:: img/fife.png
-   :height: 225
-   :width: 375
    :align: center
    :alt: The FIFE/Neutrinos server options as displayed on the JupyterHub. The first option is the AL9 Interactive General Purpose Notebook, the second option is the GPU AL9 Interactive (NVIDIA Ampere A100) and the third is the GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU].
 

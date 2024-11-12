@@ -4,8 +4,6 @@ Fermi Generic AL9
 ======================
 
 .. image:: img/fermi_generic.png
-   :height: 225
-   :width: 375
    :align: center
    :alt: The Fermi Generic AL9 server options as displayed on the JupyterHub.
    

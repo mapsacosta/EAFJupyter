@@ -4,8 +4,6 @@ Cosmic Frontier
 =====================
 
 .. image:: img/cosmic.png
-   :height: 485
-   :width: 375
    :align: center
    :alt: The Cosmic Frontier server options as displayed on the JupyterHub. The first option is the AL9 Interactive General Purpose Notebook, the second option is GPU AL9 Interactive (NVIDIA Ampere A100), the third option is GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU], and the fourth option is GPU AL9 Interactive (NVIDIA Ampere A100) [40GB GPU].
    
