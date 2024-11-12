@@ -3,7 +3,7 @@
 Cosmic Frontier
 =====================
 
-.. image:: img/CosmicFrontier_hub.png
+.. image:: img/cosmic.png
    :height: 485
    :width: 375
    :align: center

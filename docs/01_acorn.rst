@@ -3,7 +3,7 @@
 ACORN/ACCEL-AI
 =====================
 
-.. image:: img/Accel_ai_acorn_hub.png
+.. image:: img/acorn-accleai.png
    :height: 485
    :width: 375
    :align: center

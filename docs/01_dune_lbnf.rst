@@ -3,7 +3,7 @@
 LBNF/DUNE/ProtoDUNE
 =====================
 
-.. image:: img/Dune_lbnf_protodune_hub.png
+.. image:: img/dune.png
    :height: 225
    :width: 375
    :align: center

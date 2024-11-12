@@ -3,7 +3,7 @@
 CMSLPC
 =====================
 
-.. image:: img/CMSLPC_hub.png
+.. image:: img/cms.png
    :height: 485
    :width: 375
    :align: center

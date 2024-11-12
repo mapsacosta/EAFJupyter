@@ -3,7 +3,7 @@
 FIFE/Neutrinos
 =====================
 
-.. image:: img/FIFE_neutrinos_hub.png
+.. image:: img/fife.png
    :height: 225
    :width: 375
    :align: center

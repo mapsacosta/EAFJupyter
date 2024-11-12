@@ -3,7 +3,7 @@
 Fermi Generic AL9
 ======================
 
-.. image:: img/Generic_hub.png
+.. image:: img/fermi_generic.png
    :height: 225
    :width: 375
    :align: center
