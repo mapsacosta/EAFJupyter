@@ -7,11 +7,11 @@ Cosmic Frontier
    :height: 485
    :width: 375
    :align: center
-   :alt: The Cosmic Frontier server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is GPU SL7 Interactive (NVIDIA Ampere A100), the third option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU], and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU].
+   :alt: The Cosmic Frontier server options as displayed on the JupyterHub. The first option is the AL9 Interactive General Purpose Notebook, the second option is GPU AL9 Interactive (NVIDIA Ampere A100), the third option is GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU], and the fourth option is GPU AL9 Interactive (NVIDIA Ampere A100) [40GB GPU].
    
 |   
    
-SL7 Interactive General Purpose Notebook
+AL9 Interactive General Purpose Notebook
 ------------------------------------------
 Image: astro-notebook
 
@@ -32,7 +32,7 @@ Packages
    +-------------------------------------+--------------------------------+-------------------------------+----------------------------+-----------------------------+
 
 
-GPU SL7 Interactive (NVIDIA Ampere A100), GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU], and GPU SL7 Interactive (NVIDIA Ampere A100) [40GB GPU]
+GPU AL9 Interactive (NVIDIA Ampere A100), GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU], and GPU AL9 Interactive (NVIDIA Ampere A100) [40GB GPU]
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 Image: astro-notebook (GPU)
 
@@ -54,11 +54,7 @@ Packages
 
 LSST
 -----------------------------------------------------
-.. important::
-   
-   This notebook option will be made available in a future update.
-
-Image: lsst-notebook
+EAF offers a container image with the LSST jupyterhub kernel enabled
 
 Packages
 ~~~~~~~~~~
@@ -91,5 +87,3 @@ CVMFS
        +-----------------------------------------+--------------------------------------------+
        | .. centered:: des.opensciencegrid.org.  | .. centered:: sw.lsst.eu                   |
        +-----------------------------------------+--------------------------------------------+
-
-.. include:: notebook-structure-footer.rst

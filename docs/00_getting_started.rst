@@ -2,14 +2,14 @@
 Getting started - Choosing a Notebook
 *********
 
-Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic SL7. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic SL7 notebooks. All of the basic SL7 interactive notebooks inherit from the `base image`_.
+Each experiment has different notebook options when starting a server and are grouped into the following: LBNF/DUNE/ProtoDUNE, FIFE/Neutrinos, ACORN/ACCEL-AI, Cosmic Frontier, CMSLPC, and Fermi Generic AL9. In general, only the notebooks where the user has an associated experiment should be available when selecting which to open. Users will also have access to the Fermi Generic AL9 notebooks. All of the basic AL9 interactive notebooks inherit from the `base image`_.
 
 - :ref:`CMSLPC<cms>`- CMS, LHC
 - :ref:`Cosmic Frontier<astro>` - LSST, MAGIS-100, DES, DarkSide, Holometer, CDMS, COUPP, Pierre Auger Observatory, Sloan Digital Sky Survey, GammeV
 - :ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 - :ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 - :ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
-- :ref:`Fermi Generic SL7/CC8<fermi>` - Everyone
+- :ref:`Fermi Generic AL9/CC8<fermi>` - Everyone
 
 .. note::
 
@@ -46,12 +46,11 @@ Packages
 
 The notebooks that directly inherit from this image are:
 
-- CMSLPC: SL7 Interactive
-- Cosmic Frontier: SL7 Interactive General Purpose Notebook
-- ACORN/ACCEL-AI: ACORN CPU Only SL7 Interactive, ACORN AIMPS SL7 Interactive, L-CAPE CPU Only SL7 Interactive
-- FIFE/Neutrinos: SL7 Interactive General Purpose Notebook
-- LBNF/DUNE/ProtoDUNE: SL7 Interactive General Purpose Notebook
+- CMSLPC: AL8/AL9 Interactives (identical to cmslpc) + COFFEa Dask interactives
+- Cosmic Frontier: AL9 Interactive notebook + LSST kernel for Jupyter
+- ACORN/ACCEL-AI: ACORN AL9 Interactives, Fortran AL9 Interactive, Accel-AI AL9 Interactive
+- FIFE/Neutrinos: AL9 Interactive General Purpose Notebook
+- LBNF/DUNE/ProtoDUNE: AL9 Interactive General Purpose Notebook
 
-.. , and Cosmic Frontier: LSST Notebook (not released yet). 
 
 .. include:: notebook-structure-footer.rst

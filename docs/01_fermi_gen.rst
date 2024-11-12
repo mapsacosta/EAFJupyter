@@ -1,24 +1,18 @@
 .. _fermi:
 
-Fermi Generic SL7/CC8
+Fermi Generic AL9
 ======================
 
 .. image:: img/Generic_hub.png
    :height: 225
    :width: 375
    :align: center
-   :alt: The Fermi Generic SL7/CC8 server options as displayed on the JupyterHub. The first option is the Basic SL7 Interactive, the second option is the Basic CC8 Interactive and the third is the Rescue Image.
+   :alt: The Fermi Generic AL9 server options as displayed on the JupyterHub.
    
 |
 
-.. important::
-   
-   The CC8 notebook will be removed in a future update.
-.. The rescue notebook, with instructions on how to use it, is documented here<>.
-
-Basic SL7 Interactive
+Basic AL9 Interactive
 -----------------------
-Image: fife-notebook
 
 Packages
 ~~~~~~~~~~
@@ -62,7 +56,36 @@ CVMFS
    | .. centered:: uboone.opensciencegrid.org           | .. centered:: --                           |
    +----------------------------------------------------+--------------------------------------------+
 
-.. include:: notebook-structure-footer.rst
 
-.. For more detailed information regarding packages, see the diagram in :ref:`EAF Structure and Packages<diagram>`. To look at only Fermi Generic SL7 images, toggle the "Background" and "Fife/Neutrinos" layers in the interactive diagram.
+Rescue AL9 Interactive
+-----------------------
+
+EAF offers a 'rescue' notebook which is a lightweight container that allows users to clean up data when Disk usage is too high for the notebook to function.
+
+In the event your storage is full, the server will not be able to start. It should display a message:
+
+.. image:: img/diskfull.png
+  :width: 600
+  :alt: Disk is full
+
+You will need to go back to the hub control panel, and launch a "rescue" server, listed under Fermilab generic notebooks.
+This image has limited CPU and memory resources, and only a Terminal launcher.  In the rescue notebook, your normal
+storage area is mounted as ``/tmphome``.  You can remove files to get back under quota as in the example below,
+and then start a normal server.
+
+.. code-block:: console
+
+  /usr/bin/id: cannot find name for group ID 5063
+
+  *** RESCUE IMAGE: Your home directory is temporarily mounted at /tmphome ***
+
+  /tmphome > df -h --output=size,used,avail,pcent,target .
+   Size  Used Avail Use% Mounted on
+   4.0G  4.0G     0 100% /tmphome
+  /tmphome > rm bigfile
+  /tmphome > df -h --output=size,used,avail,pcent,target .
+   Size  Used Avail Use% Mounted on
+   4.0G  3.7G  372M  91% /tmphome
+  /tmphome >
+
 
