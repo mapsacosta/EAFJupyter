@@ -12,8 +12,10 @@ ACORN CPU Only SL7 Interactive
 -------------------------------
 Image: acorn-notebook
 
+
 Packages
 ~~~~~~~~~
+
 
 .. table::
    :align: center
@@ -31,7 +33,7 @@ Packages
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
    | .. centered:: scikit-images        | .. centered:: numpy        | .. centered:: pandas       | .. centered:: pytz           | .. centered:: scipy         |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
-   | .. centered:: scikit-learn         | .. centered:: cupy         | .. centered:: sympy        | .. centered:: acsys-py       | .. centered:: acsys-py[settings]|
+   | .. centered:: scikit-learn         | .. centered:: cupy         | .. centered:: sympy        | .. centered:: acsys-py       | .. centered:: [settings]    |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
 
 

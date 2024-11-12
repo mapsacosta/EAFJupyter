@@ -27,7 +27,7 @@ Packages
 
 COFFEA-DASK AL9 Interactive
 ------------------------------
-For more information on various versions of COFFEA. Check the dedicated page forsetting up your `Dask on EAF <https://eafjupyter.readthedocs.io/en/latest/02_batch_dask_cms.html#logging-in-and-setting-up>` 
+For more information on various versions of COFFEA. Check the dedicated page for setting up your `Dask on EAF <https://eafjupyter.readthedocs.io/en/latest/02_batch_dask_cms.html#logging-in-and-setting-up>`_.
 
 Image: cmslpc-coffea-dask
 
