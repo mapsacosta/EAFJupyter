@@ -10,22 +10,22 @@ ACORN/ACCEL-AI
 
 |
 
-ACORN CPU Only AL9 Interactive
+ACORN CPU Only SL7 Interactive
 -------------------------------
 Image: acorn-notebook
 
 Packages
-~~~~~~~~~~
+~~~~~~~~~
 
-.. table:: 
+.. table::
    :align: center
-   
+
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
    | .. centered:: xorg-x11-proto-devel | .. centered:: libX11-devel | .. centered:: libXau-devel | .. centered:: xorg-x11-xauth | .. centered:: xorg-x11-apps |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
    | .. centered:: xorg-x11-server-Xorg | .. centered:: cm-super     | .. centered:: libX11       | .. centered:: gcc            | .. centered:: nvcc          |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
-   | .. centered:: jupyterlab-drawio    |  .. centered:: ffmpeg      | .. centered:: pytorch     | .. centered:: acsys-py[settings]        | .. centered:: acsys-py      |
+   | .. centered:: jupyterlab-drawio    |  .. centered:: ffmpeg      | .. centered:: dvipng       | .. centered:: pytorch        | .. centered:: cpuonly       |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
    | .. centered:: jupyterlab-github    | .. centered:: bokeh        | .. centered:: tqdm         | .. centered:: cython         | .. centered:: h5py          |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
@@ -33,8 +33,9 @@ Packages
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
    | .. centered:: scikit-images        | .. centered:: numpy        | .. centered:: pandas       | .. centered:: pytz           | .. centered:: scipy         |
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
-   | .. centered:: scikit-learn         | .. centered:: cupy         | .. centered:: sympy        | .. centered:: acsys          | .. centered:: --            |
+   | .. centered:: scikit-learn         | .. centered:: cupy         | .. centered:: sympy        | .. centered:: acsys-py       | .. centered:: acsys-py[settings]|
    +------------------------------------+----------------------------+----------------------------+------------------------------+-----------------------------+
+
 
 
 ACORN AIMPS AL9 Interactive
