@@ -30,6 +30,7 @@ Packages
    | .. centered:: xrootd-client          | .. centered:: --              | .. centered:: --             | .. centered:: --          | .. centered:: --            |
    +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
 
+
 GPU AL9 Interactive (NVIDIA Ampere A100) and GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU]
 --------------------------------------------------------------------------------------------------
 Image: fife-notebook (GPU)
