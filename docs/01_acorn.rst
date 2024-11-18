@@ -8,7 +8,7 @@ ACORN/ACCEL-AI
 
 |
 
-ACORN CPU Only SL7 Interactive
+ACORN CPU Only AL9 Interactive
 -------------------------------
 Image: acorn-notebook
 
@@ -54,7 +54,7 @@ Packages
 
 Accel-AI AL9 Interactive
 ---------------------------------
-This environment has been merged from L-CAPE and READS SL7 notebooks and includes acsys functionality for access to control system data. It has a GPU equivalent which adds the following packages: 
+This environment has been merged from L-CAPE and READS AL9 notebooks and includes acsys functionality for access to control system data. It has a GPU equivalent which adds the following packages: 
 
 Image: accel-ai-notebook
 
