@@ -9,7 +9,7 @@ Each experiment has different notebook options when starting a server and are gr
 - :ref:`ACORN/ACCEL-AI<accelerator>` -  PIP-II, Test Beam Facility, ILC, LHC Accelerator Program, Muon Collider
 - :ref:`FIFE/Neutrinos<fife>` - LArIAT, NOvA, MicroBooNE, MINERvA, ICARUS, SBND, Mu2e, Muon g-2
 - :ref:`LBNF/DUNE/ProtoDUNE<dune>` - DUNE, LBNF
-- :ref:`Fermi Generic AL9/CC8<fermi>` - Everyone
+- :ref:`Fermi Generic AL9<fermi>` - Everyone
 
 .. note::
 
