@@ -3,15 +3,13 @@
 FIFE/Neutrinos
 =====================
 
-.. image:: img/FIFE_neutrinos_hub.png
-   :height: 225
-   :width: 375
+.. image:: img/fife.png
    :align: center
-   :alt: The FIFE/Neutrinos server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is the GPU SL7 Interactive (NVIDIA Ampere A100) and the third is the GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
+   :alt: The FIFE/Neutrinos server options as displayed on the JupyterHub. The first option is the AL9 Interactive General Purpose Notebook, the second option is the GPU AL9 Interactive (NVIDIA Ampere A100) and the third is the GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
 |
 
-SL7 Interactive General Purpose Notebook
+AL9 Interactive General Purpose Notebook
 ------------------------------------------
 Image: fife-notebook
 
@@ -20,6 +18,7 @@ Packages
 
 .. table:: 
    :align: center
+
    +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
    | .. centered:: krb5-workstation       | .. centered:: redhat-lsb-core | .. centered:: make           | .. centered:: nss_wrapper | .. centered:: libXext-devel |
    +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
@@ -32,7 +31,8 @@ Packages
    | .. centered:: xrootd-client          | .. centered:: --              | .. centered:: --             | .. centered:: --          | .. centered:: --            |
    +--------------------------------------+-------------------------------+------------------------------+---------------------------+-----------------------------+
 
-GPU SL7 Interactive (NVIDIA Ampere A100) and GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+
+GPU AL9 Interactive (NVIDIA Ampere A100) and GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU]
 --------------------------------------------------------------------------------------------------
 Image: fife-notebook (GPU)
 
@@ -81,5 +81,3 @@ CVMFS
    | .. centered:: uboone.opensciencegrid.org           | .. centered:: --                           |
    +----------------------------------------------------+--------------------------------------------+
 
-
-.. include:: notebook-structure-footer.rst

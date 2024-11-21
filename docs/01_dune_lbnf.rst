@@ -3,15 +3,13 @@
 LBNF/DUNE/ProtoDUNE
 =====================
 
-.. image:: img/Dune_lbnf_protodune_hub.png
-   :height: 225
-   :width: 375
+.. image:: img/dune.png
    :align: center
-   :alt: The LBNF/DUNE/ProtoDUNE server options as displayed on the JupyterHub. The first option is the SL7 Interactive General Purpose Notebook, the second option is the GPU SL7 Interactive (NVIDIA Ampere A100) and the third is the GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
+   :alt: The LBNF/DUNE/ProtoDUNE server options as displayed on the JupyterHub. The first option is the AL9 Interactive General Purpose Notebook, the second option is the GPU AL9 Interactive (NVIDIA Ampere A100) and the third is the GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU].
 
 |
 
-SL7 Interactive General Purpose Notebook
+AL9 Interactive General Purpose Notebook
 -----------------------------------------
 Image: dune-notebook
 
@@ -47,7 +45,7 @@ Packages
    | .. centered:: libXmu-devel            | .. centered:: libgcc.i686     | .. centered:: --       | .. centered:: --            | .. centered:: --               |
    +---------------------------------------+-------------------------------+------------------------+-----------------------------+--------------------------------+
 
-GPU SL7 Interactive (NVIDIA Ampere A100) and GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+GPU AL9 Interactive (NVIDIA Ampere A100) and GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU]
 --------------------------------------------------------------------------------------------------
 Image: dune-notebook (GPU)
 
@@ -83,5 +81,3 @@ CVMFS
    | .. centered:: dune.opensciencegrid.org  | .. centered:: larsoft.opensciencegrid.org. |
    +-----------------------------------------+--------------------------------------------+
 
-
-.. include:: notebook-structure-footer.rst

@@ -64,7 +64,6 @@ Quickstart
    01_cosmic.rst
    01_acorn.rst
    01_cmslpc.rst
-   01_diagram.rst
 
 
 

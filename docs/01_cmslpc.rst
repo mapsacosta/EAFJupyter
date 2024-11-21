@@ -3,17 +3,13 @@
 CMSLPC
 =====================
 
-.. image:: img/CMSLPC_hub.png
-   :height: 485
-   :width: 375
+.. image:: img/cms.png
    :align: center
-   :alt: The CMSLPC server options as displayed on the JupyterHub. The first option is the SL7 Interactive, the second option is COFFEA-DASK SL7 Interactive, the third option is GPU SL7 Interactive (NVIDIA Ampere A100), and the fourth option is GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU].
+   :alt: The CMSLPC server options as displayed on the JupyterHub. 
 
 |
 
-Each server opton inherits the packages from the image it was based on. The inheritence is shown in the diagram in :ref:`EAF Structure and Packages<diagram>`.
-
-SL7 Interactive
+AL9 Interactive
 -----------------
 Image: cmslpc-notebook
 
@@ -29,8 +25,10 @@ Packages
    | .. centered:: gcc      | .. centered:: osg-wn-client | .. centered::  xrootd-client |  .. centered:: eos-client   |  .. centered:: eos-xrootd  |
    +------------------------+-----------------------------+------------------------------+-----------------------------+----------------------------+
 
-COFFEA-DASK SL7 Interactive
+COFFEA-DASK AL9 Interactive
 ------------------------------
+For more information on various versions of COFFEA. Check the dedicated page for setting up your `Dask on EAF <https://eafjupyter.readthedocs.io/en/latest/02_batch_dask_cms.html#logging-in-and-setting-up>`_.
+
 Image: cmslpc-coffea-dask
 
 Packages
@@ -62,7 +60,7 @@ Packages
    +---------------------------------------+-----------------------------+------------------------------+------------------------------+-------------------------------+
 
 
-GPU SL7 Interactive (NVIDIA Ampere A100) and GPU SL7 Interactive (NVIDIA Ampere A100) [20GB GPU]
+GPU AL9 Interactive (NVIDIA Ampere A100) and GPU AL9 Interactive (NVIDIA Ampere A100) [20GB GPU]
 --------------------------------------------------------------------------------------------------
 Image: cmslpc-notebook (GPU)
 
@@ -94,5 +92,3 @@ CVMFS
    +-------------------------------------------+-----------------------------------------+
    | .. centered:: cms-lpc.opensciencegrid.org | .. centered:: unpacked.cern.ch          |
    +-------------------------------------------+-----------------------------------------+
-
-.. include:: notebook-structure-footer.rst   
