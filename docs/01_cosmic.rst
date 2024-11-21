@@ -52,7 +52,7 @@ Packages
 
 LSST
 -----------------------------------------------------
-EAF offers a container image with the LSST jupyterhub kernel enabled
+EAF offers a container image with the LSST jupyterhub kernel enabled.
 
 Packages
 ~~~~~~~~~~
