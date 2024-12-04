@@ -13,7 +13,7 @@ Each experiment has different notebook options when starting a server and are gr
 
 .. note::
 
-   If you do not have access to your experiment, or have access to an experiment you are not a part of, please contact eaf-users@fnal.gov.
+   If you do not have access to your experiment, or have access to an experiment you are not a part of, please contact eaf-users AT fnal.gov.
 
 Base Image
 ---------------
