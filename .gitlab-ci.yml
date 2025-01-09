@@ -19,3 +19,13 @@ build-docs:
     - if: '$CI_COMMIT_BRANCH == "local-build"'
   tags:
     - eafdocs
+
+publish-docs:
+  stage: publish
+  image: harbor.apps.okddev.fnal.gov/cache/library/python:3.12
+  script:
+    - cp -rf build/* $HOST_MOUNT
+  tags:
+    - eafdocs
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "local-build"'
